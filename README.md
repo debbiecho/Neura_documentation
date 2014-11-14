@@ -23,7 +23,7 @@ We're excited for you to join the community of Builders using Neura to enhance t
 **Mike took 'data objects' from Automatic. What do Fitbit, Jawbone, & Nest say? let's benchmark with them. Keep it simple.**
 
 ### Comments, questions, wanna grab a beer?
-Reach out to us at build [at] theneura [dot] com.  We're serious about the beer :) :beer: **does markdown do emoji?**
+Reach out to us at build [at] theneura [dot] com.  We're serious about the beer :) :beer:
 
 
 
