@@ -2,10 +2,10 @@
 Build with Neura 
 ===================
 
-We're excited for you to join the community of Builders using Neura to enhance their apps and internet-of-things (IoT) devices.  The Neura API is ready for you to build amazing apps. 
+We're excited for you to join the community of Builders using Neura to enhance their apps and internet-of-things (IoT) devices.  
 
 
-###Here are some important things you should know about the API:  
+###The Neura API is ready for you to build amazing apps.  
 
   - The API is currently in alpha, so we appreciate your patience as we continue to improve it. We decided that we'd prefer to get you something good rather than make you wait for something perfect.  The API could change in ways that may break your app, so if this scares you, you should wait until the API is more stable. 
   - The Neura Android app is currently in beta does not support event webhooks.  **(Berman how true is this for Neura?)**
