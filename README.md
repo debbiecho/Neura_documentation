@@ -14,7 +14,7 @@ We're excited for you to join the community of Builders using Neura to enhance t
 ### Resources
  - [Quickstart pull Neura **data objects(?)** for a user](https://github.com/mikimer/Neura_documentation/blob/master/quickstartPull.md) (5-minute project)
  - [Quickstart subscribe to push notifications for user events](https://github.com/mikimer/Neura_documentation/blob/master/quickstartPush.md) (?? minute project)
- - [The Neura API in detail](link) **insert link to API doc**
+ - [The Neura API in detail](https://github.com/mikimer/Neura_documentation/blob/master/APIguide.md) 
  - The Neura SDK for Android
  - The Neura SDK for iOS
  - Permissions (move from http://dev.neura.me/#/docs)
