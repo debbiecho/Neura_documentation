@@ -39,13 +39,10 @@ This 5-minute project will allow you to use Neura's `daily_summary` API call to 
     }
 ```
 ###Wanna do more? Examine your own `daily_summary` data
-You can examine your data by getting your unique `Authorization Key`**Is that what it's called?** from Neura for the `daily_summary` call.  
+You can examine your data by getting your unique **Authorization Key** **(Is that what it's called?)** from Neura for the `daily_summary` call.  
 
   1.  Download the Neura app on your Android or iOS mobile phone. **include app & play store links** 
   2. Email `build [at] theneura [dot] com` to request an access code to complete installation of the app.  In the email, please be sure to note that you're a Builder working on a Quickstart project.  
   3. Neura will respond with your `Authorization Key`.
   4. Have fun playing around with your data. We hope it gives you a small taste of the power of Neura and motivates you to integrate your apps and IoT devices with Neura.
 
-
-
-> Written with [StackEdit](https://stackedit.io/).

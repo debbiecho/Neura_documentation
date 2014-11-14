@@ -1,8 +1,16 @@
 # Neura API Documentation
 
+## Neura conventions
+**How do dates work? Timezones? Flight/travel?**
+**What is the expected latency on push events?** 
+**Even if we don't have perfect answers, let's address upfront.**
+
+###Privacy
+HTTPS is required for all Neura APIs because private user information will be transmitted. Users trust your application with this info and Neura expects you respect this trust. We require that your application not retransmit insecurely, retain indefinitely or share with 3rd parties any data sent via the Neura API. 
+
 ## Authentication
 
-You can query the Neura API to pull information about a user. All requests for user data must include an **authorization header** with the value containing the user's access token:
+You can query the Neura API to pull information about a user. All requests for user data must include an **authorization header** containing the user's access token:
 
 **Example**
 
@@ -10,11 +18,23 @@ You can query the Neura API to pull information about a user. All requests for u
 Authorization: Bearer asdf1234*****************
 ```
 
-## API Root Endpoint
+**We need to explain how to get the auth token**
 
-The current version of the Neura API is V1 and each call to the V1 API will start with:
+## API root endpoint
 
- `https://wapi.theneura.com/v1`
+The Neura API is currently in V1 so each call starts with `https://wapi.theneura.com/v1`. **What else do we need to say about the root endpoint?**
+
+### Response to GET requests
+Neura returns whether your GET request was a `success` or `error`. If the status is  `error` Neura returns: 
+
+   - `status = errors`
+   -  `errors` > `code` A snake_case string representing the error code. 
+   -  `errors > message` A human-readable message describing the error.
+
+
+
+
+[TOC]
 
 ## GET /users/profile/daily_summary
 
@@ -24,25 +44,41 @@ Get's a user’s wellness information for a single day. Requires a **Bearer** au
 
 **`https://wapi.theneura.com/v1/users/profile/daily_summary`**
 
-### Query Parameters
+### Request query parameters
 
-#### Required
-- `date`: Date of the summary to retrieve in YYYY-MM-DD format
+#### Required  request parameters
+- `date`  The day for which you want information in YYYY-MM-DD format
+**feedback from Eric @ Zenobase: what timezone? when does date start and end? how do we align different datasets?**
 
-#### Optional
-- `source`: The source device to retrieve data for. For example, if Neurosky device data is requested then this parameter should be set to "Neurosky".
+#### Optional request parameters
+- `source` The single partner device for which you want information. If you don't specify `source` the Neura returns data aggregated from all the user's devices.  As of October 2014, `source` is only available for Neurosky; use the format: `source = neurosky`. 
 
-### Headers
+### Request headers
 
-#### Required
+#### Required request headers
 
 - `authorization`: Bearer authorization token
 
-#### Optional
+#### Optional request headers
 
 - `Cache-Control`: Specifies if the server should circumvent the server cache
 
-### Example Request
+## Response for `daily_summary` 
+
+If status is `success` Neura returns:
+
+  - `timestamp`: The time when Neura sent the response in epoch time. 
+  - `data`:  The complex object of response data. If data is not available for any of the sub-objects then Neura returns 0.
+  - `data` > `date` Neura echoes the `date` in your Request parameter in the in the format YYYY-MM-DD.   
+**feedback from Eric @ Zenobase: what timezone? when does date start and end? how do we align different datasets?**
+  - `data` > `minutesWalk`: The number of minutes that the user was continuously active either running or walking while outside their home. **this is confusing. let's clarify or hold off releasing it. questions: what if they have a treadmill/bike? rename from 'Walk' to 'Active'?**
+  - `data` > `steps` The number of steps the user walked on `date`.  If the user has multiple step-counting devices then Neura the merges data to best reflect total steps walked without double counting.
+  - `data` > `calories` The amount of calories the user burned on `date` in kilocalories (kcal).
+   - `data` > `heartRate` The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with Neurosky. 
+  - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). **is this if the user measured their weight that day? how does this work exactly?**
+
+
+### Example `daily_summary` request
 
 ```http
 GET https://wapi.theneura.com/v1/users/profile/daily_summary?date=2014-09-30
@@ -50,7 +86,7 @@ Authorization: Bearer asdf1234**************************
 Cache-Control: no-cache
 ```
 
-### Example Response
+### Example `daily_summary` response
 
 #### Headers
 ```http
@@ -73,9 +109,9 @@ Content-Type: application/json
 	   "weight": 0,
 	   "workDay": 0,
 	   "sleepData": {
-	   "length": 290,
-	   "deepSleep": 0,
-	   "lightSleep": 0
+	     "length": 290,
+	     "deepSleep": 0,
+	     "lightSleep": 0
    },
    "activityPlaces": [ ]
    }

@@ -47,6 +47,7 @@ The complex object of ````success```` response data. As of October 2014, Neura r
 
 **data > date**	
 Neura echoes  the ````date```` in your Request parameter in the  in the format YYYY-MM-DD.   
+**feedback from Eric @ Zenobase: what timezone? when does date start and end? how do we align different datasets?**
 
 **data > minutesWalk**	
 Neura returns the number of minutes that the user was continuously active either running or walking while outside their home. 
