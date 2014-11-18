@@ -31,10 +31,16 @@ Neura returns whether your GET request was a `success` or `error`. If the status
    -  `errors` > `code` A snake_case string representing the error code. 
    -  `errors > message` A human-readable message describing the error.
 
+###Neura **data objects** available for a PULL request
+  - `daily_summary`: a summary of the user's activity
+  - `activity`: Wellness Activity Profile -  
+  - `hrv`: Heart Rate Variable (for Neurosky only) 
+  - `sleep`: Sleep Profile - 
 
+**what's the difference between `daily_summary` and `activity`? It seems like it's just that `activity` is for multiple days.**
 
+---------
 
-[TOC]
 
 ## GET /users/profile/daily_summary
 
@@ -118,4 +124,178 @@ Content-Type: application/json
 }
 ```
  
+
+---------
+
+
+## GET /users/profile/call TEMPLATE
+
+DESCRIPTION OF THE CALL
+
+### Resource URI
+
+**`https://wapi.theneura.com/v1/users/profile/call`**
+
+### Request query parameters
+
+#### Required request parameters
+- `required_parameter`:  description
+
+#### Optional request parameters
+- `optional_parameter`: description
+
+### Request headers
+
+#### Required request headers
+
+- `authorization`: Bearer authorization token
+
+#### Optional request headers
+
+- `Cache-Control`: Specifies if the server should circumvent the server cache
+
+## Response for `call` 
+
+parameters returned & descriptions
+
+
+### Example `call` request
+
+```http
+GET https://wapi.theneura.com/v1/users/profile/call
+Authorization: Bearer asdf1234**************************
+Cache-Control: no-cache
+```
+
+### Example `call` response
+
+#### Headers
+```http
+status: 200 OK
+version: HTTP/1.1
+Content-Type: application/json
+```
+#### Body
+```json
+{
+   }
+```
+ 
+
+---------
+
+
+## GET /users/profile/call TEMPLATE
+
+DESCRIPTION OF THE CALL
+
+### Resource URI
+
+**`https://wapi.theneura.com/v1/users/profile/call`**
+
+### Request query parameters
+
+#### Required request parameters
+- `required_parameter`:  description
+
+#### Optional request parameters
+- `optional_parameter`: description
+
+### Request headers
+
+#### Required request headers
+
+- `authorization`: Bearer authorization token
+
+#### Optional request headers
+
+- `Cache-Control`: Specifies if the server should circumvent the server cache
+
+## Response for `call` 
+
+parameters returned & descriptions
+
+
+### Example `call` request
+
+```http
+GET https://wapi.theneura.com/v1/users/profile/call
+Authorization: Bearer asdf1234**************************
+Cache-Control: no-cache
+```
+
+### Example `call` response
+
+#### Headers
+```http
+status: 200 OK
+version: HTTP/1.1
+Content-Type: application/json
+```
+#### Body
+```json
+{
+   }
+```
+ 
+
+---------
+
+
+## GET /users/profile/call TEMPLATE
+
+DESCRIPTION OF THE CALL
+
+### Resource URI
+
+**`https://wapi.theneura.com/v1/users/profile/call`**
+
+### Request query parameters
+
+#### Required request parameters
+- `required_parameter`:  description
+
+#### Optional request parameters
+- `optional_parameter`: description
+
+### Request headers
+
+#### Required request headers
+
+- `authorization`: Bearer authorization token
+
+#### Optional request headers
+
+- `Cache-Control`: Specifies if the server should circumvent the server cache
+
+## Response for `call` 
+
+parameters returned & descriptions
+
+
+### Example `call` request
+
+```http
+GET https://wapi.theneura.com/v1/users/profile/call
+Authorization: Bearer asdf1234**************************
+Cache-Control: no-cache
+```
+
+### Example `call` response
+
+#### Headers
+```http
+status: 200 OK
+version: HTTP/1.1
+Content-Type: application/json
+```
+#### Body
+```json
+{
+   }
+```
+ 
+
+
+
 
