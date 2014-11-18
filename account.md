@@ -19,7 +19,7 @@ benchmark with:
     - Platform: Android, iOS, web
   - Nice to have
     - What language do they code in? PHP, ruby, JavaScript
-    - 
+ 
 
 **Biz considerations**
 
