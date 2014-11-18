@@ -12,7 +12,7 @@ The API is currently in alpha, so we appreciate your patience as we continue to 
 ### Helpful documentation
  - [Quickstart: PULL a Neura data object](https://github.com/mikimer/Neura_documentation/blob/master/quickstartPull.md) (5-minute project)
  - [Quickstart: subscribe to a PUSH notification](https://github.com/mikimer/Neura_documentation/blob/master/quickstartPush.md) (??-minute project)
- - Account creation for developers 
+ - [Account creation for developers ](https://github.com/mikimer/Neura_documentation/blob/master/account.md)
  - [The Neura API in detail](https://github.com/mikimer/Neura_documentation/blob/master/APIguide.md) 
  - The Neura SDK for Android
  - The Neura SDK for iOS
