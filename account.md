@@ -2,7 +2,7 @@
 
 We're delighted that you want to build with the Neura API so we've tried to make it as easy possible.
 
-Eroc will lead this charge
+Eroc will lead this charge - agreed
 
 Current website to sign up as a dev:
 [http://dev.neura.me/#/](http://dev.neura.me/#/)
