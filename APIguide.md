@@ -37,7 +37,15 @@ Neura returns whether your GET request was a `success` or `error`. If the status
   - `hrv`: Heart Rate Variable (for Neurosky only) 
   - `sleep`: Sleep Profile - 
 
-**what's the difference between `daily_summary` and `activity`? It seems like it's just that `activity` is for multiple days.**
+**Neura will use the term 'data objects' instead of 'services' to benchmark with Automatic. Neura will use the term 'event subscription' to benchmark with Fitbit. [background research here](https://github.com/mikimer/apricot/blob/master/GitHub%20notes.md)**
+
+**Berman, what's the difference between `daily_summary` and `activity`? It seems like it's just that `activity` is for multiple days.**
+
+###Neura **events** available for a PUSH subscription
+  - `userIsWalking`: user is walking
+  - `phoneShaking`: user is shaking their phone **Ori to decide test case per product discussion on Nov 18th**  
+
+
 
 ---------
 
