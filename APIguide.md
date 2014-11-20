@@ -362,65 +362,6 @@ Content-Type: application/json
 
 
 
----------
-
-
-## GET /users/profile/call TEMPLATE
-
-DESCRIPTION OF THE CALL
-
-### Resource URI
-
-**`https://wapi.theneura.com/v1/users/profile/call`**
-
-### Request query parameters
-
-#### Required request parameters
-- `required_parameter`:  description
-
-#### Optional request parameters
-- `optional_parameter`: description
-
-### Request headers
-
-#### Required request headers
-
-- `authorization`: Bearer authorization token
-
-#### Optional request headers
-
-- `Cache-Control`: Specifies if the server should circumvent the server cache
-
-## Response for `call` 
-
-parameters returned & descriptions
-
-
-### Example `call` request
-
-```http
-GET https://wapi.theneura.com/v1/users/profile/call
-Authorization: Bearer asdf1234**************************
-Cache-Control: no-cache
-```
-
-### Example `call` response
-
-#### Headers
-```http
-status: 200 OK
-version: HTTP/1.1
-Content-Type: application/json
-```
-#### Body
-```json
-{
-   }
-```
- 
-
-
-
 
 
 
