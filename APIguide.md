@@ -186,7 +186,20 @@ Content-Type: application/json
 #### Body
 ```json
 {
-   }
+"status": "success",
+"timestamp": 1416526587,
+"data": {
+  "calories": 1914.8622890088939,
+  "steps": 11096.583672086723,
+  "activityPlaces": [
+    {
+    "label": "workout",
+    "steps": 2216.2600026130676,
+    "calories": 148.26000261306763
+    }
+    ]
+  }
+}
 ```
  
 
