@@ -3,7 +3,7 @@
 
 We're excited for you to join the community of developers using Neura to enhance their apps and internet-of-things (IoT) devices.  
 
-###The Neura API is ready for you to build awesome apps.  
+###Neura is ready for you to build awesome apps
 You can use the Neura API and SDKs to securely access user data by subscribing to PUSH events or submitting a PULL request for a data object.  User privacy is critical to us, so we use OAuth2 authentication to ensure that users have approved your access to their data.
 
 ### Helpful documentation
