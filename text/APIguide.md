@@ -1,22 +1,38 @@
-# Neura API Documentation
+# Neura API Endpoints
 
-The Neura API is **read-only(?)**, requires HTTPS, and returns responses in JSON.  The API is currently in alpha, so we appreciate your patience as we continue to improve it.  We will do our best to give you at least 10-days notice before releasing breaking changes and to constantly communicate the [status of the API](). 
-
+The Neura API is read-only, requires HTTPS, and returns responses in JSON.  
 
 ## Permissions
  - Permissions (move from http://dev.neura.me/#/docs)
-
+**How do Neura permissions work? Does this belong here or in Authentication?** 
 
 ## API root endpoint
 
-The Neura API is currently in V1 so each call starts with `https://wapi.theneura.com/v1`. **What else do we need to say about the root endpoint?**
+The Neura API is currently in V1 so each call starts with `https://wapi.theneura.com/v1`. 
+**What else do we need to say about the root endpoint?**
 
 ### Response to GET requests
-Neura returns whether your GET request was a `success` or `error`. If the status is  `error` Neura returns: 
+Neura returns a `status` indicating whether your GET request was a `success` or `error`. If the `status` is `success` then Neura returns a valid response, as detailed below. If the `status` is  `error` Neura returns: 
 
-   - `status = errors`
-   -  `errors` > `code` A snake_case string representing the error code. 
-   -  `errors > message` A human-readable message describing the error.
+   - `status`: The status is `error`.
+   - `timestamp`:  The time when Neura sent the response in epoch time. 
+   - `errors`: The complex object of error data.
+   -  `errors` > `code`: A snake_case string representing the error code. 
+   -  `errors` > `message`: A human-readable message describing the error.
+
+###Example `error` response
+```json
+{
+   "status": "error",
+   "timestamp": 1416537411,
+   "errors": [
+      {
+      "code": "invalid_format",
+      "message": "date parameter format is invalid."
+      }
+    ]
+}
+```
 
 ###Neura **data objects** available for a PULL request
   - `daily_summary`: a summary of the user's activity
@@ -24,21 +40,6 @@ Neura returns whether your GET request was a `success` or `error`. If the status
   - `sleep`: Sleep Profile - 
   - `hrv`: Heart Rate Variable (for Neurosky only) 
 
-**Neura will use the term 'data objects' instead of 'services' to benchmark with Automatic. Neura will use the term 'event subscription' to benchmark with Fitbit. [background research here](https://github.com/mikimer/apricot/blob/master/GitHub%20notes.md)**
-
-**What will it take to change the names of the API calls to be more meaningful?  Mike's suggestions:**
-  - `wellness_day` instead of `daily_summary` since it provides wellness information for a single day
-  - `wellness_period` instead of `activity` since it provides wellness information for a period of time
-  - `sleep_period` instead of `sleep` since it provides sleep information for a period of time
-  - `hrv_period` instead of `hrv` since it provides heart rate variable info for a period of time.
-  - `daily_summary` > `details` instead of `data` since "`data`" is so broad it isn't meaningful.
-  - `daily_summary` > `data` > `activityOutside` instead of `minutesWalk` since (1) we don't embed units in any other object names, (2) it's walking, running, or any other kind of exercise, and (3) it's not clear that this excludes walking indoors.
-  - `activity` > `data` > `averageSteps` instead of `steps` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `steps`
-  - `activity` > `data` > `averageCalories` instead of `calories` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `calories`
-  - `exercise` instead of `workout` since non-native english speakers have trouble with phrasal verbs and to clearly distinguish between *work* and *working out*
-  - `data` > `activityPlaces` > `location` instead of `type` since it's specifically a type of *location*
-  - Can we make `daily_summary` and `activity` parallel to `sleep`? `Sleep` can do either a single day or a period, but we differentiate between `daily_summary` and `activity`. Can we simplify?
-  - 
 
 ###Neura **events** available for a PUSH subscription
   - `userIsWalking`: user is walking
@@ -77,8 +78,7 @@ Neura returns whether your GET request was a `success` or `error`. If the status
 
 ## Response for `daily_summary` 
 
-If status is `success` Neura returns:
-
+  - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `data`:  The complex object of wellness data. If data is not available for any of the sub-objects then Neura returns 0.
   - `data` > `date` Neura echoes the `date` in your Request parameter in the in the format YYYY-MM-DD.   
@@ -162,8 +162,7 @@ None.
 
 ## Response for `activity` 
 
-If status is `success` Neura returns:
-
+  - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `data`:  The complex object of wellness data. If data is not available for any of the sub-objects then Neura returns 0.
   - `data` > `steps`: Neura returns the average daily steps during the period.
@@ -245,8 +244,8 @@ None.
 - `Cache-Control`: Specifies if the server should circumvent the server cache
 
 ## Response for `sleep` 
-If status is `success` Neura returns:
 
+  - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `data`:  The complex object of sleep data. If data is not available for any of the sub-objects then Neura returns 0.
   - `data` > `length`: The average duration of time sleeping in minutes during the period. 
@@ -288,7 +287,6 @@ Content-Type: application/json
 
 ---------
 
-
 ## GET /users/profile/hrv 
 
 `hrv` is a data object containing a user’s heart rate information either on a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive. This service is only available for users that have integrated Neurosky with Neura and requires a **Bearer** authorization token.
@@ -322,8 +320,7 @@ None.
 
 ## Response for `hrv` 
 
-If status is `success` Neura returns:
-
+  - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `items`:  The complex object of heart rate data. If data is not available for any of the sub-objects then Neura returns 0. **why is this `items` and all other data objects use `data`?**
   - `items` > `value`: The heart rate variable measure. **clarify this**
@@ -352,6 +349,27 @@ Content-Type: application/json
    }
 ```
  
+
+------------
+
+#Things for Mikimer & Berman to discuss on this page
+
+**Neura will use the term 'data objects' instead of 'services' to benchmark with Automatic. Neura will use the term 'event subscription' to benchmark with Fitbit. [background research here](https://github.com/mikimer/apricot/blob/master/GitHub%20notes.md)**
+
+**What will it take to change the names of the API calls to be more meaningful?  Mike's suggestions:**
+  - `wellness_day` instead of `daily_summary` since it provides wellness information for a single day
+  - `wellness_period` instead of `activity` since it provides wellness information for a period of time
+  - `sleep_period` instead of `sleep` since it provides sleep information for a period of time
+  - `hrv_period` instead of `hrv` since it provides heart rate variable info for a period of time.
+  - `daily_summary` > `details` instead of `data` since "`data`" is so broad it isn't meaningful.
+  - `daily_summary` > `data` > `activityOutside` instead of `minutesWalk` since (1) we don't embed units in any other object names, (2) it's walking, running, or any other kind of exercise, and (3) it's not clear that this excludes walking indoors.
+  - `activity` > `data` > `averageSteps` instead of `steps` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `steps`
+  - `activity` > `data` > `averageCalories` instead of `calories` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `calories`
+  - `exercise` instead of `workout` since non-native english speakers have trouble with phrasal verbs and to clearly distinguish between *work* and *working out*
+  - `data` > `activityPlaces` > `location` instead of `type` since it's specifically a type of *location*
+  - Can we make `daily_summary` and `activity` parallel to `sleep`? `Sleep` can do either a single day or a period, but we differentiate between `daily_summary` and `activity`. Can we simplify?
+  - 
+
 
 
 
