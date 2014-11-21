@@ -306,7 +306,8 @@ Content-Type: application/json
 
 ## GET /users/profile/hrv 
 
-`hrv` is... **DESCRIPTION OF THE CALL**
+`hrv` is a data object containing a user’s heart rate information either on a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive. This service is only available for users that have integrated Neurosky with Neura and requires a **Bearer** authorization token.
+
 
 ### Resource URI
 
@@ -315,10 +316,14 @@ Content-Type: application/json
 ### Request query parameters
 
 #### Required request parameters
-- `required_parameter`:  description
+Use the single `date` for a data on a single day or the `start_date` and `end_date` parameters for a period.  If you include all 3 parameters Neura will return an `error`. **have neura return `error`. currently we return `success` and an empty data object**
+- `date`: The day for which you want information in YYYY-MM-DD format.
+OR
+- `start_date`: The first day for which you want information in YYYY-MM-DD format.
+- `end_date`: The last day for which you want information in YYYY-MM-DD format.
 
 #### Optional request parameters
-- `optional_parameter`: description
+None.
 
 ### Request headers
 
@@ -332,7 +337,12 @@ Content-Type: application/json
 
 ## Response for `hrv` 
 
-parameters returned & descriptions
+If status is `success` Neura returns:
+
+  - `timestamp`: The time when Neura sent the response in epoch time. 
+  - `items`:  The complex object of heart rate data. If data is not available for any of the sub-objects then Neura returns 0. **why is this `items` and all other data objects use `data`?**
+  - `items` > `value`: The heart rate variable measure. **clarify this**
+  - `items` > `timestamp`: The timestamp when data was  
 
 ### Example `hrv` request
 
