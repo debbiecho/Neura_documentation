@@ -40,6 +40,8 @@ In this project you will PULL the `daily_summary` data object from Neura's API t
 ```
 **Update this response for Gilad's updated dataset**
 
+-----
+
 ##Wanna do more? 
 ###Play with the `date` in Gilad's dataset 
 The dataset is only available from July to September 2014 (from `2014-07-01` to `2014-09-30`**update for what Berman creates**). 

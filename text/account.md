@@ -8,7 +8,8 @@ Current website to sign up as a dev:
 [http://dev.neura.me/#/](http://dev.neura.me/#/)
 
 benchmark with:
-[https://github.com/TapSense/tapsense-adapters/wiki/TapSense-Platform:-Getting-Started-as-Publisher](https://github.com/TapSense/tapsense-adapters/wiki/TapSense-Platform:-Getting-Started-as-Publisher)
+
+  - https://github.com/TapSense/tapsense-adapters/wiki/TapSense-Platform:-Getting-Started-as-Publisher 
 
 **Tech considerations**
 
@@ -32,3 +33,11 @@ benchmark with:
    - **how to manage community?** 
      -  prefinery? campaign monitor? mail chimp
      -  
+
+**Terms of service** Benchmark with:
+
+  - https://jawbone.com/up/developer/terms 
+  - http://dev.fitbit.com/terms
+  - https://developer.nest.com/documentation/cloud/tos
+  - 
+  
