@@ -9,11 +9,11 @@ You can use the Neura API and SDKs to securely access user data by subscribing t
 ### Helpful documentation
  - [Quickstart: PULL a Neura data object](https://github.com/mikimer/Neura_documentation/blob/master/text/quickstartPull.md) (5-minute project)
  - [Quickstart: subscribe to a PUSH notification](https://github.com/mikimer/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project)
- - [Account creation for developers ](https://github.com/mikimer/Neura_documentation/blob/master/text/account.md)
+ - [Create a developer account](https://github.com/mikimer/Neura_documentation/blob/master/text/account.md)
  - [Neura basics](https://github.com/mikimer/Neura_documentation/blob/master/text/basics.md) 
- - [API endpoints](https://github.com/mikimer/Neura_documentation/blob/master/text/APIguide.md) 
- - [SDK for Android]()
- - [SDK for iOS]()
+ - [API endpoints](https://github.com/mikimer/Neura_documentation/blob/master/text/endpoints.md) 
+ - [SDK for Android](https://github.com/mikimer/Neura_documentation/blob/master/text/SDK_Android.md)
+ - [SDK for iOS](https://github.com/mikimer/Neura_documentation/blob/master/text/SDK_iOS.md)
  - [Current status of the Neura API](https://github.com/mikimer/Neura_documentation/blob/master/text/status.md)
 
 ###  Questions? Comments? Wanna grab a beer?
