@@ -32,7 +32,7 @@ benchmark with:
     
    - **how to manage community?** 
      -  prefinery? campaign monitor? mail chimp
-     -  
+    
 
 **Terms of service** Benchmark with:
 

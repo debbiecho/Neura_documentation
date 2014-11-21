@@ -17,6 +17,14 @@ Neura
 **Even if we don't have perfect answers, let's address upfront.**
 
 
+##Why build on Neura?
+Neura is the perfect compliment to any app, service, or internet-of-things (IoT) device that enhances user experience through the smart use of data.  A common reason developers build on Neura is that we provide what they wanted to build anyhow for both data integrations (50+ **link**) and we provide contextual knowledge, instead of raw data that first needs to be processed for meaning and insight.
+
+Other reasons to build on Neura include:
+  - Freemium pricing. Only pay when you start generating value for users.
+  - Machine learning. Yup, we've got that. Tachlis. 
+
+
 ##Privacy
 Neura puts user privacy first and we expect our community of Builders to do the same.  We've designed Neura to distill data to enrich our users' lives, not to sell ads. If  you have any concerns 
 
