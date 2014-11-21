@@ -47,7 +47,12 @@ Neura returns whether your GET request was a `success` or `error`. If the status
   - `sleep_period` instead of `sleep` since it provides sleep information for a period of time
   - `hrv_period` instead of `hrv` since it provides heart rate variable info for a period of time.
   - `daily_summary` > `details` instead of `data` since "`data`" is so broad it isn't meaningful.
-  - `daily_summary` > `data` > `ActiveOutside` instead of `minutesWalk` since (1) we don't embed units in any other object names and (2) it's not clear that walk doesn't include walking indoors.
+  - `daily_summary` > `data` > `activityOutside` instead of `minutesWalk` since (1) we don't embed units in any other object names, (2) it's walking, running, or any other kind of exercise, and (3) it's not clear that this excludes walking indoors.
+  - `activity` > `data` > `averageSteps` instead of `steps` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `steps`
+  - `activity` > `data` > `averageCalories` instead of `calories` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `calories`
+  - `exercise` instead of `workout` since non-native english speakers have trouble with phrasal verbs and to clearly distinguish between *work* and *working out*
+  - `data` > `activityPlaces` > `location` instead of `type` since it's specifically a type of *location*
+  - 
 
 
 ###Neura **events** available for a PUSH subscription
@@ -172,8 +177,18 @@ Content-Type: application/json
 
 ## Response for `activity` 
 
-parameters returned & descriptions
+If status is `success` Neura returns:
 
+  - `timestamp`: The time when Neura sent the response in epoch time. 
+  - `data`:  The complex object of response data. If data is not available for any of the sub-objects then Neura returns 0.
+  - `data` > `steps`: Neura returns the average daily steps during the period.
+  - `data` > `calories`: Neura returns the average calories burned during the period.   
+  - `data` > `activityPlaces`: The complex object of places and the activities that the user does at those locations. 
+  - `data` > `activityPlaces` > `type`: The type of location either `work` or `workout`.   **In the Word doc it looks like there's a different response for `work` vs. `workout`. Is that true? If so, update text below**
+  - `data` > `activityPlaces` > `type` > `steps`: The average steps at the location. 
+  - `data` > `activityPlaces` > `type` > `calories`: The average calories at the location. 
+  - `data` > `activityPlaces` > `type` > `length`: The average time spent at the location in minutes. 
+  - **the word doc lists `numOfTimesInDay` but that doesn't show up in Postman. Do we still include it? how does it work exactly?**
 
 ### Example `activity` request
 
