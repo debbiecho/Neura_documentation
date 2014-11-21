@@ -52,8 +52,8 @@ Neura returns whether your GET request was a `success` or `error`. If the status
   - `activity` > `data` > `averageCalories` instead of `calories` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `calories`
   - `exercise` instead of `workout` since non-native english speakers have trouble with phrasal verbs and to clearly distinguish between *work* and *working out*
   - `data` > `activityPlaces` > `location` instead of `type` since it's specifically a type of *location*
+  - Can we make `daily_summary` and `activity` parallel to `sleep`? `Sleep` can do either a single day or a period, but we differentiate between `daily_summary` and `activity`. Can we simplify?
   - 
-
 
 ###Neura **events** available for a PUSH subscription
   - `userIsWalking`: user is walking
@@ -75,7 +75,7 @@ Neura returns whether your GET request was a `success` or `error`. If the status
 ### Request query parameters
 
 #### Required  request parameters
-- `date`  The day for which you want information in YYYY-MM-DD format
+- `date`  The day for which you want information in YYYY-MM-DD format.
 
 #### Optional request parameters
 - `source` The single partner device for which you want information. If you don't specify `source` then Neura returns data aggregated from all the user's devices.  As of October 2014, `source` is only available for Neurosky; use the format: `source=neurosky`. 
@@ -95,7 +95,7 @@ Neura returns whether your GET request was a `success` or `error`. If the status
 If status is `success` Neura returns:
 
   - `timestamp`: The time when Neura sent the response in epoch time. 
-  - `data`:  The complex object of response data. If data is not available for any of the sub-objects then Neura returns 0.
+  - `data`:  The complex object of wellness data. If data is not available for any of the sub-objects then Neura returns 0.
   - `data` > `date` Neura echoes the `date` in your Request parameter in the in the format YYYY-MM-DD.   
   - `data` > `minutesWalk`: The number of minutes that the user was continuously active either running or walking while outside their home. 
   - `data` > `steps` The number of steps the user walked on `date`.  If the user has multiple step-counting devices then Neura the merges datasets to best reflect total steps walked without double counting.
@@ -163,7 +163,7 @@ Content-Type: application/json
 - `end_date`  The last day for which you want information in YYYY-MM-DD format.
 
 #### Optional request parameters
-[none]
+None.
 
 ### Request headers
 
@@ -180,7 +180,7 @@ Content-Type: application/json
 If status is `success` Neura returns:
 
   - `timestamp`: The time when Neura sent the response in epoch time. 
-  - `data`:  The complex object of response data. If data is not available for any of the sub-objects then Neura returns 0.
+  - `data`:  The complex object of wellness data. If data is not available for any of the sub-objects then Neura returns 0.
   - `data` > `steps`: Neura returns the average daily steps during the period.
   - `data` > `calories`: Neura returns the average calories burned during the period.   
   - `data` > `activityPlaces`: The complex object of places and the activities that the user does at those locations. 
@@ -231,7 +231,7 @@ Content-Type: application/json
 
 ## GET /users/profile/sleep 
 
-`sleep` is... **DESCRIPTION OF THE CALL**
+`sleep` is a data object containing a user’s sleep information either for a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive. Requires a **Bearer** authorization token.
 
 ### Resource URI
 
@@ -240,10 +240,14 @@ Content-Type: application/json
 ### Request query parameters
 
 #### Required request parameters
-- `required_parameter`:  description
+Use the single `date` for a data on a single day or the `start_date` and `end_date` parameters for a period.  If you include all 3 parameters Neura will return an `error`. **have neura return `error`. currently we return `success` and an empty data object**
+- `date`: The day for which you want information in YYYY-MM-DD format.
+OR
+- `start_date`: The first day for which you want information in YYYY-MM-DD format.
+- `end_date`: The last day for which you want information in YYYY-MM-DD format.
 
 #### Optional request parameters
-- `optional_parameter`: description
+None.
 
 ### Request headers
 
@@ -256,14 +260,20 @@ Content-Type: application/json
 - `Cache-Control`: Specifies if the server should circumvent the server cache
 
 ## Response for `sleep` 
+If status is `success` Neura returns:
 
-parameters returned & descriptions
+  - `timestamp`: The time when Neura sent the response in epoch time. 
+  - `data`:  The complex object of sleep data. If data is not available for any of the sub-objects then Neura returns 0.
+  - `data` > `length`: The average duration of time sleeping in minutes during the period. 
+  - `data` > `deepSleep`:  The average duration of deep sleep in minutes during the period. **how are we defining deep sleep? benchmark w/ fitbit, jawbone**
+  - `data` > `lightSleep`: The average duration of light sleep in minutes during the period. **what does it mean when this is 0 as in the example below?**
+  - `data` > `efficiency`: The average sleep efficiency during the period. **what does sleep efficiency mean to Neura? how are we measuring/defining it?**
 
 
 ### Example `sleep` request
 
 ```http
-GET https://wapi.theneura.com/v1/users/profile/call
+GET https://wapi.theneura.com/v1/users/profile/sleep
 Authorization: Bearer asdf1234**************************
 Cache-Control: no-cache
 ```
