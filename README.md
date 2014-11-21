@@ -10,10 +10,10 @@ You can use the Neura API to securely access user data by subscribing to PUSH ev
 The API is currently in alpha, so we appreciate your patience as we continue to improve it.  We will do our best to give you at least 10-days notice before releasing breaking changes and to constantly communicate the [status of the API](). 
 
 ### Helpful documentation
- - [Quickstart: PULL a Neura data object](https://github.com/mikimer/Neura_documentation/blob/master/quickstartPull.md) (5-minute project)
- - [Quickstart: subscribe to a PUSH notification](https://github.com/mikimer/Neura_documentation/blob/master/quickstartPush.md) (??-minute project)
- - [Account creation for developers ](https://github.com/mikimer/Neura_documentation/blob/master/account.md)
- - [The Neura API in detail](https://github.com/mikimer/Neura_documentation/blob/master/APIguide.md) 
+ - [Quickstart: PULL a Neura data object](https://github.com/mikimer/Neura_documentation/blob/master/text/quickstartPull.md) (5-minute project)
+ - [Quickstart: subscribe to a PUSH notification](https://github.com/mikimer/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project)
+ - [Account creation for developers ](https://github.com/mikimer/Neura_documentation/blob/master/text/account.md)
+ - [The Neura API in detail](https://github.com/mikimer/Neura_documentation/blob/master/text/APIguide.md) 
  - The Neura SDK for Android
  - The Neura SDK for iOS
  - Permissions (move from http://dev.neura.me/#/docs)
