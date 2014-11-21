@@ -48,7 +48,7 @@ The dataset is only available from July to September 2014 (from `2014-07-01` to 
 You can examine your data by getting your unique **Authorization Key** from Neura for the `daily_summary` call.  As of November 2014, this is only available for Android.
 
   1. [Download Neura's Android app](https://play.google.com/store/apps/details?id=com.neura.weave&hl=en). 
-  2. Download Neura's 
+  2. Download Neura's [3rd party demo app]()
   3. ...
   4. Have fun playing around with your data. We hope it gives you a small taste of the power of Neura and motivates you to integrate your apps and IoT devices with Neura.
 
