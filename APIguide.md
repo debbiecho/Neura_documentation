@@ -2,8 +2,10 @@
 
 ## Neura conventions
 **How do dates work? Timezones? Flight/travel?**
+   **feedback from Eric @ Zenobase: what timezone? when does date start and end? how do we align different datasets?**
 **What is the expected latency on push events?** 
 **Even if we don't have perfect answers, let's address upfront.**
+
 
 ###Privacy
 HTTPS is required for all Neura APIs because private user information will be transmitted. Users trust your application with this info and Neura expects you respect this trust. We require that your application not retransmit insecurely, retain indefinitely or share with 3rd parties any data sent via the Neura API. 
@@ -39,11 +41,18 @@ Neura returns whether your GET request was a `success` or `error`. If the status
 
 **Neura will use the term 'data objects' instead of 'services' to benchmark with Automatic. Neura will use the term 'event subscription' to benchmark with Fitbit. [background research here](https://github.com/mikimer/apricot/blob/master/GitHub%20notes.md)**
 
-**Berman, what's the difference between `daily_summary` and `activity`? It seems like it's just that `activity` is for multiple days.**
+**What will it take to change the names of the API calls to be more meaningful?  Mike's suggestions:**
+  - `wellness_day` instead of `daily_summary` since it provides wellness information for a single day
+  - `wellness_period` instead of `activity` since it provides wellness information for a period of time
+  - `sleep_period` instead of `sleep` since it provides sleep information for a period of time
+  - `hrv_period` instead of `hrv` since it provides heart rate variable info for a period of time.
+  - `daily_summary` > `details` instead of `data` since "`data`" is so broad it isn't meaningful.
+  - `daily_summary` > `data` > `ActiveOutside` instead of `minutesWalk` since (1) we don't embed units in any other object names and (2) it's not clear that walk doesn't include walking indoors.
+
 
 ###Neura **events** available for a PUSH subscription
   - `userIsWalking`: user is walking
-  - `phoneShaking`: user is shaking their phone **Ori to decide test case per product discussion on Nov 18th**  
+  - `phoneShaking`: user is shaking their phone **Does userIsIdle / userIsNotIdle work for this? If not, Ori to decide test case per product discussion on Nov 18th**  
 
 
 
@@ -52,7 +61,7 @@ Neura returns whether your GET request was a `success` or `error`. If the status
 
 ## GET /users/profile/daily_summary
 
-Get's a user’s wellness information for a single day. Requires a **Bearer** authorization token.
+`daily_summary` is a data object containing a user’s wellness information for a single day. Requires a **Bearer** authorization token.
 
 ### Resource URI
 
@@ -62,10 +71,9 @@ Get's a user’s wellness information for a single day. Requires a **Bearer** au
 
 #### Required  request parameters
 - `date`  The day for which you want information in YYYY-MM-DD format
-**feedback from Eric @ Zenobase: what timezone? when does date start and end? how do we align different datasets?**
 
 #### Optional request parameters
-- `source` The single partner device for which you want information. If you don't specify `source` the Neura returns data aggregated from all the user's devices.  As of October 2014, `source` is only available for Neurosky; use the format: `source = neurosky`. 
+- `source` The single partner device for which you want information. If you don't specify `source` then Neura returns data aggregated from all the user's devices.  As of October 2014, `source` is only available for Neurosky; use the format: `source=neurosky`. 
 
 ### Request headers
 
@@ -84,9 +92,8 @@ If status is `success` Neura returns:
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `data`:  The complex object of response data. If data is not available for any of the sub-objects then Neura returns 0.
   - `data` > `date` Neura echoes the `date` in your Request parameter in the in the format YYYY-MM-DD.   
-**feedback from Eric @ Zenobase: what timezone? when does date start and end? how do we align different datasets?**
-  - `data` > `minutesWalk`: The number of minutes that the user was continuously active either running or walking while outside their home. **this is confusing. let's clarify or hold off releasing it. questions: what if they have a treadmill/bike? rename from 'Walk' to 'Active'?**
-  - `data` > `steps` The number of steps the user walked on `date`.  If the user has multiple step-counting devices then Neura the merges data to best reflect total steps walked without double counting.
+  - `data` > `minutesWalk`: The number of minutes that the user was continuously active either running or walking while outside their home. 
+  - `data` > `steps` The number of steps the user walked on `date`.  If the user has multiple step-counting devices then Neura the merges datasets to best reflect total steps walked without double counting.
   - `data` > `calories` The amount of calories the user burned on `date` in kilocalories (kcal).
    - `data` > `heartRate` The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with Neurosky. 
   - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). **is this if the user measured their weight that day? how does this work exactly?**
@@ -138,7 +145,7 @@ Content-Type: application/json
 
 ## GET /users/profile/activity 
 
-`Activity` is... **description**
+`Activity` a data object containing a user’s wellness information during a period of time beginning on `start_date` and ending on `end_date`, inclusive. Requires a **Bearer** authorization token.
 
 ### Resource URI
 
@@ -147,10 +154,11 @@ Content-Type: application/json
 ### Request query parameters
 
 #### Required request parameters
-- `required_parameter`:  description
+- `start_date`  The first day for which you want information in YYYY-MM-DD format.
+- `end_date`  The last day for which you want information in YYYY-MM-DD format.
 
 #### Optional request parameters
-- `optional_parameter`: description
+[none]
 
 ### Request headers
 
@@ -256,7 +264,15 @@ Content-Type: application/json
 #### Body
 ```json
 {
-   }
+"status": "success",
+"timestamp": 1416526654,
+"data": {
+  "length": 5,
+  "deepSleep": 62.3125,
+  "lightSleep": 0,
+  "efficiency": 47.28778345315291
+  }
+}
 ```
  
 
@@ -312,6 +328,7 @@ Content-Type: application/json
 #### Body
 ```json
 {
+
    }
 ```
  
