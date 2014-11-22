@@ -1,6 +1,5 @@
 # Neura API Endpoints
-
-The Neura API is read-only, requires HTTPS, and returns responses in JSON.  
+In this document Neura details API endpoints that you can use to subscribe to PUSH notifications for events and to issue PULL requests for data objects. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  
 
 ## Permissions
  - Permissions (move from http://dev.neura.me/#/docs)

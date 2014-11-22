@@ -1,4 +1,4 @@
-#An introduction to Neura
+#An introduction to Neura for developers
 
 ##Neura distills context. 
 ####Neura distills raw data from a user's smartphone and internet-of-things (IoT) devices into contextual knowledge so that you can enhance their life.
@@ -6,9 +6,21 @@
 ##The API is in private alpha
 The API is currently available only to select developers while it is in alpha.  If you'd like to apply for access, contact us at build [at] theneura [dot] com; please be sure to include information on your technical skills and use cases you'd like to address.  
 
-Particularly because the API is in alpha, we appreciate your patience as we continue to improve it.  We will do our best to give you at least 10-days notice before releasing breaking changes and to constantly communicate the [status of the API](). 
+Particularly because the API is in alpha, we appreciate your patience as we continue to improve it.  We will do our best to give you at least 10-days notice before releasing breaking changes and to constantly communicate the [status of the API](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/status.md). 
 
-## Neura conventions
+
+##Neura's nomenclature
+
+**Users** are individuals with the Neura app and third party apps that build on Neura. Users are also known as consumers.
+**Integrations** are apps, devices and/or services that send input data to Neura, such as Fitbit, Jawbone, Nest, and Withings.  Here is our [current list of integrations](); we're always adding more.
+
+**Developers** are third-party software developers that build apps, devices and/or services that consume output data from Neura. Developers are also known as partners.  Since Neura has a freemium business model, some developers are also customers.
+**Events** are changes in the status of a user that Neura delivers as a callback.  Developers need user permission to subscribe to events. Here are details on [subscribing to PUSH notifications for events]().
+
+**Data objects** contain user information, such as wellness, activity or sleep information, during a period of time in JSON format.  Developers need user permission to receive data objects.  Here are details on [sending PULL requests for data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/endpoints.md).
+
+
+## Neura's conventions
 Neura
 
 **How do dates work? Timezones? Flight/travel?**
