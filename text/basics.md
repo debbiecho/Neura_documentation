@@ -20,7 +20,7 @@ Particularly because the API is in alpha, we appreciate your patience as we cont
 **Data objects** contain user information, such as wellness, activity or sleep information, during a period of time in JSON format.  Developers need user permission to receive data objects.  Here are details on [sending PULL requests for data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/endpoints.md).
 
 ## Neura's conventions
-Neura distills contextual knowledge from raw data in users' smartphone sensors, apps, devices so that you can enhance your apps.  To do this, your users will need to install the Neura app, create an account with Neura, and onboard**(wordchoice?)** any apps and IoT devices they own into Neura.  Neura performs well for users with only a smartphone;   the more apps and devices a user onboards, the better Neura performs.  
+Neura distills contextual knowledge from raw data in users' smartphone sensors, apps, devices so that you can enhance your apps.  To do this, your users will need to install the Neura app, create an account with Neura, and onboard**(wordchoice?)** any apps and IoT devices they own into Neura.  Neura performs well for users with only a smartphone;   the more apps and devices a user onboards, the better Neura performs.  Finally, you need to secure user permission for event subscriptions and data object requests.
 
 Neura is available for users with smartphones running on Android or iOS.  The Neura app has been optimized for the following model phones:
 
