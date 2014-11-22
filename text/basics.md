@@ -11,7 +11,7 @@ Particularly because the API is in alpha, we appreciate your patience as we cont
 
 ##Neura's nomenclature
 
-**Users** are individuals with the Neura app and third party apps that build on Neura. Users are also known as consumers.
+**Users** are individuals with the Neura app and third party apps that build with Neura. Users are also known as consumers.
 **Integrations** are apps, devices and/or services that send input data to Neura, such as Fitbit, Jawbone, Nest, and Withings.  Here is our [current list of integrations](); we're always adding more.
 
 **Developers** are third-party software developers that build apps, devices and/or services that consume output data from Neura. Developers are also known as partners.  Since Neura has a freemium business model, some developers are also customers.
@@ -19,18 +19,22 @@ Particularly because the API is in alpha, we appreciate your patience as we cont
 
 **Data objects** contain user information, such as wellness, activity or sleep information, during a period of time in JSON format.  Developers need user permission to receive data objects.  Here are details on [sending PULL requests for data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/endpoints.md).
 
-
 ## Neura's conventions
-Neura
+Neura distills contextual knowledge from raw data in users' smartphone sensors, apps, devices so that you can enhance your apps.  To do this, your users will need to install the Neura app, create an account with Neura, and onboard**(wordchoice?)** any apps and IoT devices they own into Neura.  Neura performs well for users with only a smartphone;   the more apps and devices a user onboards, the better Neura performs.  
 
+Neura is available for users with smartphones running on Android or iOS.  The Neura app has been optimized for the following model phones:
+
+  **Android**: Galaxy S3, Galaxy S4, Nexus 4, Nexus 5, LG G2.  **iOS**: 7.0 running on iPhone 4, iPhone 4S, iPhone 5, iPhone 5C, iPhone 5S.
+
+**How have we dealt with iPhone 6?**
 **How do dates work? Timezones? Flight/travel?**
    **feedback from Eric @ Zenobase: what timezone? when does date start and end? how do we align different datasets?**
 **What is the expected latency on push events?** 
 **Even if we don't have perfect answers, let's address upfront.**
 
 
-##Why build on Neura?
-Neura is the perfect compliment to any app, service, or internet-of-things (IoT) device that enhances user experience through the smart use of data.  A common reason developers build on Neura is that we provide what they wanted to build anyhow for both data integrations (50+ **link**) and we provide contextual knowledge, instead of raw data that first needs to be processed for meaning and insight.
+##Why build with Neura?
+Neura is the perfect compliment to any app, service, or internet-of-things (IoT) device that enhances user experience through the smart use of data.  A common reason developers build with Neura is that we provide what they wanted to build anyhow for both data integrations (50+ **link**) and we provide contextual knowledge, instead of raw data that first needs to be processed for meaning and insight.
 
 Other reasons to build on Neura include:
   - Freemium pricing. Only pay when you start generating value for users.
@@ -40,7 +44,8 @@ Other reasons to build on Neura include:
 ##Privacy
 Neura puts user privacy first and we expect our community of Builders to do the same.  We've designed Neura to distill data to enrich our users' lives, not to sell ads. If  you have any concerns 
 
-HTTPS is required for all Neura APIs because private user information will be transmitted. Users trust your application with this info and Neura expects you respect this trust. We require that your application not retransmit insecurely, retain indefinitely or share with 3rd parties any data sent via the Neura API. 
+HTTPS is required for all Neura APIs because private user information will be transmitted. Users trust your application with this info and Neura expects you respect this trust. We require that your application not retransmit insecurely, retain indefinitely or share with third parties any data sent via the Neura API. 
+
 
 ### Authentication
 
@@ -53,3 +58,10 @@ Authorization: Bearer asdf1234*****************
 ```
 
 **We need to explain how to get the auth token**
+
+
+-------
+
+#Mikimer & Eroc to chat about
+Eric, can you build out our privacy policy? I benchmarked **Privacy** with Jawbone, Fitbit & Nest.  They raise a good point that once Neura transmits data, we need to limit how it can be used by developers.  How do we protect users?  *probably good to talk w/ triinu about this: what was RSA's approach?*
+
