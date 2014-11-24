@@ -5,7 +5,7 @@ We're delighted that you want to build with the Neura API so we've tried to make
 Eroc will lead this charge - agreed
 
 Current website to sign up as a dev:
-[http://dev.neura.me/#/](http://dev.neura.me/#/)
+http://dev.neura.me 
 
 benchmark with:
 
@@ -13,6 +13,7 @@ benchmark with:
 
 **Tech considerations**
 
+Developers provide Neura with:
   - Need to have
     - email
     - password
@@ -20,7 +21,8 @@ benchmark with:
     - Platform: Android, iOS, web
   - Nice to have
     - What language do they code in? PHP, ruby, JavaScript
- 
+
+Neuar provides developers with:`app_id` Client ID of the oauth process`app_secret`: Application secret, client secret of oauth process **MIke to pull this from the google doc w/ berman -- we went over this a bit already**
 
 **Biz considerations**
 
