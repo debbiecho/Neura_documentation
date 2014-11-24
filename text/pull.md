@@ -1,5 +1,5 @@
-# Neura API Endpoints
-In this document Neura details API endpoints that you can use to subscribe to PUSH notifications for events and to issue PULL requests for data objects. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  
+# Neura API Endpoints for PULL data objects
+In this document Neura details API endpoints that you can use to issue PULL requests for data objects. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  
 
 ## Permissions
  - Permissions (move from http://dev.neura.me/#/docs)
@@ -39,12 +39,6 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
   - `activity`: Wellness Activity Profile -  
   - `sleep`: Sleep Profile - 
   - `hrv`: Heart Rate Variable (for Neurosky only) 
-
-
-###Neura **events** available for a PUSH subscription
-  - `userIsWalking`: user is walking
-  - `phoneShaking`: user is shaking their phone **Does userIsIdle / userIsNotIdle work for this? If not, Ori to decide test case per product discussion on Nov 18th**  
-
 
 
 ---------
