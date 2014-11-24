@@ -1,5 +1,5 @@
 # Neura API Endpoints for PUSH event subscriptions
-In this document Neura details API endpoints that you can use to subscribe to PUSH notifications for events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON  **Is this true for PUSH events?**.  
+In this document Neura details API endpoints that you can use to subscribe to PUSH notifications for events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  **Is JSON true for PUSH events?**.   You must be [authenticated and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive PUSH notifications. 
 
 
 `POST https://wapi.theneura.com/v1/subscriptions`
@@ -39,13 +39,9 @@ DESCRIPTION OF THE CALL
 - `Cache-Control`: Specifies if the server should circumvent the server cache
 
 
-
-
-
-
 ## Neura notification for event subscription
 
-- `notificationTimestamp`:  The time when Neura sent the response in epoch time. **Mike changed from Unix GTM time**- `state`: State that customer has set previously in the subscription. **clarify with Berman**    - `identifier`: Customer’s subscription id that was set in the event subscription **do we really use two different names for the same thing? why?**- `event`: The complex object of event data       -  `timestamp`: Timestamp of the event in Unix time (GTM time) **can we change this to be parallel to PULL requests? Let's be consistent wherever possible**       -  `userId`: Unique user id that had event occurred       -  `eventName`: Event name that is also used for subscribing to the service       -  `metadata`: Metadata that is defined event specific. Look at service codes and their metadata list below
+- `notificationTimestamp`:  The time when Neura sent the response in epoch time. **Mike changed from Unix GTM time**- `state`: State that customer has set previously in the subscription. **clarify with Berman**    - `identifier`: Customer’s subscription id that was set in the event subscription **do we really use two different names for the same thing? why?**- `event`: The complex object of event data       -  `timestamp`: Timestamp of the event in Unix time (GTM time) **can we change this to be parallel to PULL requests? Let's be consistent wherever possible**       -  `userId`: Unique user id that had event occurred **clarify with Berman**       -  `eventName`: The name of the event you subscribed to.       -  `[metadata]`: Metadata is unique to each event, as detailed in event descriptions.
 
 
 ### Example `call` request

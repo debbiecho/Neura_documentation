@@ -1,9 +1,5 @@
 # Neura API Endpoints for PULL data objects
-In this document Neura details API endpoints that you can use to issue PULL requests for data objects. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  
-
-## Permissions
- - Permissions (move from http://dev.neura.me/#/docs)
-**How do Neura permissions work? Does this belong here or in Authentication?** 
+In this document Neura details API endpoints that you can use to issue PULL requests for data objects. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must be [authenticated and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive responses to PULL requests. 
 
 ## API root endpoint
 
