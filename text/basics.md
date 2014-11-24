@@ -47,20 +47,6 @@ Neura puts user privacy first and we expect developers to do the same.  We've de
 
 HTTPS is required for all Neura APIs because private user information will be transmitted. Users trust your application with this info and Neura expects you respect this trust. We require that your application not retransmit insecurely, retain indefinitely or share with third parties any data sent via the Neura API. 
 
-
-### Authentication
-
-You can query the Neura API to pull information about a user. All requests for user data must include an **authorization header** containing the user's access token:
-
-**Example**
-
-```
-Authorization: Bearer asdf1234*****************
-```
-
-**We need to explain how to get the auth token**
-
-
 -------
 
 #Mikimer & Eroc to chat about

@@ -33,6 +33,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 }
 ```
 
+
 ###Neura **data objects** available for a PULL request
   - `daily_summary`: a summary of the user's activity
   - `activity`: Wellness Activity Profile -  
@@ -348,6 +349,18 @@ Content-Type: application/json
    }
 ```
  
+
+
+
+
+-----
+
+
+
+
+
+
+
 
 ------------
 
