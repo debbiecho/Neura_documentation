@@ -23,7 +23,8 @@ Reach out to us at build [at] theneura [dot] com.  We're serious about the :beer
 
 ----------------
 
-#Internal Neura notes - delete this before public release
+#Internal Neura notes 
+###delete this before public release
 Mikimer has moved the API and SDK docs from Word to Github to (1) make it easier to collaborate, (2) improve formatting and readability, and (3) to create an MVP that's ready for public release.
 
 The source documents were:  
