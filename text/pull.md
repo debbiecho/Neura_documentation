@@ -359,16 +359,17 @@ Content-Type: application/json
 **Neura will use the term 'data objects' instead of 'services' to benchmark with Automatic. Neura will use the term 'event subscription' to benchmark with Fitbit. [background research here](https://github.com/mikimer/apricot/blob/master/GitHub%20notes.md)**
 
 **What will it take to change the names of the API calls to be more meaningful?  Mike's suggestions:**
-  - `wellness_day` instead of `daily_summary` since it provides wellness information for a single day
-  - `wellness_period` instead of `activity` since it provides wellness information for a period of time
-  - `sleep_period` instead of `sleep` since it provides sleep information for a period of time
-  - `hrv_period` instead of `hrv` since it provides heart rate variable info for a period of time.
-  - `daily_summary` > `details` instead of `data` since "`data`" is so broad it isn't meaningful.
-  - `daily_summary` > `data` > `activityOutside` instead of `minutesWalk` since (1) we don't embed units in any other object names, (2) it's walking, running, or any other kind of exercise, and (3) it's not clear that this excludes walking indoors.
-  - `activity` > `data` > `averageSteps` instead of `steps` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `steps`
-  - `activity` > `data` > `averageCalories` instead of `calories` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `calories`
+
+  - `wellness_day` instead of `daily_summary` since it provides wellness information for a single day  
+  - `wellness_period` instead of `activity` since it provides wellness information for a period of time  
+  - `sleep_period` instead of `sleep` since it provides sleep information for a period of time  
+  - `hrv_period` instead of `hrv` since it provides heart rate variable info for a period of time.  
+  - `daily_summary` > `details` instead of `data` since "`data`" is so broad it isn't meaningful.  
+  - `daily_summary` > `data` > `activityOutside` instead of `minutesWalk` since (1) we don't embed units in any other object names, (2) it's walking, running, or any other kind of exercise, and (3) it's not clear that this excludes walking indoors.  
+  - `activity` > `data` > `averageSteps` instead of `steps` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `steps`  
+  - `activity` > `data` > `averageCalories` instead of `calories` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `calories`  
   - `exercise` instead of `workout` since non-native english speakers have trouble with phrasal verbs and to clearly distinguish between *work* and *working out*
-  - `data` > `activityPlaces` > `location` instead of `type` since it's specifically a type of *location*
+  - `data` > `activityPlaces` > `location` instead of `type` since it's specifically a type of *location*  
   - Can we make `daily_summary` and `activity` parallel to `sleep`? `Sleep` can do either a single day or a period, but we differentiate between `daily_summary` and `activity`. Can we simplify?
   - 
 

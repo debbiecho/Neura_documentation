@@ -7,8 +7,7 @@ Eroc will lead this charge - agreed
 Current website to sign up as a dev:
 http://dev.neura.me 
 
-benchmark with:
-
+benchmark with:  
   - https://github.com/TapSense/tapsense-adapters/wiki/TapSense-Platform:-Getting-Started-as-Publisher 
 
 **Tech considerations**

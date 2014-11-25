@@ -10,7 +10,6 @@ Particularly because the API is in alpha, we appreciate your patience as we cont
 
 
 ##Neura's nomenclature
-
 **Users** are individuals with the Neura app and/or third party apps that build with Neura. Users are also known as consumers.  Neura is free for users.
 **Integrations** are apps, devices and/or services that send input data to Neura, such as Fitbit, Jawbone, Nest, and Withings.  Here is our [current list of integrations]()**link**; we're always adding more.  Neura is free for integrations.
 

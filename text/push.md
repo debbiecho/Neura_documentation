@@ -36,7 +36,6 @@ In this document Neura details API endpoints that you can use to subscribe to PU
 
 
 ## Neura notification for event subscription
-
 - `notificationTimestamp`:  The time when Neura sent the response in epoch time. **Mike changed from Unix GTM time**- `state`: State that customer has set previously in the subscription. **clarify with Berman**    - `identifier`: Customer’s subscription id that was set in the event subscription **do we really use two different names for the same thing? why?**- `event`: The complex object of event data       -  `timestamp`: Timestamp of the event in Unix time (GTM time) **can we change this to be parallel to PULL requests? Let's be consistent wherever possible**       -  `userId`: Unique user id that had event occurred **clarify with Berman**       -  `eventName`: The name of the event you subscribed to.       -  `[metadata]`: Metadata is unique to each event, as detailed in event descriptions.
 
 
