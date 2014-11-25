@@ -12,9 +12,9 @@ You can add the Neura SDK for Android to your app to that your app can request P
 
 Your application can identify the Neura callbacks by using the `requestCode` that was provided in the method `NeuraAuthUtil.authenticate`.  If authentication is successful then Neura returns an access token, `NeuraAuthUtil.extractToken`. The access token is permanent and can be used for subscribing to PUSH event notifications or to issue a PULL request for a data object.  If authentication fails, then Neura returns an error code.
 
-###Class and method descriptions for authentication`Boolean NeuraAuthUtil.authenticate(Context context, int requestCode, AuthenticationRequest authenticationRequest);` `Context`: Context of Activity, which must be Activity Context.`requestCode`: request code to identify
-`onActivityResult()` callback for Neura authentication.
-`authenticationRequest`: AuthenticationRequest instance.####Example `NeuraAuthUtil.authenticate` call
+###Class and method descriptions for authentication`Boolean NeuraAuthUtil.authenticate(Context context, int requestCode, AuthenticationRequest authenticationRequest);` `Context`: Context of Activity, which must be Activity Context.  `requestCode`: request code to identify  
+`onActivityResult()` callback for Neura authentication.  
+`authenticationRequest`: AuthenticationRequest instance.  ####Example `NeuraAuthUtil.authenticate` call
  `example goes here`
  
 ####Example `NeuraAuthUtil.authenticate` response
