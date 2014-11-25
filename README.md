@@ -29,12 +29,12 @@ Mikimer has moved the API and SDK docs from Word to Github to (1) make it easier
 The source documents were:  
   - NEURA.ME API Integration Guide ver 2.docx    
   - NEURA.ME Android Integration Guide.docx  
-  - (iOS doc??!!)
+  - NEURA ME iOS Integration Guide.docx
 
 Throughout the document **I've embedded bold text with questions for whoever wrote the original text**.  I'm planning on sitting down with the tech team to get answers to these questions when I'm in Israel Nov 30th to Dec 12th 2014.  I'd LOVE IT if you forked the original documents and responded to these questions.  Eroc quickly became a master of the fork and pull request, so I'm confident the tech team can do it too, hehe ;)
 
 Conventions:  
-- states - right now where the user is / what they're doing PULL
+- states - instantaneous (1 sec?) moment where Neura returns where the user is / what they're doing PULL 
 - events - change in state PUSH
 - data objects - dataset for the user during a period of time PULL
 
