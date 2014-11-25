@@ -33,7 +33,7 @@ The source documents were:
 
 Throughout the document **I've embedded bold text with questions for whoever wrote the original text**.  I'm planning on sitting down with the tech team to get answers to these questions when I'm in Israel Nov 30th to Dec 12th 2014.  I'd LOVE IT if you forked the original documents and responded to these questions.  Eroc quickly became a master of the fork and pull request, so I'm confident the tech team can do it too, hehe ;)
 
-###delete this before public release
+###delete internal notes before public release
 
 
 
