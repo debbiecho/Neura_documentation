@@ -3,8 +3,6 @@
 
 You can add the Neura SDK for Android to your app to that your app can request PUSH event notifications and issue PULL requests for data objects.  Your users will need to install the Neura app on their phones, available in Google Play `google play link` **add link**.  Once your users have installed the Neura app, they'll need to grant you permission to access their events and data objects.
 
-#**See if Steve Edouard can make me a template again for this doc!**
-
 
 ##AuthenticationThe Neura Android SDK has the method `NeuraAuthUtil.authenticate` that handles authentication flow, which consists of two steps:
 1.	The method verifies whether the Neura app is installed on the user's phone and returns a boolean value.
