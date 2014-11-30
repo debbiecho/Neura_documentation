@@ -40,5 +40,5 @@ Neuar provides developers with:`app_id` Client ID of the oauth process`app_sec
   - https://jawbone.com/up/developer/terms 
   - http://dev.fitbit.com/terms
   - https://developer.nest.com/documentation/cloud/tos
-  - 
+  - Make sure to include data privacy. Just because Neura send a developer data (state, event, data object) can't mean that the developer owns that data indefinitely.
   

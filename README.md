@@ -1,9 +1,9 @@
 
 #Build with Neura 
-Neura provides context. We distill raw data into contextual knowledge so that developers can make better apps and internet-of-things (IoT) devices.  
+Neura provides context. We distill raw data into contextual knowledge so that developers can make **smarter** apps and internet-of-things (IoT) devices.  
 
 ###Neura is ready for you to build awesome apps
-You can use the Neura API and SDKs to securely access user data by subscribing to PUSH events or submitting a PULL request for a data object.  User privacy is critical to us, so we use OAuth2 authentication to ensure that users have approved your access to their data.
+You can use the Neura API and SDKs to securely access user data by subscribing to PUSH events or submitting a PULL request for a data object.  User privacy is critical to us, so we ensure that users have approved your access to their data with OAuth2 authentication.
 
 ### Helpful documentation
  - [Quickstart: PULL a Neura data object](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (5-minute project)

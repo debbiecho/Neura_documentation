@@ -1,5 +1,5 @@
-# Neura API Endpoints for PULL data objects
-In this document Neura details API endpoints that you can use to issue PULL requests for data objects. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must be [authenticated and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive responses to PULL requests. 
+# Neura data objects
+In this document Neura details API endpoints that you can use to issue PULL requests for data objects. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** authorization token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive responses to PULL requests. 
 
 ## API root endpoint
 
@@ -10,7 +10,7 @@ The Neura API is currently in V1 so each call starts with `https://wapi.theneura
 Neura returns a `status` indicating whether your GET request was a `success` or `error`. If the `status` is `success` then Neura returns a valid response, as detailed below. If the `status` is  `error` Neura returns: 
 
    - `status`: The status is `error`.
-   - `timestamp`:  The time when Neura sent the response in epoch time. 
+   - `timestamp`:  The time when Neura sent the response in [epoch time](http://en.wikipedia.org/wiki/Unix_time). 
    - `errors`: The complex object of error data.
    -  `errors` > `code`: A snake_case string representing the error code. 
    -  `errors` > `message`: A human-readable message describing the error.
@@ -31,10 +31,11 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 
 
 ###Neura **data objects** available for a PULL request
+The following data objects are detailed below:  
   - `daily_summary`: a summary of the user's activity
   - `activity`: Wellness Activity Profile -  
   - `sleep`: Sleep Profile - 
-  - `hrv`: Heart Rate Variable (for Neurosky only) 
+  - `hrv`: Heart Rate Variable (for [Neurosky](http://neurosky.com/) only) 
 
 
 ---------
@@ -42,7 +43,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 
 ## GET /users/profile/daily_summary
 
-`daily_summary` is a data object containing a user’s wellness information for a single day. Requires a **Bearer** authorization token.
+`daily_summary` is a data object containing a user’s wellness information for a single day. 
 
 ### Resource URI
 
@@ -371,7 +372,7 @@ Content-Type: application/json
   - `exercise` instead of `workout` since non-native english speakers have trouble with phrasal verbs and to clearly distinguish between *work* and *working out*
   - `data` > `activityPlaces` > `location` instead of `type` since it's specifically a type of *location*  
   - Can we make `daily_summary` and `activity` parallel to `sleep`? `Sleep` can do either a single day or a period, but we differentiate between `daily_summary` and `activity`. Can we simplify?
-  - 
+  - Differentiate between when a value is 0 and when there is no data. Currently, Neura returns 0 if there's no data, which isn't the same as measuring zero. Example: user left their device at home all day (0 steps) vs. user turned off their device (no data).  
 
 
 
