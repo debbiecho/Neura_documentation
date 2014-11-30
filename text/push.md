@@ -1,13 +1,13 @@
 # Neura API endpoints for PUSH event subscriptions
-In this document Neura details API endpoints that you can use to subscribe to PUSH notifications for events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  **Is JSON true for PUSH events?**.   You must be [authenticated and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive PUSH notifications. 
-
+In this document Neura details API endpoints that you can use to subscribe to PUSH notifications for events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  **Is JSON true for PUSH events?**.  You must [be authenticated, provide a **Bearer** authorization token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive PUSH notifications. 
 
 `POST https://wapi.theneura.com/v1/subscriptions`
 **Is this true? when I tested it was GET not POST**
-###Neura **events** available for a PUSH subscription
+###Neura events detailed below
   - `userIsWalking`: user is walking
   - `phoneShaking`: user is shaking their phone **Does userIsIdle / userIsNotIdle work for this? If not, Ori to decide test case per product discussion on Nov 18th**  
 
+**Mikimer & Berman to play with more events!**
 
 ## GET a subscription to an event
 
@@ -162,7 +162,15 @@ Content-Type: application/json
  
 
 ##`<events>` available for PUSH notification subscriptions 
+The events are detailed below, organized into the following categories:  
+
+- Events at home
+- Events at work
+- Events around town
+- Other events
+
 **list associated metadata**
+
 
 ###Events at home
 `userArrivedHome`

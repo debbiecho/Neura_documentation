@@ -290,7 +290,7 @@ Content-Type: application/json
 
 #### Required request parameters
 Use the single `date` for a data on a single day or the `start_date` and `end_date` parameters for a period.  If you include all 3 parameters Neura will return an `error`. **have neura return `error`. currently we return `success` and an empty data object**
-- `date`: The day for which you want information in YYYY-MM-DD format.
+- `date`: The day for which you want information in YYYY-MM-DD format.  
 OR
 - `start_date`: The first day for which you want information in YYYY-MM-DD format.
 - `end_date`: The last day for which you want information in YYYY-MM-DD format.
@@ -335,7 +335,7 @@ Content-Type: application/json
 #### Body
 ```json
 {
-
+**mikimer to get example from berman -- i couldn't get this from Postman**
    }
 ```
  
