@@ -30,8 +30,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 ```
 
 
-###Neura **data objects** available for a PULL request
-The following data objects are detailed below:  
+###Neura **data objects** detailed below
   - `daily_summary`: a summary of the user's activity
   - `activity`: Wellness Activity Profile -  
   - `sleep`: Sleep Profile - 
@@ -52,10 +51,10 @@ The following data objects are detailed below:
 ### Request query parameters
 
 #### Required  request parameters
-- `date`  The day for which you want information in YYYY-MM-DD format.
+- `date`: The day for which you want information in YYYY-MM-DD format.
 
 #### Optional request parameters
-- `source` The single partner device for which you want information. If you don't specify `source` then Neura returns data aggregated from all the user's devices.  As of October 2014, `source` is only available for Neurosky; use the format: `source=neurosky`. 
+- `source`: The single partner device for which you want information. If you don't specify `source` then Neura returns data aggregated from all the user's devices.  As of October 2014, `source` is only available for Neurosky; use the format: `source=neurosky`. 
 
 ### Request headers
 
@@ -72,11 +71,11 @@ The following data objects are detailed below:
   - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `data`:  The complex object of wellness data. If data is not available for any of the sub-objects then Neura returns 0.
-  - `data` > `date` Neura echoes the `date` in your Request parameter in the in the format YYYY-MM-DD.   
+  - `data` > `date`: Neura echoes the `date` in your Request parameter in the in the format YYYY-MM-DD.   
   - `data` > `minutesWalk`: The number of minutes that the user was continuously active either running or walking while outside their home. 
-  - `data` > `steps` The number of steps the user walked on `date`.  If the user has multiple step-counting devices then Neura the merges datasets to best reflect total steps walked without double counting.
-  - `data` > `calories` The amount of calories the user burned on `date` in kilocalories (kcal).
-   - `data` > `heartRate` The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with Neurosky. 
+  - `data` > `steps`: The number of steps the user walked on `date`.  If the user has multiple step-counting devices then Neura the merges datasets to best reflect total steps walked without double counting.
+  - `data` > `calories`: The amount of calories the user burned on `date` in kilocalories (kcal).
+   - `data` > `heartRate`: The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with Neurosky. 
   - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). **is this if the user measured their weight that day? how does this work exactly?**
 
 
@@ -126,7 +125,7 @@ Content-Type: application/json
 
 ## GET /users/profile/activity 
 
-`Activity` a data object containing a user’s wellness information during a period of time beginning on `start_date` and ending on `end_date`, inclusive. Requires a **Bearer** authorization token.
+`Activity` is a data object containing a user’s wellness information during a period of time beginning on `start_date` and ending on `end_date`, inclusive.  
 
 ### Resource URI
 
@@ -206,7 +205,7 @@ Content-Type: application/json
 
 ## GET /users/profile/sleep 
 
-`sleep` is a data object containing a user’s sleep information either for a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive. Requires a **Bearer** authorization token.
+`sleep` is a data object containing a user’s sleep information either for a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive.   
 
 ### Resource URI
 
@@ -215,8 +214,8 @@ Content-Type: application/json
 ### Request query parameters
 
 #### Required request parameters
-Use the single `date` for a data on a single day or the `start_date` and `end_date` parameters for a period.  If you include all 3 parameters Neura will return an `error`. **have neura return `error`. currently we return `success` and an empty data object**
-- `date`: The day for which you want information in YYYY-MM-DD format.
+Use the single `date` for a data on a single day or the `start_date` and `end_date` parameters for a period.  If you include all 3 parameters Neura will return an `error`.  
+- `date`: The day for which you want information in YYYY-MM-DD format.  
 OR
 - `start_date`: The first day for which you want information in YYYY-MM-DD format.
 - `end_date`: The last day for which you want information in YYYY-MM-DD format.
@@ -359,6 +358,8 @@ Content-Type: application/json
 
 **Neura will use the term 'data objects' instead of 'services' to benchmark with Automatic. Neura will use the term 'event subscription' to benchmark with Fitbit. [background research here](https://github.com/mikimer/apricot/blob/master/GitHub%20notes.md)**
 
+Let's get/create a bug filing & tracking tool. For instance, Neura always returns `success` even when there's an error. How would/should mikimer file this error?
+
 **What will it take to change the names of the API calls to be more meaningful?  Mike's suggestions:**
 
   - `wellness_day` instead of `daily_summary` since it provides wellness information for a single day  
@@ -372,7 +373,7 @@ Content-Type: application/json
   - `exercise` instead of `workout` since non-native english speakers have trouble with phrasal verbs and to clearly distinguish between *work* and *working out*
   - `data` > `activityPlaces` > `location` instead of `type` since it's specifically a type of *location*  
   - Can we make `daily_summary` and `activity` parallel to `sleep`? `Sleep` can do either a single day or a period, but we differentiate between `daily_summary` and `activity`. Can we simplify?
-  - Differentiate between when a value is 0 and when there is no data. Currently, Neura returns 0 if there's no data, which isn't the same as measuring zero. Example: user left their device at home all day (0 steps) vs. user turned off their device (no data).  
+  - For `data`, differentiate between when a value is 0 and when there is no data. Currently, Neura returns 0 if there's no data, which isn't the same as measuring zero. Example: user left their device at home all day (0 steps) vs. user turned off their device (no data).  
 
 
 
