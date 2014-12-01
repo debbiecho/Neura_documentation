@@ -46,7 +46,7 @@ In this project you will PULL the `daily_summary` data object from Neura's API t
 Gilad's data from July to September 2014 (from `2014-07-01` to `2014-09-30`**update for what Berman creates**) is available for you to play with. 
 
 ###Examine your own `daily_summary` data
-You can examine your data by getting your unique **Authorization Key**.  As of November 2014, this is only available for Android.  
+You can examine your data by getting your unique `accessToken`.  As of November 2014, this is only available for Android.  
 
   1. [Download Neura's Android app](https://play.google.com/store/apps/details?id=com.neura.weave&hl=en). 
   2. Download Neura's [3rd party demo app](https://github.com/mikimer/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk)
