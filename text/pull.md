@@ -144,7 +144,7 @@ None.
 
 #### Required request headers
 
-- `authorization`: Bearer authorization token
+- `authorization`: Bearer authorization token  **Is this the same as `accessToken`?**
 
 #### Optional request headers
 
