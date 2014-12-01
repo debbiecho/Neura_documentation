@@ -21,9 +21,11 @@ Particularly because the API is in alpha, we appreciate your patience as we cont
 
 **Events** are changes in the state of a user that Neura delivers as a callback.  Here are details on [subscribing to PUSH notifications for events]().
 
-**Data objects** contain user information, such as wellness, activity or sleep information, during a period of time in JSON format.  Here are details on [sending PULL requests for data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/endpoints.md).
+**Data objects** contain user information, such as wellness, activity or sleep information, during a period of time in JSON format.  Here are details on [sending requests for data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/endpoints.md).
 
-**Permissions** are when a user grants a developer access to their data.  Developers need permission to query a state, subscribe to events, or receive a  data object.
+**Permissions** are when a user grants an app access to their data.  Developers need permission to subscribe to events or receive a data object.
+
+**Subscriptions** are when an app is registered to receive event notifications. 
 
 
 ##Why build with Neura?
