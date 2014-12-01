@@ -47,7 +47,8 @@ Conventions:
 Big To Do's
 - Get Android sample app working. https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md#examine-your-own-daily_summary-data
 - Go through PUSH subscription & document https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md 
-
+- Go through time & timezones in Neura. Document edge cases.
+- 
 
 ###delete internal notes before public release
 
