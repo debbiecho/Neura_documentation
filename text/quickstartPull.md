@@ -1,6 +1,6 @@
 
 #Quickstart: Submit a PULL request for a data object
-In this project you will PULL the `daily_summary` data object from Neura's API to get wellness information for Gilad, our CEO.  This project should take you less than 5 minutes.
+In this project you will PULL the `daily_summary` data object from Neura's API to get wellness information for Gilad, our CEO.  This project should take you less than 5 minutes; it **does not require an account** with Neura.
 
 ##Instructions
   1.  If you don't already have a [tool to test a RESTful API](http://stackoverflow.com/questions/13965959/what-tools-can-i-use-to-test-restful-api), install [Postman for Google Chrome](http://www.getpostman.com/).
