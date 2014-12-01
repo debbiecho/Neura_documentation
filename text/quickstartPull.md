@@ -1,5 +1,5 @@
 
-#Quickstart: Request wellness information for a user 
+#Quickstart: Request wellness information
 In this project you will request the `daily_summary` data object from Neura's API to get wellness information for "Bob", a dummy user.  This project should take you less than 5 minutes; it **does not require an account** with Neura.
 
 ##Instructions
