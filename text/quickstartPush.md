@@ -1,6 +1,6 @@
 
 #Quickstart: Subscribe to event PUSH notifications 
-In this project you will subscribe to the Neura event PUSH notifications for `userIsIdle` and `userIsNotIdle` for **User XXX**.  This project is only available for Android; it will soon be available for iOS.  This project should take you less than **YY** minutes.
+In this project you will subscribe to the Neura event PUSH notifications for `userStartedWalking` and `userArrivedHome` for **User XXX**.  This project is only available for Android; it will soon be available for iOS.  This project should take you less than **YY** minutes.
 
 
 -------
