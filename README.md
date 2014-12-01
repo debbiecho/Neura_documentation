@@ -42,7 +42,7 @@ Throughout the document **I've embedded bold text with questions for whoever wro
 Conventions:  
 - states - instantaneous (1 sec?) moment where Neura returns where the user is / what they're doing PULL **Next step: Berman to chat w/ Ori about distinguishing between States & Events.  As of today, there are no 'States' available in the API -- we developed userIsWalking it's disabled until further notice.**
 - events - change in state PUSH
-- data objects - dataset for the user during a period of time PULL
+- data objects - dataset for the user during a period of time PULL. **Mike to talk w/ Gilad & Ori**
 
 ###delete internal notes before public release
 
