@@ -2,6 +2,8 @@
 
 ####Neura distills raw data from a user's smartphone and internet-of-things (IoT) devices into contextual knowledge so that your apps and devices can be smarter to better enhance the user's life.
 
+**insert sexy picture here. make the text visual.**
+
 ##The API is in private alpha
 The API is currently available only to select developers while it is in alpha.  If you'd like to apply for access, contact build [at] theneura [dot] com; please be sure to include information on your technical skills and use cases you'd like to address.  
 
@@ -10,10 +12,12 @@ Particularly because the API is in alpha, we appreciate your patience as we cont
 
 ##Neura's nomenclature
 **Users** are individuals with the Neura app and/or third party apps that build with Neura. Users are also known as consumers.  Neura is free for users.
-**Integrations** are apps, devices and/or services that send input data to Neura, such as Fitbit, Jawbone, Nest, and Withings.  Here is our [current list of integrations]()**link**; we're always adding more.  Neura is free for integrations.
 
-**Developers** are third-party software developers that build apps, devices and/or services that consume output data from Neura. Developers are also known as partners.  Since Neura has a freemium business model, some developers are also customers.
- **States** are instantaneous (1 sec?) moments where Neura returns where the user is or what the user is doing.  **mikimer & berman to discuss. how do/will states work?**
+**Integrations** are apps, devices and/or services that send input data to Neura, such as Fitbit, Jawbone, Nest, and Withings.  Here is our [current list of integrations]()**link**; we're always adding more.  Neura is free for integrations.
+
+**Developers** are third-party software developers that build apps, devices and/or services that consume output data from Neura. Developers are also known as partners.  Since Neura has a freemium business model, some developers are also paying customers.
+
+ **States** are moments where the user is doing a particular activity and/or in a particular location.  
 
 **Events** are changes in the state of a user that Neura delivers as a callback.  Here are details on [subscribing to PUSH notifications for events]().
 
@@ -37,7 +41,9 @@ Your users will need to install the Neura app, create an account with Neura, and
 
 Neura is available for users with smartphones running on Android or iOS.  The Neura app has been optimized for the following model phones:
 
-  **Android**: Galaxy S3, Galaxy S4, Nexus 4, Nexus 5, LG G2.  **iOS**: 7.0 running on iPhone 4, iPhone 4S, iPhone 5, iPhone 5C, iPhone 5S.
+  **Android**: Galaxy S3, Galaxy S4, Nexus 4, Nexus 5, LG G2.
+
+  **iOS**: 7.0 running on iPhone 4, iPhone 4S, iPhone 5, iPhone 5C, iPhone 5S.
 
 **How have we dealt with iPhone 6?**
 **How do dates work? Timezones? Flight/travel?**
