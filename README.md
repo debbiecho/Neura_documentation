@@ -29,7 +29,7 @@ Mikimer has moved the API and SDK docs from Word to Github to (1) make it easier
 Plans:  
 - Mikimer will own this document until further notice
 - Anyone else editing the doc will submit change to Mikimer for approval
-- Mikimer will flag Issues for team members to address
+- Mikimer will flag Issues for team members to address  
 - 
 
 The source documents were:  
