@@ -44,6 +44,10 @@ Conventions:
 - events - change in state PUSH
 - data objects - dataset for the user during a period of time PULL. **Mike to talk w/ Gilad & Ori**
 
+Big To Do's
+- Get Android sample app working. https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md#examine-your-own-daily_summary-data
+
+
 ###delete internal notes before public release
 
 
