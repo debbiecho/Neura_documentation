@@ -16,19 +16,16 @@ Developers provide Neura with:
   - Need to have
     - email
     - password
-    - existing User?
-    - Platform: Android, iOS, web
-  - Nice to have
-    - What language do they code in? PHP, ruby, JavaScript
+    - existing User? Best practices is to use the same email for User & Dev accounts, similar to Google & Facebook.
+    - Which platform will you develop for? Select all that apply: Android, iOS, web
 
-Neuar provides developers with:`app_id` Client ID of the oauth process`app_secret`: Application secret, client secret of oauth process **MIke to pull this from the google doc w/ berman -- we went over this a bit already**
 
 **Biz considerations**
 
   - Need to know
     - 
   - Want to know
-    - Who is at the company? Do they want to be users? builders? Make it easy to send them invitations.
+    - For v5 CRM: Who is at the company? Do they want to be users? devs? Make it easy to send them invitations.
 
     
    - **how to manage community?** 
