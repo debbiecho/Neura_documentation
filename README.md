@@ -6,10 +6,10 @@ Neura provides context. We distill raw data into contextual knowledge so that de
 You can use the Neura API and SDKs to securely access user data by subscribing to PUSH events or submitting a PULL request for a data object.  User privacy is critical to us, so we ensure that users have approved your access to their data with OAuth2 authentication.
 
 ### Helpful documentation
- - [Quickstart: PULL a Neura data object](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (5-minute project)
- - [Quickstart: subscribe to a PUSH notification for a Neura event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project)
+ - [Quickstart: request wellness information for a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (5-minute project)
+ - [Quickstart: subscribe to a push notification for a Neura event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project)
  - [Create a developer account](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/account.md)
- - [Neura basics](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) 
+ - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) 
  - [Authentication and permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md)
  - [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) 
  - [API event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)
