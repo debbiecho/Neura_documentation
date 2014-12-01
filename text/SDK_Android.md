@@ -75,7 +75,8 @@ private void performNeuraAuthentication() {
                 String accessToken = NeuraAuthUtil.extractToken(data);
                 saveAccessTokenPersistent(accessToken);
                 Toast.makeText(MainActivity.this, "Authenticate Success!", Toast.LENGTH_SHORT).show();
-                refreshUi();
+                // Put here whatever code you want to execute after you acquire the access token from Neura
+                refreshUi(); // For now, we just refresh the UI to represent the new state
             } else {
                 int errorCode = data.getIntExtra(NeuraConsts.EXTRA_ERROR_CODE, -1);
                 // TODO handle one of the error codes described in the documentation
