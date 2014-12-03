@@ -21,14 +21,18 @@ If you need the password to access the Neura app, contact us at build [at] thene
 ![Working Neura app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoNeuraApp.png)
 
 ###2. Activate the demo app
-Enter the following `APP ID`, `APP SECRET`, and `PERMISSION` name in the app:   
+Enter the following `APP ID`, `APP SECRET`, and `PERMISSION` name in the app and click `Neura authenticate`.  
 
 > APP ID: 3b06106c458337babc3e0eaec4e8fd2fba19edd009d41ba422e518ff4b169766  
 > APP SECRET: 95767dfa44a840db4a6666b2005943ff93a832f9c54cb34411ea602139b69e61  
 > PERMISSION: userStartedWalking  
 
+Your app should now look like this:
 
-Permissions:  userArrivedToWork | userFinishedWalking | userFinishedDriving | userStartedDriving | userStartedWalking | userArrivedHome | userLeftWork |
+![Demo app with completed fields](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoCompletedFields.png)
+
+###3. Take it for a spin
+The `userStartedWalking` event is triggered when the user leaves the building and takes a walk outside.  After you walk about 100 meters out the door, the demo app will send you the notification.
 
 
 
