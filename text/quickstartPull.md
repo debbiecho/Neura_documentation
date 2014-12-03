@@ -2,18 +2,8 @@
 #Quickstart: Request wellness information
 In this project you will request the `daily_summary` data object from Neura's API to get wellness information for "Yoran", a dummy user.  This project should take you less than 5 minutes; it **does not require an account** with Neura.
 
-##Instructions
-  1.  If you don't already have a [tool to test a RESTful API](http://stackoverflow.com/questions/13965959/what-tools-can-i-use-to-test-restful-api), install [Postman for Google Chrome](http://www.getpostman.com/).
-  2. Select a 'Normal' `Get` request.
-  3. Under `Request URL` enter `https://wapi.theneura.com/v1/users/profile/daily_summary`  
-  4. Under `URL Parameter Key` enter `date`
-  5. Under `URL Parameter Value` enter `2014-09-01`
-  6. Under `Header` enter `Authorization`
-  7. Under  `Header Value` enter `Bearer asdf1234********` **(Berman to update)**
-  8. Send the `Get` request
-  9. View Neura's response in JSON with a summary of Yoran's wellness information on September 1st, 2014.  Documentation explaining the response in detail is available in the [API data object](https://github.com/mikimer/Neura_documentation/blob/master/text/endpoints.md) documentation. 
 
-###The output will be:
+###The response you'll get in JSON
 ```json
     {
     "status": "success",
@@ -38,6 +28,18 @@ In this project you will request the `daily_summary` data object from Neura's AP
       }
 ```
 **Update this response for Gilad's updated dataset**
+
+
+###Instructions
+  1.  If you don't already have a [tool to test a RESTful API](http://stackoverflow.com/questions/13965959/what-tools-can-i-use-to-test-restful-api), install [Postman for Google Chrome](http://www.getpostman.com/).
+  2. Select a 'Normal' `Get` request.
+  3. Under `Request URL` enter `https://wapi.theneura.com/v1/users/profile/daily_summary`  
+  4. Under `URL Parameter Key` enter `date`
+  5. Under `URL Parameter Value` enter `2014-11-14`
+  6. Under `Header` enter `Authorization`
+  7. Under  `Header Value` enter `Bearer asdf1234********` **(Berman to update)**
+  8. Send the `Get` request
+  9. View Neura's response in JSON with a summary of Yoran's wellness information on November 14th, 2014.  Documentation explaining the response in detail is available in the [API data object](https://github.com/mikimer/Neura_documentation/blob/master/text/endpoints.md) documentation. 
 
 -----
 
