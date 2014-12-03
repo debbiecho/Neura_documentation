@@ -30,7 +30,7 @@ Your application can identify the Neura callbacks by using the `requestCode` tha
 ###`AuthenticationRequest` class
 `public class AuthenticationRequest`
 
-`java.lang.String getAppId()` This is the **Application Key** that was requested and received during app registration  
+`java.lang.String getAppId()` This is the `accessToken`**correct?** that was requested and received during app registration  
 `void setAppId(java.lang.String appId)`   
 `void setAppSecret(java.lang.String app_secret)`  
 `void setPermissions(java.util.ArrayList<Permission> permissions)`   
@@ -177,6 +177,32 @@ You can unsubscribe your app from event notifications.
 -------------
 
 Mike left off at ProGuard Mon Nov 24th
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
