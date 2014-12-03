@@ -20,7 +20,7 @@ Users with the following devices can send their device data to Neura.  Developer
  	- UP
  	- UP 24
  - Google  
-	 - Calendar
+	- Calendar  
   	- Glass
  - Facebook
  - BodyMedia
@@ -50,5 +50,11 @@ Users with the following devices can send their device data to Neura.  Developer
 	 - Weather station
  - LG
 	 - WebOS TV
+ - iHealth
+	 - Glucometer
+ - Neurosky
+   - Biosensor
+
+  
  
  
