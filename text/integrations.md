@@ -5,7 +5,18 @@ Users with the following devices can send their device data to Neura.  Developer
 **Neura integrates with the following devices:**    
 
 
-
+ - Belkin Wemo
+	 - Power outlet
+ - BodyMedia
+ 	- Fit 
+ 	- Core 
+ 	- Link
+ - Dropcam
+ 	- Dropcam
+ 	- Dropcam Pro
+ - Estimote
+	 - Bluetooth tag
+ - Facebook
  - Fitbit  
 	- Force
 	- Flex
@@ -13,47 +24,36 @@ Users with the following devices can send their device data to Neura.  Developer
 	- One  
 	- Ultra  
 	- Aria  
- - Nike  
-	- Fuelband
-	- Fuelband +
- - Jawbone  
- 	- UP
- 	- UP 24
  - Google  
 	- Calendar  
   	- Glass
- - Facebook
- - BodyMedia
- 	- Fit 
- 	- Core 
- 	- Link
+ - iHealth
+	 - Glucometer
+ - iBeacon
+ 	- Bluetooth tag
+ - Jawbone  
+ 	- UP
+ 	- UP 24
+ - LG
+	 - WebOS TV
+ - Nest
+ 	- Protect
+ 	- Thermostat  
+ - Netatmo
+   - Thermostat
+   - Weather station
+ - Nike  
+	- Fuelband
+	- Fuelband +
+ - Neurosky
+   - Biosensor
+ - Philips 
+	 - Hue 	
+ - Tesla
+	 - Model S
  - Withings
  	- Pulse  
  	- Body Analyzer
- - Nest
- 	- Protect
- 	- Thermostat
- - Dropcam
- 	- Dropcam
- - Belkin Wemo
-	 - Power outlet
- - Tesla
-	 - Model S
- - Philips 
-	 - Hue 
- - iBeacon
- 	- Bluetooth tag
- - Estimote
-	 - Bluetooth tag
- - Netatmo
-	 - Thermostat
-	 - Weather station
- - LG
-	 - WebOS TV
- - iHealth
-	 - Glucometer
- - Neurosky
-   - Biosensor
 
   
  
