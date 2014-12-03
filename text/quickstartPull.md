@@ -51,5 +51,5 @@ Cache-Control: no-cache
 ###Wanna do more? Play with the `date` in Bob's dataset 
 Bob's data from November 1st to November 15th 2014 (from `2014-11-01` to `2014-11-15`) is available for you to play with. 
 
-Congrats on finishing the quickstart project! We hope it gives you a small taste of the power of Neura and motivates you to integrate your apps and IoT devices with Neura.
+#####Congrats on finishing the quickstart project! We hope it gives you a small taste of the power of Neura and motivates you to integrate your apps and IoT devices with Neura.
 
