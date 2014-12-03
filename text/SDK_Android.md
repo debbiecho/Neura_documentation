@@ -3,8 +3,9 @@
 
 You can add the Neura SDK for Android to your app so that your app can request PUSH event notifications and issue requests for data objects.  Your users will need to install the [Neura app from Google Play](https://play.google.com/store/apps/details?id=com.neura.weave&hl=en).  Once your users have installed the Neura app, they'll need to grant you permission to access their events and data objects.
 
-**Download Neura's Android SDK here**
+[**Download Neura's Android SDK here**](https://github.com/NeuraLabs/Neura_documentation/tree/master/resources/Neura_Android_SDK)
 
+![Neura Android SDK](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/android-sdk-image.jpg)
 
 **Chiki, why don't we start by showing the Neura libraries to include? Don't devs need to first include libraries?**
 
