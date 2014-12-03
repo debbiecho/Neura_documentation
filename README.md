@@ -6,19 +6,19 @@ Neura provides context. We distill raw data into contextual knowledge so that yo
 You can use the Neura API and SDKs to securely access user data by subscribing to PUSH events or requesting a data object.  User privacy is critical to us, so we ensure that users have approved your access to their data with OAuth2 authentication.
 
 ### Get started in minutes
- - [Quickstart: request wellness information for a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (5-minute project)
- - [Quickstart: subscribe to a push notification for **Android**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project)
+ - [Quickstart: request wellness information for a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (5-minute project) _100% done!_
+ - [Quickstart: subscribe to a push notification for **Android**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project) _70% done -- mikimer & chiki to get app working again_
 
 ### Learn more
- - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) 
- - [Create a developer account](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/account.md)
- - [Authentication and permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md)
- - [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) 
- - [API event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)
- - [SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md)
- - [SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md)
- - [Integrated devices that can send data to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md)
- - [Current status of the Neura API](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/status.md)
+ - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md)  _80% done. clarify time & timezones_   
+ - [Create a developer account](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/account.md) _30% done - eroc is on it_
+ - [Authentication and permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) _40% done - mikimer & berman to complete_
+ - [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) _90% done. a few questions for Berman_  
+ - [API event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)  _50% done. Berman to fill in_ 
+ - [SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) _80% done. a few things to clarify with chiki_ 
+ - [SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md) _60% done. clarify a few things with Michael_   
+ - [Integrated devices that can send data to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) _100% done!_ 
+ - [Current status of the Neura API](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/status.md) _80% done. Mikimer to chat with Triinu & Berman about how to maintain this page_ 
 
 ### Questions? Comments? Wanna grab a beer?
 Reach out to us at build [at] theneura [dot] com.  We're serious about the :beer:.
