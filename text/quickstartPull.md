@@ -1,6 +1,6 @@
 
 #Quickstart: Request wellness information
-In this project you will request the `daily_summary` data object from Neura's API to get wellness information for "Bob", a dummy user.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md#instructions) for this project are detailed below -- it should take you less than 5 minutes; it **does not require an account** with Neura.
+In this project you will request the `daily_summary` data object from Neura's API to get wellness information for Bob, a dummy user.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md#instructions) for this project are detailed below -- it should take you less than 5 minutes; it **does not require an account** with Neura or a mobile phone.
 
 
 ###What you'll send  
@@ -45,8 +45,8 @@ Cache-Control: no-cache
   5. For **URL Parameter Value** enter `2014-11-14`
   6. For **Header** enter `Authorization`
   7. For  **Header Value** enter `Bearer b994215649adf4df0ae14579b919505a60d59f973adac419af8bea7d67cbae89`  
-  8. Send the `Get` request  
-  9. View Neura's response in JSON with a summary of Bob's wellness information on November 14th, 2014.  Documentation explaining the response in detail is available in the [API data object](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofiledaily_summary) documentation. 
+  8. Send the **GET** request  
+  9. View Neura's response in JSON summaring Bob's wellness information on November 14th, 2014.  The [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofiledaily_summary) documentation explains the response in detail.
 
 ###Wanna do more? Play with the `date` in Bob's dataset 
 Bob's data from November 1st to November 15th 2014 (from `2014-11-01` to `2014-11-15`) is available for you to play with. 

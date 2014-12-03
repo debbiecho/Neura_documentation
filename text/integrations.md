@@ -1,9 +1,12 @@
 #Devices that integrate with Neura
 
-Users with the following devices can send their device data to Neura.  Developers that make apps or devices should encourage their users to send Neura data from integrated devices so that Neura can provide more detailed and accurate data events and data objects.  If you would like an integration that doesn't appear below, please let us know at build [at] theneura [dot] com.
+Users can send data to Neura from the following devices.  If you would like an integration that doesn't appear below, please let us know at build [at] theneura [dot] com.
+
+Please note that Neura's relationship with integrated devices is read-only; if you want Neura to write data to your app or IoT device, [begin here](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md).
+Also, please encourage your users to send Neura data from their devices that integrate with Neura so that Neura can provide you with the most accurate events and data objects.
 
 
-##Neura integrates with the following devices:
+##Neura integrations:
 
  - Belkin Wemo
 	 - Power outlet

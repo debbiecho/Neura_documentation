@@ -1,5 +1,5 @@
 # Requesting data objects
-In this document we detail Neura's API endpoints that you can use to issue requests for data objects, information about a user over time and/or in a specific place. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** authorization token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive a response. 
+In this document we detail Neura's API endpoints for requesting data objects, information about a user over time and/or in a specific place. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** authorization token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive a response. 
 
 ## API root endpoint
 

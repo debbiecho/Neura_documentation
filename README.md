@@ -7,7 +7,7 @@ You can use the Neura API and SDKs to securely access user data by subscribing t
 
 ### Get started in minutes
  - [Quickstart: request wellness information for a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (5-minute project)
- - [Quickstart: subscribe to an **Android** push notification](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project)
+ - [Quickstart: subscribe to a push notification for **Android**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project)
 
 ### Learn more
  - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) 
@@ -20,7 +20,7 @@ You can use the Neura API and SDKs to securely access user data by subscribing t
  - [Integrated devices that can send data to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md)
  - [Current status of the Neura API](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/status.md)
 
-###  Questions? Comments? Wanna grab a beer?
+### Questions? Comments? Wanna grab a beer?
 Reach out to us at build [at] theneura [dot] com.  We're serious about the :beer:.
 
 
@@ -33,7 +33,7 @@ Plans:
 - Mikimer will own this document until further notice
 - Anyone else editing the doc will submit change to Mikimer for approval
 - Mikimer will flag Issues for team members to address  
-- 
+
 
 The source documents were:  
   - NEURA.ME API Integration Guide ver 2.docx    
@@ -50,8 +50,8 @@ Conventions:
 Big To Do's
 - Get Android sample app working. https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md#examine-your-own-daily_summary-data
 - Go through PUSH subscription & document https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md 
-- Go through time & timezones in Neura. Document edge cases.
-- 
+- Go through time & timezones in Neura. Document edge cases.  
+
 
 ###delete internal notes before public release
 

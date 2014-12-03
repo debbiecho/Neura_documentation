@@ -1,15 +1,11 @@
 
-#Quickstart: Subscribe to event PUSH notifications 
-In this project you will subscribe to the Neura event PUSH notifications for `userStartedWalking` and `userArrivedHome` for **User XXX**.  This project is only available for Android; it will soon be available for iOS.  This project should take you less than **YY** minutes.
+#Quickstart: Subscribe to event PUSH notifications on Android
+In this project you will subscribe to the Neura event PUSH notifications on Android for `userStartedWalking` and `userArrivedHome` for Bob, a dummy user.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md#instructions) for this project are detailed below -- it should take you less than **XX** minutes; it **does not require an account** with Neura.
+
+###The response you'll recieve
 
 
--------
 
-
-#Mikimer & Berman to discuss
-Get the sample app working, sampleProject.apk
-how do PUSH notifications work in Neura? 
-which user should we pick for User XXX? Can we make a simple robot that spends 30 seconds idle followed by 30 seconds not idle?
- 
+###Instructions
 
 
