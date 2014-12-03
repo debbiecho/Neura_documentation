@@ -173,11 +173,12 @@ You can unsubscribe your app from event notifications.
     }
 ```
 
+##ProGuardIf you are using ProGuard on the release build of your app, you must add this snippet to your app's proguard-project.txt config file:`-keepnames class * implements java.io.Serializable````
+-keepclassmembers class * implements java.io.Serializable {    static final long serialVersionUID;    private static final java.io.ObjectStreamField[] serialPersistentFields;    !static !transient <fields>;    private void writeObject(java.io.ObjectOutputStream);    private void readObject(java.io.ObjectInputStream);    java.lang.Object writeReplace();    java.lang.Object readResolve();}
+```
 
--------------
-
-Mike left off at ProGuard Mon Nov 24th
-
+##Error CodesNeura's Android SDK has the following error codes:  
+    public static final int ERROR_CODE_USER_NOT_LOGGED_IN = 1;    public static final int ERROR_INVALID_APP_ID = 2;    public static final int ERROR_USER_DENIED_PERMISSIONS = 3;    public static final int ERROR_MISSING_ANDROID_PLATFORM = 4;    public static final int ERROR_SERVER_ERROR = 5;    public static final int ERROR_UNEXPECTED_SERVER_RESPONSE = 6;    public static final int ERROR_NOT_AUTORIZED_APP_SIGNITURE = 7;    public static final int ERROR_APP_MISSING_PERMISSIONS = 8;    public static final int ERROR_NO_NETWORK = 9;    public static final int ERROR_USER_CANCELED_AUTHENTICATION = 10;    public static final int ERROR_ILLEGAL_PERMISSIONS = 11;
 
 
 
