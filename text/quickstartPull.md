@@ -52,6 +52,4 @@ Cache-Control: no-cache
 Bob's data from November 1st to November 15th 2014 (`2014-11-01` to `2014-11-15`) is available for you to play with. You can see how it changes over time or additional details, such as when he weighed himself on November 13th.
 
 ##Congrats on finishing the quickstart project! 
-We hope it gives you a small taste of the power of Neura and motivates you to integrate your apps and IoT devices with Neura.
-
-For next steps, you can [learn more](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) about Neura or [set up a developer account](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/account.md).
+We hope it gives you a small taste of the power of Neura and motivates you to integrate your apps and IoT devices with Neura.  For next steps, you can [learn more](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) about Neura or [set up a developer account](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/account.md).
