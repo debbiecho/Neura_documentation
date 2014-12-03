@@ -8,8 +8,6 @@ You can add the Neura SDK for Android to your app so that your app can request P
 
 [**Download Neura's Android SDK here**](https://github.com/NeuraLabs/Neura_documentation/tree/master/resources/Neura_Android_SDK)
 
-**Chiki, why don't we start by showing the Neura libraries to include? Don't devs need to first include libraries?**
-
 ##Authentication
 The Neura Android SDK has the method `NeuraAuthUtil.authenticate` that handles authentication flow, which consists of two steps:
 
@@ -35,7 +33,7 @@ Your application can identify the Neura callbacks by using the `requestCode` tha
 ###`AuthenticationRequest` class
 `public class AuthenticationRequest`
 
-`java.lang.String getAppId()` This is the `accessToken`**correct?** that was requested and received during app registration  
+`java.lang.String getAppId()` This is the `accessToken` that was requested and received during app registration  
 `void setAppId(java.lang.String appId)`   
 `void setAppSecret(java.lang.String app_secret)`  
 `void setPermissions(java.util.ArrayList<Permission> permissions)`   
@@ -121,7 +119,8 @@ Request	NeuraEventsRequest instance
 `Void setAccessToken(java.lang.String accessToken)` Retrieved from Neura Authentication Request process
 `Void setEventId(java.lang.String eventId)` Unique Neura Event that user’s application wishes to subscribe to The list is described in Neura developer console. The current document gives also the sample list. **should this be eventId or <eventId> to indicate that the dev needs to replace <eventId>?**
 
-###Example **of what?**
+###Example of `NeuraEventsRequest`
+Note that `eventsReuest`, not "eventsRequest," is correct.
 ```java
 private void registerToNeuraSpecificEvents(String accessToken, Context context, String eventId) {
         NeuraEventsRequest eventsReuest = new NeuraEventsRequest();
@@ -187,7 +186,16 @@ You can unsubscribe your app from event notifications.
 
 
 
+---------
 
+#Internal issues to discuss:
+
+1. **Chiki, why don't we start by showing the Neura libraries to include? Don't devs need to first include libraries?**
+2. I replaced `authorization key` with `accessToken` is that ok?
+3. 
+
+
+##remove internal issues before publishing
 
 
 
