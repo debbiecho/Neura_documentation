@@ -1,6 +1,6 @@
 
 #Quickstart: Request wellness information
-In this project you will request the `daily_summary` data object from Neura's API to get wellness information for "Bob", a dummy user.  This project should take you less than 5 minutes; it **does not require an account** with Neura.
+In this project you will request the `daily_summary` data object from Neura's API to get wellness information for "Yoran", a dummy user.  This project should take you less than 5 minutes; it **does not require an account** with Neura.
 
 ##Instructions
   1.  If you don't already have a [tool to test a RESTful API](http://stackoverflow.com/questions/13965959/what-tools-can-i-use-to-test-restful-api), install [Postman for Google Chrome](http://www.getpostman.com/).
@@ -11,7 +11,7 @@ In this project you will request the `daily_summary` data object from Neura's AP
   6. Under `Header` enter `Authorization`
   7. Under  `Header Value` enter `Bearer asdf1234********` **(Berman to update)**
   8. Send the `Get` request
-  9. View Neura's response in JSON with a summary of Bob's wellness information on September 1st, 2014.  Documentation explaining the response in detail is available in the [API data object](https://github.com/mikimer/Neura_documentation/blob/master/text/endpoints.md) documentation. 
+  9. View Neura's response in JSON with a summary of Yoran's wellness information on September 1st, 2014.  Documentation explaining the response in detail is available in the [API data object](https://github.com/mikimer/Neura_documentation/blob/master/text/endpoints.md) documentation. 
 
 ###The output will be:
 ```json
@@ -42,8 +42,8 @@ In this project you will request the `daily_summary` data object from Neura's AP
 -----
 
 ##Wanna do more? 
-###Play with the `date` in Bob's dataset 
-Bob's data from July to September 2014 (from `2014-07-01` to `2014-09-30`**update for what Berman creates**) is available for you to play with. 
+###Play with the `date` in Yoran's dataset 
+Yoran's data from July to September 2014 (from `2014-07-01` to `2014-09-30`**update for what Berman creates**) is available for you to play with. 
 
 ###Examine your own `daily_summary` data
 You can examine your data by getting your unique `accessToken`.  As of November 2014, this is only available for Android.  
