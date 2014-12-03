@@ -1,6 +1,6 @@
 #Devices that integrate with Neura
 
-Users with the following devices can send their device data to Neura.  Developers that make apps or devices can benefit from more detailed and accurate data from Neura, so they should encourage their users to send Neura data from integrated devices.  
+Users with the following devices can send their device data to Neura.  Developers that make apps or devices should encourage their users to send Neura data from integrated devices so that Neura can provide more detailed and accurate data events and data objects.
 
 **Neura integrates with the following devices:**    
 
