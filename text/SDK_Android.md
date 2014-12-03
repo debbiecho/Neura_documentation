@@ -1,7 +1,10 @@
 
 #Neura SDK for Android
 
-You can add the Neura SDK for Android to your app to that your app can request PUSH event notifications and issue PULL requests for data objects.  Your users will need to install the Neura app on their phones, available in Google Play `google play link` **add link**.  Once your users have installed the Neura app, they'll need to grant you permission to access their events and data objects.
+You can add the Neura SDK for Android to your app so that your app can request PUSH event notifications and issue requests for data objects.  Your users will need to install the [Neura app from Google Play](https://play.google.com/store/apps/details?id=com.neura.weave&hl=en).  Once your users have installed the Neura app, they'll need to grant you permission to access their events and data objects.
+
+**Download Neura's Android SDK here**
+
 
 **Chiki, why don't we start by showing the Neura libraries to include? Don't devs need to first include libraries?**
 
@@ -15,7 +18,7 @@ The Neura Android SDK has the method `NeuraAuthUtil.authenticate` that handles a
 
 The callback of the method is the authentication result using the `Activity.onActivityResult` method, as detailed in the Android developers guide: http://developer.android.com/reference/android/app/Activity.html#onActivityResult(int, int, android.content.Intent)
 
-Your application can identify the Neura callbacks by using the `requestCode` that was provided in the method `NeuraAuthUtil.authenticate`.  If authentication is successful then Neura returns an access token, `NeuraAuthUtil.extractToken`. The access token is permanent and can be used for subscribing to PUSH event notifications or to issue a PULL request for a data object.  If authentication fails, then Neura returns an error code.
+Your application can identify the Neura callbacks by using the `requestCode` that was provided in the method `NeuraAuthUtil.authenticate`.  If authentication is successful then Neura returns an access token, `NeuraAuthUtil.extractToken`. The access token is permanent and can be used for subscribing to PUSH event notifications or to issue a request for a data object.  If authentication fails, then Neura returns an error code.
 
 ##Class and method descriptions for authentication
 
