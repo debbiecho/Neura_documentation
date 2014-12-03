@@ -5,8 +5,8 @@ Users with the following devices can send their device data to Neura.  Developer
 **Neura integrates with the following devices:**    
 
  - Fitbit  
-	 - Force
-	 - Flex
+	- Force
+	- Flex
 	- Zip  
 	- One  
 	- Ultra  
@@ -17,7 +17,7 @@ Users with the following devices can send their device data to Neura.  Developer
  - Jawbone  
  	- UP
  	- UP 24
-  - Google 
+  - Google  
   	- Glass
  - BodyMedia
  	- Fit 
