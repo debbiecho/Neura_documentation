@@ -7,7 +7,7 @@ You can use the Neura API and SDKs to securely access user data by subscribing t
 
 ### Get started in minutes
  - [Quickstart: request wellness information for a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (5-minute project)
- - [Quickstart: subscribe to a push notification for a Neura event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project)
+ - [Quickstart: subscribe to an **Android** push notification](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project)
 
 ### Learn more
  - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) 
