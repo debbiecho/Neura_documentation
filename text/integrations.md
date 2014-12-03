@@ -5,8 +5,6 @@ Users with the following devices can send their device data to Neura.  Developer
 
 ##Neura integrates with the following devices:
 
- - Alljoyn
-	 - Multiple devices (???)
  - Belkin Wemo
 	 - Power outlet
  - BodyMedia
