@@ -1,4 +1,3 @@
-testing my new branch
 
 #Build with Neura 
 Neura provides context. We distill raw data into contextual knowledge so that you can make **smarter** apps and internet-of-things (IoT) devices.  
