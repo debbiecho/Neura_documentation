@@ -34,6 +34,11 @@ Your app should now look like this:
 ###3. Take it for a spin
 The `userStartedWalking` event is triggered when the user leaves the building and takes a walk outside.  After you walk about 100 meters out the door, the demo app will send you the notification.
 
+### Wanna do more?
+request other permissions
+use your accessToken to get your own data objects  
+_**mike to draft this**_
+
 ##Congrats on finishing the quickstart project! 
 We hope it gives you a small taste of the power of Neura and motivates you to integrate your apps and IoT devices with Neura.  For next steps, you can [learn more](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) about Neura or [set up a developer account](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/account.md).
 
