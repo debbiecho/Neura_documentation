@@ -33,10 +33,9 @@ Neura is the perfect compliment to any app, service, or internet-of-things (IoT)
 
 Other reasons to build with Neura include:
 
-  - More sensors. Benefit from data from all of your users' IoT devices, once they grant you permission, of course.
+  - More data. Benefit from data from all of your users' IoT devices.
   - Freemium pricing. Only pay when you generate value for users.
-  - Machine learning. Yup, we've got that. Tachlis. 
-  - **_Get in put from Gilad, Ori, & Eric; 4 bullets max_**
+  - Machine learning. Neura gets better the more you use it.
 
 
 ## Getting your users on Neura
