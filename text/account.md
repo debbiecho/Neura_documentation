@@ -20,6 +20,8 @@ Developers provide Neura with:
     - Which platform will you develop for? Select all that apply: Android, iOS, web
 
 
+Let's address data portability. What happens if they leave Neura? https://www.braintreepayments.com/features
+
 **Biz considerations**
 
   - Need to know

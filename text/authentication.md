@@ -1,6 +1,9 @@
 
 ## Authentication
 
+All API requests must be made over [HTTPS](http://en.wikipedia.org/wiki/HTTP_Secure). Calls made over plain HTTP will fail. You must authenticate for all requests.
+
+
 You can query the Neura API to pull information about a user. All requests for user data must include an **authorization header** containing the user's access token:
 
 **Example**
