@@ -47,20 +47,21 @@ Neura is available for users with smartphones running on Android or iOS.  The Ne
 _**How have we dealt with iPhone 6?**_
 
 ## Time and Timezones
-**How do dates work? Timezones? Flight/travel?**
-   **feedback from Eric @ Zenobase: what timezone? when does date start and end? how do we align different datasets?**
-**What is the expected latency on push events?** 
-**Even if we don't have perfect answers, let's address upfront.**
+A Neura day begins on the calendar day when the user awakes and finishes the following calendar day when the user awakes.  Neura takes this approach to best convey the day from the perspective of the user. Consequently, a calendar day is always 24 hours whereas a Neura day varies with user sleep patterns.  
 
-Things that affect this:  
-- calcs are from sleep to sleep: from when the user wakes up until the user goes to bed.  The user wakes up during the calendar day. The user may or may not fall asleep during the calendar day. ***Is sleep part of the day before or after? ask Itay***
--  draw a picture
+
 -  Discrepancy between the app & the API: is Time presented according to the current timezone of the user. When time zone changes so do times.
 - switching time zone.  calculations are done based on the timestamp of the calendar day when the user work up. 
 
 ![Neura's view of a person's day](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDailyCalendar.jpg)
-   
+
+### The `timestamp` in the Neura API
+When the Neura API delivers an event or a data object, it returns a `timestamp` in [epoch time](http://en.wikipedia.org/wiki/Unix_time). 
+
 ![Neura frames events in a user's timezone and always returns UTC](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraUTC.jpg)   
+
+### Timezone changes
+Neura considers a user changing timezones an [edge case](http://en.wikipedia.org/wiki/Edge_case). Consequently, our approach is to ensure that all data is captured in the day before and after the timezone change, even if the  
 
 
 ## Neura's data inputs
