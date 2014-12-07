@@ -59,8 +59,9 @@ Things that affect this:
 -  Discrepancy between the app & the API: is Time presented according to the current timezone of the user. When time zone changes so do times.
 - switching time zone.  calculations are done based on the timestamp of the calendar day when the user work up. 
 
-
+![Neura's view of a person's day](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDailyCalendar.jpg)
    
+![Neura frames events in a user's timezone and always returns UTC](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraUTC.jpg)   
 
 
 ## Neura's data inputs
