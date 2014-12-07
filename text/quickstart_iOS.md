@@ -2,13 +2,15 @@
 In this project you will authenticate with the Neura to receive your unique `accessToken`.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md#instructions) for this project are detailed below -- it should take you less than 5 minutes, if you've already set up your Neura account; it **requires an account** with Neura and an iOS phone.
 
 ##The response you'll recieve
-![Demo app event notifications](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoEventNotification.png)
+![Demo app event notifications](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/iOS_auth_app.png)
 
 
 ##Instructions
 
 ###1. Install the apps
-You must have both the [Neura app](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2) and the [demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) for this project.  
+You must have both the [Neura app](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2) and the [demo app](https://github.com/NeuraLabs/Neura_documentation/tree/master/resources/Neura_iOS_demo_app) for this project.  
+
+***mikimer left off here Sun Dec 7th***
 
 ![Both apps installed](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoAppsInPhone.png)
 
