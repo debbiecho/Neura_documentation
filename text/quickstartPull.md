@@ -2,15 +2,8 @@
 #Quickstart: Request wellness information
 In this project you will request the `daily_summary` data object from Neura's API to get wellness information for Bob, a dummy user.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md#instructions) for this project are detailed below -- it should take you less than 5 minutes; it **does not require an account** with Neura or a mobile phone.
 
-This project demonstrates Neura's ability to provide condensed data to a 3rd party app. A practical application of this project is that you can use it to develop an app that adapts to user behavior over time. 
+This project demonstrates Neura's ability to provide distilled data to a 3rd party app. A practical application of this project is that you can use it to develop an app that adapts to user behavior over time. 
 
-##What you'll send  
-```
-GET /v1/users/profile/daily_summary?date=2014-11-14 HTTP/1.1
-Host: wapi.theneura.com
-Authorization: Bearer b994215649adf4df0ae14579b919505a60d59f973adac419af8bea7d67cbae89
-Cache-Control: no-cache
-```
 
 ##The response you'll get in JSON
 ```json
@@ -48,6 +41,15 @@ Cache-Control: no-cache
   7. For  **Header Value** enter `Bearer b994215649adf4df0ae14579b919505a60d59f973adac419af8bea7d67cbae89`  
   8. Send the **GET** request  
   9. View Neura's response in JSON summaring Bob's wellness information on November 14th, 2014.  The [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofiledaily_summary) documentation explains the response in detail.
+
+###What you'll send  
+```
+GET /v1/users/profile/daily_summary?date=2014-11-14 HTTP/1.1
+Host: wapi.theneura.com
+Authorization: Bearer b994215649adf4df0ae14579b919505a60d59f973adac419af8bea7d67cbae89
+Cache-Control: no-cache
+```
+
 
 ###Wanna do more? Play with the `date` in Bob's dataset 
 Bob's data from November 1st to November 15th 2014 (`2014-11-01` to `2014-11-15`) is available for you to play with. You can see how it changes over time or additional details, such as when he weighed himself on November 13th.
