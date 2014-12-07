@@ -17,7 +17,7 @@ Particularly because the API is in alpha, we appreciate your patience as we cont
 
 **Developers** are third-party software developers that build apps, devices and/or services that consume output data from Neura. Developers are also known as partners.  Since Neura has a freemium business model, some developers are also paying customers.
 
- **States** are moments where the user is doing a particular activity and/or in a particular location.  
+**States** are moments where the user is doing a particular activity in a particular location.  
 
 **Events** are changes in the state of a user that Neura delivers synchronously as a callback.  Here are details on [subscribing to PUSH notifications for events]().
 
@@ -33,8 +33,8 @@ Neura is the perfect compliment to any app, service, or internet-of-things (IoT)
 
 Other reasons to build with Neura include:
 
-  - More sensors. You get access to data from all of your users' IoT devices, after they grant you permission, of course.
-  - Freemium pricing. Only pay when you start generating value for users.
+  - More sensors. Benefit from data from all of your users' IoT devices, once they grant you permission, of course.
+  - Freemium pricing. Only pay when you generate value for users.
   - Machine learning. Yup, we've got that. Tachlis. 
   - **_Get in put from Gilad, Ori, & Eric; 4 bullets max_**
 
@@ -53,6 +53,13 @@ _**How have we dealt with iPhone 6?**_
 **What is the expected latency on push events?** 
 **Even if we don't have perfect answers, let's address upfront.**
 
+## Neura's data inputs
+Neura utilizes data gathered by the Neura app and [integrated devices](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) that the user has authorized for Neura to access.  The Neura app gathers data from the the user's phone's:  
+  - Wifi
+  - Bluetooth
+  - GPS
+  - Accelerometer
+  - Battery
 
 ##Privacy
 Neura puts user privacy first and we expect developers to do the same.  We've designed Neura to enrich users' lives, not to sell ads. If you have any questions or concerns about how to design privacy protections into your apps, contact build [at] theneura [dot] com.
