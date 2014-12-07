@@ -2,7 +2,7 @@
 
 ####Neura distills raw data from a user's smartphone and internet-of-things (IoT) devices into contextual knowledge so that your apps and devices can be smarter to better enhance the user's life.
 
-**_insert sexy picture here. make the text visual._**
+![Neura data flow diagram](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDataFlowDiagram.png)
 
 ##The API is in private alpha
 The API is currently available only to select developers while it is in alpha.  If you'd like to apply for access, contact build [at] theneura [dot] com; please be sure to include information on your technical skills and use cases you'd like to address.  
@@ -52,6 +52,16 @@ _**How have we dealt with iPhone 6?**_
    **feedback from Eric @ Zenobase: what timezone? when does date start and end? how do we align different datasets?**
 **What is the expected latency on push events?** 
 **Even if we don't have perfect answers, let's address upfront.**
+
+Things that affect this:  
+- calcs are from sleep to sleep: from when the user wakes up until the user goes to bed.  The user wakes up during the calendar day. The user may or may not fall asleep during the calendar day. ***Is sleep part of the day before or after? ask Itay***
+-  draw a picture
+-  Discrepancy between the app & the API: is Time presented according to the current timezone of the user. When time zone changes so do times.
+- switching time zone.  calculations are done based on the timestamp of the calendar day when the user work up. 
+
+
+   
+
 
 ## Neura's data inputs
 Neura utilizes data gathered by the Neura app and [integrated devices](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) that the user has authorized for Neura to access.  The Neura app gathers data from the the user's phone's:  
