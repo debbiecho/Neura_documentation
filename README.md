@@ -8,6 +8,8 @@ You can use the Neura API and SDKs to securely access user data by subscribing t
 ### Get started in minutes
  - [Quickstart: request wellness information for a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (5-minute project) _100% done!_
  - [Quickstart: subscribe to a push notification for **Android**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (??-minute project) _70% done -- mikimer & chiki to get app working again_
+ - [Quickstart: authenticate a user as a 3rd party app for **iOS**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md) (5-minute project) _50% done -- mikimer working on it_
+
 
 ### Learn more
  - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md)  _80% done. clarify time & timezones_   
@@ -40,7 +42,7 @@ The source documents were:
   - NEURA.ME Android Integration Guide.docx  
   - NEURA ME iOS Integration Guide.docx
 
-Throughout the document **I've embedded bold text with questions for whoever wrote the original text**.  I'm planning on sitting down with the tech team to get answers to these questions when I'm in Israel Nov 30th to Dec 12th 2014.  I'd LOVE IT if you forked the original documents and responded to these questions.  Eroc quickly became a master of the fork and pull request, so I'm confident the tech team can do it too, hehe ;)
+Throughout the document ***I've embedded italics-bold text with questions for whoever wrote the original text***.  I'm planning on sitting down with the tech team to get answers to these questions when I'm in Israel Nov 30th to Dec 12th 2014.  I'd LOVE IT if you forked the original documents and responded to these questions.  Eroc quickly became a master of the fork and pull request, so I'm confident the tech team can do it too, hehe ;)
 
 Conventions:  
 - states - instantaneous (1 sec?) moment where Neura returns where the user is / what they're doing PULL **Next step: Berman to chat w/ Ori about distinguishing between States & Events.  As of today, there are no 'States' available in the API -- we developed userIsWalking it's disabled until further notice.**
