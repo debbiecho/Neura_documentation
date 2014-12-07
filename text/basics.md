@@ -2,7 +2,7 @@
 
 ####Neura distills raw data from a user's smartphone and internet-of-things (IoT) devices into contextual knowledge so that your apps and devices can be smarter to better enhance the user's life.
 
-![Neura data flow diagram](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDataFlowDiagram.png)
+![Neura data flow diagram](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDataFlowDiagram.jpg)
 
 ##The API is in private alpha
 The API is currently available only to select developers while it is in alpha.  If you'd like to apply for access, contact build [at] theneura [dot] com; please be sure to include information on your technical skills and use cases you'd like to address.  
