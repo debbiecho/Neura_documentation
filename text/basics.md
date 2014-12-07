@@ -27,6 +27,7 @@ Particularly because the API is in alpha, we appreciate your patience as we cont
 
 **Subscriptions** are when an app is registered to receive event notifications. 
 
+**Timeline** is the main screen of the Neura app that allows the user to scroll through the events that Neura has captured. ***Jen, better word choice?***
 
 ##Why build with Neura?
 Neura is the perfect compliment to any app, service, or internet-of-things (IoT) device that enhances user experience through the smart use of data.  A common reason developers build with Neura is that they instantly benefit from Neura's [30+ integrations](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) and that Neura provides contextual knowledge, as opposed to raw data that first needs to be processed for meaning and insight.
@@ -46,23 +47,22 @@ Neura is available for users with smartphones running on Android or iOS.  The Ne
 **iOS**: 7.0 running on iPhone 4, iPhone 4S, iPhone 5, iPhone 5C, iPhone 5S.  
 _**How have we dealt with iPhone 6?**_
 
-## Time and Timezones
-A Neura day begins on the calendar day when the user awakes and finishes the following calendar day when the user awakes.  Neura takes this approach to best convey the day from the perspective of the user. Consequently, a calendar day is always 24 hours whereas a Neura day varies with user sleep patterns.  
 
-
--  Discrepancy between the app & the API: is Time presented according to the current timezone of the user. When time zone changes so do times.
-- switching time zone.  calculations are done based on the timestamp of the calendar day when the user work up. 
+## Days, time and timezones
+A Neura day begins on the calendar day when the user awakes and finishes the following calendar day when the user awakes to best convey the day from the perspective of the user.  Neura treats the event when the user awoke to be the "anchor" that defines their day. Consequently, a calendar day is always 24 hours long whereas the length of a Neura day varies with user sleep patterns.  Additionally, if Neura is unable to detect when a user awoke (e.g., because their phone is off) then there are data objects available for that day.  
+***Note for Jen: mikimer uses the term "they" for 3rd person to avoid the complication of gender (he/she). If you have any issues, let mikimer know***
 
 ![Neura's view of a person's day](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDailyCalendar.jpg)
 
-### The `timestamp` in the Neura API
-When the Neura API delivers an event or a data object, it returns a `timestamp` in [epoch time](http://en.wikipedia.org/wiki/Unix_time). 
+### Timezone changes
+Neura considers a user changing timezones as an [edge case](http://en.wikipedia.org/wiki/Edge_case). Consequently, our approach is to calculate all events based on the timezone the user was in when they awoke, regardless of their timezone the rest of the day.
+
+### Differences in time between the Neura API and the Neura app
+Time is conveyed differently in the Neura app versus the Neura API to make the most sense for each audience.  The Neura API uses [epoch time](http://en.wikipedia.org/wiki/Unix_time) so that developers don't need to worry about differences in timezones between different users.  For instance, when Neura delivers an event or a data object, it returns a `timestamp` in epoch time.
+
+For users, the Neura app always displays time in the user's current timezone.  When a user changes timezones then Neura automatically updates their timeline.  For instance, if the user awakes at 8am on Monday in San Francisco and then flies to New York, 
 
 ![Neura frames events in a user's timezone and always returns UTC](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraUTC.jpg)   
-
-### Timezone changes
-Neura considers a user changing timezones an [edge case](http://en.wikipedia.org/wiki/Edge_case). Consequently, our approach is to ensure that all data is captured in the day before and after the timezone change, even if the  
-
 
 ## Neura's data inputs
 Neura utilizes data gathered by the Neura app and [integrated devices](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) that the user has authorized for Neura to access.  The Neura app gathers data from the the user's phone's:  
