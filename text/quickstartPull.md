@@ -2,6 +2,7 @@
 #Quickstart: Request wellness information
 In this project you will request the `daily_summary` data object from Neura's API to get wellness information for Bob, a dummy user.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md#instructions) for this project are detailed below -- it should take you less than 5 minutes; it **does not require an account** with Neura or a mobile phone.
 
+This project demonstrates Neura's ability to provide condensed data to a 3rd party app. A practical application of this project is that you can use it to develop an app that adapts to user behavior over time. 
 
 ##What you'll send  
 ```

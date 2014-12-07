@@ -1,6 +1,8 @@
 
 #Quickstart: Subscribe to event PUSH notifications on Android
-In this project you will subscribe to the Neura event PUSH notifications on Android for `userStartedWalking` for yourself.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md#instructions) for this project are detailed below -- it should take you less than **XX** minutes, if you've already set up your Neura account; it **requires an account** with Neura and an Android phone.
+In this project you will use Neura's [3rd party Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) to subscribe to the Neura event PUSH notifications on Android for `userStartedWalking` for yourself.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md#instructions) for this project are detailed below -- it should take you less than 5 minutes, if you've already set up your Neura account; it **requires an account** with Neura and an Android phone.  
+
+This project demonstrates Neura's ability to notify a 3rd party app of user events. A practical application of this project is that you can use it to develop an app that intelligently reacts to your users' actions in real time. 
 
 _**Get help from chiki. the sample app broke again -- i didn't get the confirmation for registration. what'd i do wrong?**_
 
@@ -11,7 +13,7 @@ _**Get help from chiki. the sample app broke again -- i didn't get the confirmat
 ##Instructions
 
 ###1. Install the apps
-You must have both the [Neura app](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2) and the [demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) for this project.  
+You must have both the [Neura app](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2) and the [3rd party Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) for this project.  
 
 ![Both apps installed](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoAppsInPhone.png)
 
