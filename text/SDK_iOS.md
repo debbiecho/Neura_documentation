@@ -1,11 +1,38 @@
 
-#Neura SDK for iOS
+#Neura for iOS
+
+Neura has built an iOS app for users, [available via TestFlight]()
 
 
 [![Neura iOS SDK](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/iOS-7-SDK-icon.png)](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib)
 
+Add the Neura SDK to your app to enable it to request for data objects for your users that have the iOS Neura app.  Currently, event notifications are only available for Android users. 
 
-You can add the Neura SDK for iOS to your app so that your app can request PUSH event notifications and issue requests for data objects from Neura.  Your users will need to install the [app by requesting access to be a Neura beta tester on TestFlight](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2).  Once your users have installed the Neura app, they'll need to grant you permission to access their events and data objects.
+Here's how to integrate with Neura:  
+  1. Ensure your users have the Neura app  
+  2. Register your 3rd party app with Neura  
+  3. Add authentication code into your app  
+  4. Request data objects to better understand your users  
+
+##  1. Ensure your users have the Neura app  
+
+
+##  2. Register your 3rd party app with Neura  
+
+
+##  3. Add authentication code into your app  
+
+
+##  4. Request data objects to better understand your users  
+
+
+
+-----
+
+
+Your users will need to install the [app by requesting access to be a Neura beta tester on TestFlight](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2).  
+
+Once your users have installed the Neura app, they'll need to grant you permission to access their events and data objects.
 
 [**Download Neura's iOS SDK here**](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib)
 
@@ -24,14 +51,20 @@ key is this returns app UID, app secret, all permission requests
 
 ```
 **copy & paste actual code.**###Authentication The authentication method has 2 tasks:1.	The Neura SDK verifies if the Neura app is installed on the user's phone. 
-	1a. If the user does noezt have the Neura app, authentication immediately returns an error. In this case, we recommend that Consumer application suggests the user install the Neura app from iTunes. **is this what the code does? Can we change this to apply for app in TestFlight?**
-	2.	If the user has the Neura app, then the Neura app takes the user through the authentication and permissions process. Example:  ` [[Neura sharedInstance] AuthenticationWithError:&error];`**Neura returns the following error messages**:  •	`ERROR_CODE_USER_NOT_LOGGED_IN`    •	`ERROR_APP_MISSING_PERMISSIONS`  •	`ERROR_USER_DENIED_PERMISSIONS`  •	`EXTRA_ERROR_CODE`  •	`ERROR_NOT_AUTORIZED_APP_SIGNITURE`  ###Access Token **insert method name here** Callback of the authentication gives the access token or error with the reason of failure. The access token is permanent and unique to the user. You must use it to subscribe to access the user's events and data objects. 
+	1a. If the user does not have the Neura app, authentication immediately returns an error. 	
+	***yes, it's testflight. 
+	SDK just returns an error.
+	We suggest that you, the developer, direct your user to TestFlight to get the Neura app (link), but that's up to you.***
+	2.	If the user has the Neura app, then the Neura app takes the user through the authentication and permissions process. Example:  ` [[Neura sharedInstance] AuthenticationWithError:&error];`***insert pics of the authentication processs***## Neura error messages•	`ERROR_CODE_USER_NOT_LOGGED_IN`    •	`ERROR_APP_MISSING_PERMISSIONS`  •	`ERROR_USER_DENIED_PERMISSIONS`  •	`EXTRA_ERROR_CODE`  •	`ERROR_NOT_AUTORIZED_APP_SIGNITURE`  ###Access Token The callback from the Neura app to the 3rd party app returns the access token or error with the reason of failure. The access token is permanent and unique to the user. You must use it to subscribe to access the user's events and data objects. 
 
-####Examples 
-**Clarify. What does this do?**  A callback function in your code to receive an access token ```C# -(BOOL)application:(UIApplication *)application  
+```Objective-C -(BOOL)application:(UIApplication *)application  
              openURL:(NSURL *)url
  sourceApplication:(NSString *)sourceApplication  
           annotation:(id)annotation```
+***the variable is returned as a `url`***
+this is how it's returned:
+neura594d5148be1d1ab5cc767018bfa27cf6224e871ad8e2a71e3b8d3eb6054cefa1://?access_token=4f982f3f276f6753a1f29595e7138591919348dd92a46d2f4e8103d0a527459f
+
 The access token is given per Neura client_id:Example of access token: 
 `neuraASDF1234********************************://?access_token=“qwer7890************************"`  
 Example of authentication error:  
@@ -42,6 +75,13 @@ key is this returns app UID, app secret, all permission requests
 ------
 
 ##AuthenticationTo authenticate the user, Neura's SDK makes a call to the Neura app on the user's phone which takes the user through the authentication process. Your client app will go through the following steps, detailed below:1.	**Set** the **App UID**, **App secret** and client permissions2.	**Call** the authentication **What are we trying to say here? 'initiate authentication in the Neura app'?**  3.	**Receive** the access token from the Neura app  **I love this structure, but it doesn't align wiht the headers below. Make it align!**
+
+------------
+
+# Internal Neura notes
+
+fix throughout. iOS uses `access_token` whereas Android uses `accessToken`.  Let's pick one convention and use it consistently throughout.
+
 
 
 
