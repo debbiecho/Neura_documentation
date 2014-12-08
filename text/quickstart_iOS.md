@@ -22,7 +22,7 @@ If you need the password to access the Neura app, contact us at build [at] thene
 Launch the 3rd party demo app and click `Authenticate with Neura`.  Neura will return your unique `accessToken`. Copy the `accessToken` for future use.
 
 ###3. Take it for a spin
-Use your `accessToken` in the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project to see your own information.
+Use your `accessToken` in the [Quickstart: request health and wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project to see your own information.
 
 ##Congrats on finishing the quickstart project! 
 We hope it gives you a small taste of the power of Neura and motivates you to integrate your apps and IoT devices with Neura.  For next steps, you can [learn more](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) about Neura or [set up a developer account](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/account.md).
