@@ -6,7 +6,7 @@ for developers](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SamplePro
 
 ### Here's how to integrate with Neura:  
   1. Ensure your users have the Neura app  
-  2. Register your 3rd party app with Neura  
+  2. Register your app with Neura  
   3. Add Neura to your app  
   4. Request data objects to better understand your users  
 
@@ -17,7 +17,7 @@ Currently, Neura for iOS is available only through TestFlight so your users will
     
 ![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/HowToGetNeuraAppiOSFramed.png) ![TestFlight email in native iPhone mail](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/TestFlightIniPhoneMailFramed.png) ![TestFlight email in native iPhone mail](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/CreateNeuraAccountFramed.png)  
 
-##  2. Register your 3rd party app with Neura  
+##  2. Register your app with Neura  
 [![Register your app with Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRegisterApp.png)](https://dev.theneura.com)  
 
 If you don't already have a Neura user account, you need to first [get the Neura app](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2) and create a user account.  If you need expedited access, contact us at build [at] theneura [dot] com.  
