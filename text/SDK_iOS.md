@@ -51,15 +51,14 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 
 The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
 
-Add this **authentication code** to your app to activate authentication with the Neura app -- be sure to replace the example **App UID** and **App secret** with your unique credentials:
+Add this **authentication code** to your app to activate authentication with the Neura app -- be sure to replace the example **App UID** and **App secret** with your unique credentials shown at https://dev.theneura.com/#/manage :
 ```Objective-C
 - (IBAction)startNeuraAuth:(id)sender {    
-    [[Neura sharedInstance] setClientId:@"ABC123***********************************"]; // replace with the App UID that Neura provides
+    [[Neura sharedInstance] setClientId:@"ABC123***********************************"]; // replace with the App UID that Neura provides, shown at: https://dev.theneura.com/#/manage
     [[Neura sharedInstance] setClientSecretId :@"xyz789***********************************"]; // replace with the App Secret that Neura provides
-    [[Neura sharedInstance] setPermmisions:@"userIsRunning,userArrivedToSignificantLocationFromActiveZone,userStartedWalking"]; //replace with the premissions you requested, shown at: https://dev.theneura.com/#/manage
+    [[Neura sharedInstance] setPermmisions:@"dailyActivitySummary, wellnessProfile,sleepData"]; //replace with the specific premissions you requested 
     
     // If there's an error in authenticating, Neura returns it here.
-    // A complete list of the types of errors is available at https://github.com/NeuraLabs/Neura_documentation
     NSError *error = nil;
     [[Neura sharedInstance] AuthenticationWithError:&error];
     if (error) {
