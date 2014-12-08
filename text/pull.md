@@ -1,4 +1,6 @@
 # Requesting data objects
+Data objects contain [distilled user information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature), such as wellness, activity or sleep information, during a period of time in JSON format that you access asynchronously.  
+
 In this document we detail Neura's API endpoints for requesting data objects, information about a user over time and/or in a specific place. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** authorization token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive a response. 
 
 ## API root endpoint

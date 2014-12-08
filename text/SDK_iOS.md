@@ -28,16 +28,20 @@ Register your app with Neura at the [Neura's developer site](https://dev.theneur
 ![Neura's developer website](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDevSite.png)  
 
 ###Let Neura know about your app
-Please let us know your app name, company name, and a few other details.  
+[Let us know](https://dev.theneura.com/#/register) your app name, company name, and a few other details.  Please note that each iOS Bundle ID must be unique.  
 ![register your app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_top_iOS.png)
 
-###Select data objects
-Select the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you want permission to access.  (Currently, [Neura event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) are only available for Android.)  
+###Select Neura data objects
+Select the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you will want permission to access.  During the authentication process, Neura will ask your users to approve permission for you to access these data objects.  (Currently, [Neura event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) are only available for Android.)  
 ![Select data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_data_objects.png)
 
 ### Register
-The **Register** button is not available until you've completed all manditory fields.  
+The **Register** button is enabled only after you've completed all manditory fields.  
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
+
+### Example registration
+In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to 'health and wellness'.  They're using the iOS Bundle ID `com.neura.sample.auth3`.  
+![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/ExampleAppRegistrationiOS.png)
 
 
 ##  3. Add authentication code into your app  

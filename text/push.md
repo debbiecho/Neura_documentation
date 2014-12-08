@@ -1,4 +1,6 @@
 # Neura API endpoints for PUSH event subscriptions
+Event subscriptions are changes in [the state of a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature) that Neura delivers synchronously as a callback. 
+
 In this document Neura details API endpoints that you can use to subscribe to PUSH notifications for events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  **Is JSON true for PUSH events?**.  You must [be authenticated, provide a **Bearer** authorization token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive PUSH notifications. 
 
 `POST https://wapi.theneura.com/v1/subscriptions`
