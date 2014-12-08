@@ -20,9 +20,11 @@ Currently, Neura for iOS is available only through TestFlight so your users will
 ##  2. Register your 3rd party app with Neura  
 [![Register your app with Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRegisterApp.png)](https://dev.theneura.com)  
 
-If you don't already have a Neura user account, please first [download the Neura app](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2) and create a user account before starting to develop with Neura.  If you need expedited access, contact us at build [at] theneura [dot] com. 
+If you don't already have a Neura user account, you need to first [get the Neura app](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2) and create a user account.  If you need expedited access, contact us at build [at] theneura [dot] com.  
+Register your app with Neura at the [Neura's developer site](https://dev.theneura.com) -- login using the same email and password as your Neura user account.  After you register your app, Neura will provide you with the credentials you'll need to integrate Neura into your app.      
 
-Once you have a user account, use https://dev.theneura.com to register your app with Neura and receive the credentials you'll need.  You can sign in for the Neura developer account with the same email and password as your Neura user account.  Although it's not required, the best practice is to use the same login credentials for both your developer and user accounts.  
+![Neura's developer website](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDevSite.png)  
+
 
 
 
