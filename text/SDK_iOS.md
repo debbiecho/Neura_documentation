@@ -24,24 +24,24 @@ If you don't already have a Neura user account, you need to first [get the Neura
 
 Once you have an account with Neura, register your app at [Neura's developer site](https://dev.theneura.com) -- login using the same email and password as your Neura user account.  After you register your app, Neura will provide you with the credentials you'll need to add Neura into your app.      
 
-###[Log in](https://dev.theneura.com) to Neura's developer website
+### 2.1[Log in](https://dev.theneura.com) to Neura's developer website
 
 ![Neura's developer website](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDevSite.png)  
 
-###Let Neura know about your app
+### 2.2 Let Neura know about your app
 [Provide](https://dev.theneura.com/#/register) your app name, company name, a brief description of your app, and an iOS Bundle ID.  Please note that **each iOS Bundle ID must be unique** -- you cannot use the same bundle ID for multiple apps.  
 ![register your app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_top_iOS.png)
 
-###Select Neura data objects
+### 2.3 Select Neura data objects
 Select the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you will want permission to access.  During the authentication process, Neura will ask your users to approve permission for you to access these data objects.  (Currently, [Neura event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) are only available for Android.)  
 ![Select data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_data_objects.png)
 
-### Register
+### 2.4 Register
 The **Register** button is enabled only after you've completed all manditory fields.  Information for a successful registration is available in https://dev.theneura.com/#/manage . Please note that **you must click the App secret** to make it visible.  
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
-### Example registration
+### 2.5 Example registration
 In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to '*health and wellness*' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' data objects: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.  Again, please note that **you must click the App secret** to make it visible.  
 
 
@@ -51,14 +51,14 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 
 [![Get the Neura SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetSDKiOS.png)](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib)  
 
-### Add Neura's SDK 
+### 3.1 Add Neura's SDK 
 The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
 
-### Add the Neura URL schema
+### 3.2 Add the Neura URL schema
 Open the `.plist` file. Under **URL Schemes** you need to create only one URL schema. Create your **URL Schema** by adding the prefix `neura` to the **App UID** that Neura gave you in the [registration process](https://github.com/NeuraLabs/Neura_documentation/tree/master/text/account.md). For example, if the **App UID** is `ASDF1234*****************************` then the **URL schema** value is `neuraASDF1234*****************************`.  
 
 
-### Add authentication code
+### 3.3 Add authentication code
 Add this authentication code to your app to activate authentication with the Neura app -- be sure to replace the example **App UID** and **App secret** with your unique credentials shown at https://dev.theneura.com/#/manage :
 ```Objective-C
 // Neura authentication code
@@ -77,7 +77,7 @@ Add this authentication code to your app to activate authentication with the Neu
 }
 ```
 The callback from the Neura app will return either the user's `access_token` or an error message. The `access_token` is permanent and unique to the user. You must use it when requesting the user's data objects. 
-####Example: successful authentication where Neura returns the `access_token`
+####Example: successful authentication where Neura returns an `access_token`
 `neuraASDF1234********************************://?access_token=“qwer4567************************"`  
 
 ####Example: failed authentication where Neura returns an error `neuraASDF1234********************************://?error=“ERROR_APP_MISSING_PERMISSIONS"`
@@ -85,19 +85,14 @@ Add this authentication code to your app to activate authentication with the Neu
 ####All of Neura's error codes for iOS
 •	`ERROR_CODE_USER_NOT_LOGGED_IN`    •	`ERROR_APP_MISSING_PERMISSIONS`  •	`ERROR_USER_DENIED_PERMISSIONS`  •	`EXTRA_ERROR_CODE`  •	`ERROR_NOT_AUTORIZED_APP_SIGNITURE`  
 
-### Request permission from the user to access their data
+### 3.4 Request permission from the user to access their data
+Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
 
 
 ##  4. Request data objects to better understand your users  
 
 ***How does this work?!***
 
-Once your users have installed the Neura app, they'll need to grant you permission to access their events and data objects.
-
-
-
-When you launch the Neura authentication code in your app, your app will launch the Neura app to 
-you'll only need to do this once
 
 
 ------------
