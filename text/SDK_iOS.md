@@ -23,11 +23,21 @@ Currently, Neura for iOS is available only through TestFlight so your users will
 If you don't already have a Neura user account, you need to first [get the Neura app](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2) and create a user account.  If you need expedited access, contact us at build [at] theneura [dot] com.  
 Register your app with Neura at the [Neura's developer site](https://dev.theneura.com) -- login using the same email and password as your Neura user account.  After you register your app, Neura will provide you with the credentials you'll need to integrate Neura into your app.      
 
+###Log in to Neura's developer website
+
 ![Neura's developer website](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDevSite.png)  
 
+###Let Neura know about your app
+Please let us know your app name, company name, and a few other details.  
+![register your app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_top_iOS.png)
 
+###Select data objects
+Select the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you want permission to access.  (Currently, [Neura event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) are only available for Android.)  
+![Select data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_data_objects.png)
 
-
+### Register
+The **Register** button is not available until you've completed all manditory fields.  
+![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
 
 ##  3. Add authentication code into your app  
