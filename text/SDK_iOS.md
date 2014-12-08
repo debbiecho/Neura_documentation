@@ -1,14 +1,14 @@
 
 #Neura for iOS
 
-Neura has built an iOS app for users, [available via TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app), and an [iOS SDK
+Neura has built an [iOS app available via TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) for users,, and an [iOS SDK
 for developers](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib).  Add Neura to your app to enable it to request data objects for your users.  Currently, Neura does not offer event notifications for iOS; event notifications are only available for Android. 
 
 ### Here's how to integrate with Neura:  
-  1. Ensure your users have the Neura app  
-  2. Register your app with Neura  
-  3. Add Neura to your app  
-  4. Request data objects to better understand your users  
+  1. [Ensure](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) your users have the Neura app  
+  2. [Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#2-register-your-app-with-neura) your app with Neura  
+  3. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#3-add-neura-to-your-app) Neura to your app  
+  4. Query data objects to better understand your users  
 
 ##  1. Ensure your users have the Neura app  
 [![Request access to Neura iOS on TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRequestAccessiOS.png)](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2)
@@ -24,7 +24,7 @@ If you don't already have a Neura user account, you need to first [get the Neura
 
 Once you have an account with Neura, register your app at [Neura's developer site](https://dev.theneura.com) -- login using the same email and password as your Neura user account.  After you register your app, Neura will provide you with the credentials you'll need to add Neura into your app.      
 
-### 2.1[Log in](https://dev.theneura.com) to Neura's developer website
+### 2.1 [Log in](https://dev.theneura.com) to Neura's developer website
 
 ![Neura's developer website](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDevSite.png)  
 
@@ -89,7 +89,7 @@ Add this authentication code to your app to activate authentication with the Neu
 Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
 
 
-##  4. Request data objects to better understand your users  
+##  4. Query data objects to better understand your users  
 
 ***How does this work?!***
 
