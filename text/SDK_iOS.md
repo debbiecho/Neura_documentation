@@ -1,22 +1,26 @@
 
 #Neura for iOS
 
-Neura has built an iOS app for users, [available via TestFlight]()
+Neura has built an iOS app for users, [available via TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app), and an [iOS SDK
+available for download here](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib).  Add the Neura SDK to your app to enable it to request data objects for your users.  Neura is event notifications for iOS; currently, event notifications are only available for Android. 
 
-
-[![Neura iOS SDK](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/iOS-7-SDK-icon.png)](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib)
-
-Add the Neura SDK to your app to enable it to request for data objects for your users that have the iOS Neura app.  Currently, event notifications are only available for Android users. 
-
-Here's how to integrate with Neura:  
+### Here's how to integrate with Neura:  
   1. Ensure your users have the Neura app  
   2. Register your 3rd party app with Neura  
   3. Add authentication code into your app  
   4. Request data objects to better understand your users  
 
 ##  1. Ensure your users have the Neura app  
+[![Request access to Neura iOS on TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRequestAccessiOS.png)](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2)
 
-![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/HowToGetNeuraAppiOSFramed.png)
+Currently, Neura for iOS is available only through TestFlight so your users will need to [apply for access](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2).  When Neura grants them access, they'll need to (1) open the TestFlight invitation in their native iPhone Mail client and (2) create an account with Neura.  Please note that users have been unable to install TestFlight with non-native mail clients, such as Gmail and Sparrow.
+    
+![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/HowToGetNeuraAppiOSFramed.png)  
+
+![TestFlight email in native iPhone mail](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/TestFlightIniPhoneMailFramed.png)  
+
+![TestFlight email in native iPhone mail](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/CreateNeuraAccountFramed.png)
+
 
 ##  2. Register your 3rd party app with Neura  
 
@@ -35,7 +39,6 @@ Your users will need to install the [app by requesting access to be a Neura beta
 
 Once your users have installed the Neura app, they'll need to grant you permission to access their events and data objects.
 
-[**Download Neura's iOS SDK here**](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib)
 
 ##1. Register your app with Neura
 explain how this works. 
