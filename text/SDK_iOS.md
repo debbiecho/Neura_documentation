@@ -40,8 +40,6 @@ The **Register** button is enabled only after you've completed all manditory fie
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
-
-
 ### Example registration
 In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to '*health and wellness*' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' data objects: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.  Again, please note that **you must click the App secret** to make it visible.  
 
@@ -53,7 +51,23 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 
 The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
 
-
+Add this code to your app to activate authentication with the Neura app -- be sure to replace the example **App UID** and **App secret** with your unique credentials:
+```Objective-C
+- (IBAction)startNeuraAuth:(id)sender {    
+    [[Neura sharedInstance] setClientId:@"ABC123***********************************"]; // replace with the App UID that Neura provides
+    [[Neura sharedInstance] setClientSecretId :@"xyz789***********************************"]; // replace with the App Secret that Neura provides
+    [[Neura sharedInstance] setPermmisions:@"userIsRunning,userArrivedToSignificantLocationFromActiveZone,userStartedWalking"]; //replace with the premissions you requested, shown at: https://dev.theneura.com/#/manage
+    
+    // If there's an error in authenticating, Neura returns it here.
+    // A complete list of the types of errors is available at https://github.com/NeuraLabs/Neura_documentation
+    NSError *error = nil;
+    [[Neura sharedInstance] AuthenticationWithError:&error];
+    if (error) {
+        NSLog(@"Error: %@",error.userInfo[@"NSLocalizedDescription"]);
+        self.label.text = error.userInfo[@"NSLocalizedDescription"];
+    }
+}
+```
 
 
 ##  4. Request data objects to better understand your users  
