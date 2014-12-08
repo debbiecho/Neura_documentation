@@ -46,13 +46,21 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/ExampleAppRegistrationiOS.png)
 
-##  3. Add the Neura SDK and authentication code to your app  
+##  3. Add Neura to your app 
+
 [![Get the Neura SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetSDKiOS.png)](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib)  
 
+### Add Neura's SDK 
 The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
 
-Add this **authentication code** to your app to activate authentication with the Neura app -- be sure to replace the example **App UID** and **App secret** with your unique credentials shown at https://dev.theneura.com/#/manage :
+### Add the Neura URL schema
+Open the `.plist` file. Under **URL Schemes** you need to create only one URL schema. Create your **URL Schema** by adding the prefix `neura` to the **App UID** that Neura gave you in the [registration process](https://github.com/NeuraLabs/Neura_documentation/tree/master/text/account.md). For example, if the **App UID** is `ASDF1234*****************************` then the **URL schema** value is `neuraASDF1234*****************************`.  
+
+
+### Add authentication code
+Add this authentication code to your app to activate authentication with the Neura app -- be sure to replace the example **App UID** and **App secret** with your unique credentials shown at https://dev.theneura.com/#/manage :
 ```Objective-C
+// Neura authentication code
 - (IBAction)startNeuraAuth:(id)sender {    
     [[Neura sharedInstance] setClientId:@"ABC123***********************************"]; // replace with the App UID that Neura provides, shown at: https://dev.theneura.com/#/manage
     [[Neura sharedInstance] setClientSecretId:@"xyz789***********************************"]; // replace with the App Secret that Neura provides
@@ -71,6 +79,10 @@ Add this **authentication code** to your app to activate authentication with the
 
 ##  4. Request data objects to better understand your users  
 
+***How does this work?!***
+
+When you launch the Neura authentication code in your app, your app will launch the Neura app to 
+you'll only need to do this once
 
 
 -----
@@ -85,7 +97,8 @@ Once your users have installed the Neura app, they'll need to grant you permissi
 explain how this works. 
 key is this returns app UID, app secret, all permission requests
 
-###2. Create your URL schemaOpen the `.plist` file. Under **URL Schemes** you need to create only one URL schema. Create your **URL Schema** by adding the prefix `neura` to the **App UID** that Neura gave you in the [registration process](https://github.com/NeuraLabs/Neura_documentation/tree/master/text/account.md). For example, if the **App UID** is `ASDF1234*****************************` then the **URL schema** value is `neuraASDF1234*****************************`.  
+###2. Create your URL schema
+
 
 ##SetThe authentication call requires 
 Example:  ```Objective-C
