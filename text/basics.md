@@ -55,12 +55,12 @@ A Neura day begins on the calendar day when the user awakes and finishes the fol
 ![Neura's view of a person's day](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDailyCalendar.jpg)
 
 ### Timezone changes
-Neura considers a user changing timezones as an [edge case](http://en.wikipedia.org/wiki/Edge_case). Consequently, our approach is to calculate all events based on the timezone the user was in when they awoke, regardless of their timezone the rest of the day.
+Neura considers a user changing timezones as an [edge case](http://en.wikipedia.org/wiki/Edge_case). Consequently, our approach is to always calculate events based on the timezone the user was in when they awoke, regardless of their timezone the rest of the day.
 
 ### Differences in time between the Neura API and the Neura app
 Time is conveyed differently in the Neura app versus the Neura API to make the most sense for each audience.  The Neura API uses [epoch time](http://en.wikipedia.org/wiki/Unix_time) so that developers don't need to worry about differences in timezones between different users.  For instance, when Neura delivers an event or a data object, it returns a `timestamp` in epoch time.
 
-For users, the Neura app always displays time in the user's current timezone.  When a user changes timezones then Neura automatically updates their timeline.  For instance, if the user awakes at 8am on Monday in San Francisco and then flies to New York, 
+For users, the Neura app always displays time in the user's current timezone.  When a user changes timezones then Neura automatically updates their timeline.  For instance, if the user awakes at 8am on Monday in San Francisco and then flies to New York, ***left off here***
 
 ![Neura frames events in a user's timezone and always returns UTC](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraUTC.jpg)   
 
