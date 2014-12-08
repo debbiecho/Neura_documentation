@@ -49,8 +49,10 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
 
 
-ASDF1234********************************
+ABC123***********************************
 
+
+xyz789***********************************
 
 
 ##  4. Request data objects to better understand your users  
