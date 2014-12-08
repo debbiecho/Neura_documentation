@@ -46,10 +46,10 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 ##  3. Add the Neura SDK and authentication code to your app  
 [![Get the Neura SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetSDKiOS.png)](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib)  
 
-The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** ![](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/h_file.png) and **libNeura.a** ![](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/m_file.png), which you need to add to your app.  
+The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
 
- 
 
+ASDF1234********************************
 
 
 
