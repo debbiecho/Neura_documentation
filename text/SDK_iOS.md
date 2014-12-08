@@ -55,7 +55,7 @@ Add this **authentication code** to your app to activate authentication with the
 ```Objective-C
 - (IBAction)startNeuraAuth:(id)sender {    
     [[Neura sharedInstance] setClientId:@"ABC123***********************************"]; // replace with the App UID that Neura provides, shown at: https://dev.theneura.com/#/manage
-    [[Neura sharedInstance] setClientSecretId :@"xyz789***********************************"]; // replace with the App Secret that Neura provides
+    [[Neura sharedInstance] setClientSecretId:@"xyz789***********************************"]; // replace with the App Secret that Neura provides
     [[Neura sharedInstance] setPermmisions:@"dailyActivitySummary, wellnessProfile,sleepData"]; //replace with the specific premissions you requested 
     
     // If there's an error in authenticating, Neura returns it here.
