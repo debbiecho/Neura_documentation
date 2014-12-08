@@ -48,6 +48,8 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 
 The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
 
+![](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/m_file.png)  
+![](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/h_file.png)  
 
 
 
