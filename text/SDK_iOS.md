@@ -51,7 +51,7 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 
 The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
 
-Add this code to your app to activate authentication with the Neura app -- be sure to replace the example **App UID** and **App secret** with your unique credentials:
+Add this **authentication code** to your app to activate authentication with the Neura app -- be sure to replace the example **App UID** and **App secret** with your unique credentials:
 ```Objective-C
 - (IBAction)startNeuraAuth:(id)sender {    
     [[Neura sharedInstance] setClientId:@"ABC123***********************************"]; // replace with the App UID that Neura provides
