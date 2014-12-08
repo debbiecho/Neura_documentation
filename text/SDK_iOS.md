@@ -2,12 +2,12 @@
 #Neura for iOS
 
 Neura has built an iOS app for users, [available via TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app), and an [iOS SDK
-available for download here](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib).  Add the Neura SDK to your app to enable it to request data objects for your users.  Neura is event notifications for iOS; currently, event notifications are only available for Android. 
+for developers](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib).  Add Neura to your app to enable it to request data objects for your users.  Currently, Neura does not offer event notifications for iOS; event notifications are only available for Android. 
 
 ### Here's how to integrate with Neura:  
   1. Ensure your users have the Neura app  
   2. Register your 3rd party app with Neura  
-  3. Add the Neura SDK and authentication code to your app  
+  3. Add Neura to your app  
   4. Request data objects to better understand your users  
 
 ##  1. Ensure your users have the Neura app  
