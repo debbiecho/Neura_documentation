@@ -7,7 +7,7 @@ available for download here](https://github.com/NeuraLabs/neura_ios_sdk/tree/mas
 ### Here's how to integrate with Neura:  
   1. Ensure your users have the Neura app  
   2. Register your 3rd party app with Neura  
-  3. Add authentication code into your app  
+  3. Add the Neura SDK and authentication code to your app  
   4. Request data objects to better understand your users  
 
 ##  1. Ensure your users have the Neura app  
@@ -28,7 +28,7 @@ Register your app with Neura at the [Neura's developer site](https://dev.theneur
 ![Neura's developer website](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDevSite.png)  
 
 ###Let Neura know about your app
-[Let us know](https://dev.theneura.com/#/register) your app name, company name, and a few other details.  Please note that each iOS Bundle ID must be unique.  
+[Let provide](https://dev.theneura.com/#/register) your app name, company name, a brief description of your app, and an iOS Bundle ID.  Please note that **each iOS Bundle ID must be unique**.  
 ![register your app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_top_iOS.png)
 
 ###Select Neura data objects
@@ -40,11 +40,15 @@ The **Register** button is enabled only after you've completed all manditory fie
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
 ### Example registration
-In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to 'health and wellness' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' data objects: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. 
+In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to '*health and wellness*' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' data objects: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/ExampleAppRegistrationiOS.png)
 
+##  3. Add the Neura SDK and authentication code to your app  
+[![Get the Neura SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetSDKiOS.png)](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib)  
 
-##  3. Add authentication code into your app  
+The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
+
+
 
 
 ##  4. Request data objects to better understand your users  
