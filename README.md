@@ -30,6 +30,8 @@ Reach out to us at build [at] theneura [dot] com.  We're serious about the :beer
 #Internal Neura notes 
 Mikimer has moved the API and SDK docs from Word to Github to (1) make it easier to collaborate, (2) improve formatting and readability, and (3) to create an MVP that's ready for public release.
 
+![Note for Ori - please clean up images!](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NoteForOri.jpg)
+
 Plans:  
 - Mikimer will own this document until further notice
 - Anyone else editing the doc will submit change to Mikimer for approval

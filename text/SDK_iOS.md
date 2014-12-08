@@ -13,13 +13,19 @@ available for download here](https://github.com/NeuraLabs/neura_ios_sdk/tree/mas
 ##  1. Ensure your users have the Neura app  
 [![Request access to Neura iOS on TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRequestAccessiOS.png)](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2)
 
-Currently, Neura for iOS is available only through TestFlight so your users will need to [apply for access](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2).  When Neura grants them access, they'll need to (1) open the TestFlight invitation in their native iPhone Mail client and (2) create an account with Neura.  Please note that **users have been unable to install TestFlight with non-native mail clients**, such as Gmail and Sparrow.
+Currently, Neura for iOS is available only through TestFlight so your users will need to [apply for access](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2).  When Neura grants them access, they'll need to (1) open the TestFlight invitation in their native iPhone Mail client and (2) create an account with Neura.  Please note that **users have been unable to install TestFlight with non-native mail clients**, such as Gmail and Sparrow.  If you need expedited access to the app contact us at build [at] theneura [dot] com.
     
 ![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/HowToGetNeuraAppiOSFramed.png) ![TestFlight email in native iPhone mail](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/TestFlightIniPhoneMailFramed.png) ![TestFlight email in native iPhone mail](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/CreateNeuraAccountFramed.png)  
 
-
-
 ##  2. Register your 3rd party app with Neura  
+[![Register your app with Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRegisterApp.png)](https://dev.theneura.com)  
+
+If you don't already have a Neura user account, please first [download the Neura app](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2) and create a user account before starting to develop with Neura.  If you need expedited access, contact us at build [at] theneura [dot] com. 
+
+Once you have a user account, use https://dev.theneura.com to register your app with Neura and receive the credentials you'll need.  You can sign in for the Neura developer account with the same email and password as your Neura user account.  Although it's not required, the best practice is to use the same login credentials for both your developer and user accounts.  
+
+
+
 
 
 ##  3. Add authentication code into your app  
@@ -83,6 +89,7 @@ neura594d5148be1d1ab5cc767018bfa27cf6224e871ad8e2a71e3b8d3eb6054cefa1://?access_
 
 fix throughout. iOS uses `access_token` whereas Android uses `accessToken`.  Let's pick one convention and use it consistently throughout.
 
+Account creation. Let's simplify and be consistent: remove the **sign up** option and simply require users to **sign in** with their Neura user credentials.   
 
 
 
