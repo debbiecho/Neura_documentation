@@ -40,7 +40,7 @@ The **Register** button is enabled only after you've completed all manditory fie
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
 ### Example registration
-In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to 'health and wellness'.  They're using the iOS Bundle ID `com.neura.sample.auth3`.  
+In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to 'health and wellness' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' data objects: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/ExampleAppRegistrationiOS.png)
 
 
