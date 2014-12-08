@@ -36,14 +36,14 @@ Select the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation
 ![Select data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_data_objects.png)
 
 ### Register
-The **Register** button is enabled only after you've completed all manditory fields.  Information for a successful registration is available in https://dev.theneura.com/#/manage . Please note that **you must click the App secret to make it visible**.  
+The **Register** button is enabled only after you've completed all manditory fields.  Information for a successful registration is available in https://dev.theneura.com/#/manage . Please note that **you must click the App secret** to make it visible.  
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
 
 
 ### Example registration
-In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to '*health and wellness*' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' data objects: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. Neura provides the developer with the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.  Again, please note that **you must click the App secret to make it visible**.  
+In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to '*health and wellness*' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' data objects: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.  Again, please note that **you must click the App secret** to make it visible.  
 
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/ExampleAppRegistrationiOS.png)
