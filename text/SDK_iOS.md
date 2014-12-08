@@ -16,6 +16,7 @@ Here's how to integrate with Neura:
 
 ##  1. Ensure your users have the Neura app  
 
+![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/HowToGetNeuraAppiOSFramed.png)
 
 ##  2. Register your 3rd party app with Neura  
 
