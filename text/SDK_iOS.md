@@ -8,7 +8,7 @@ for developers](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SamplePro
   1. [Ensure](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) your users have the Neura app  
   2. [Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#2-register-your-app-with-neura) your app with Neura  
   3. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#3-add-neura-to-your-app) Neura to your app  
-  4. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#4-query-data-objects-to-better-understand-your-users) data objects to better understand your users  
+  4. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#4-query-data-objects-to-better-understand-your-users) Neura for data objects to better understand your users  
 
 ##  1. Ensure your users have the Neura app  
 [![Request access to Neura iOS on TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRequestAccessiOS.png)](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2)
@@ -88,9 +88,9 @@ Add this authentication code to your app to activate authentication with the Neu
 Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
 
 
-##  4. Query data objects to better understand your users  
+##  4. Query Neura for data objects to better understand your users  
 
-***How does this work?!***
+Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like data objects that aren't currently available, please let us know at build [at] theneura [dot] com. 
 
 
 
