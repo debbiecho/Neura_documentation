@@ -2,7 +2,7 @@
 #Quickstart: Subscribe to events on Android
 In this project you will use Neura's [3rd party Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) to subscribe to the Neura event PUSH notifications on Android for `userStartedWalking` for yourself.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md#instructions) for this project are detailed below -- it should take you less than 5 minutes, if you've already set up your Neura account; it **requires an account** with Neura and an Android phone.  
 
-This project demonstrates Neura's ability to notify a 3rd party app of user events. A practical application of this project is that you can use it to develop an app that intelligently reacts to your users' actions in real time. 
+This project demonstrates Neura's ability to notify a 3rd party app of user events. A practical application of this project is that you can use it to develop an app that intelligently reacts to your users' actions in real time, such as turning on the lights when they awake or locking the door when they leave home. 
 
 ##The response you'll recieve
 ![Demo app event notifications](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoEventNotification.png)
@@ -18,7 +18,7 @@ You must have both the [Neura app](https://theneura.prefinery.com/betas/4624/tes
 ####Be sure to activate your account with Neura.   
 If you need the password to access the Neura app, contact us at build [at] theneura [dot] com and be sure to note that you're working on this project. Your Neura app should look similar to this:
 
-![Working Neura app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoNeuraApp.png)
+![Working Neura app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoNeuraApp2.png)
 
 ###2. Activate the demo app
 Enter the following `APP ID`, `APP SECRET`, and `PERMISSION` name in the app and click `Neura authenticate`.  
