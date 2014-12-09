@@ -11,14 +11,9 @@ This project demonstrates Neura's ability to notify a 3rd party app of user even
 ##Instructions
 
 ###1. Install the apps
-You must have both the [Neura app](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2), an account with Neura that is logged in, and the [3rd party Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) for this project.  
+You must have both the [Neura app](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2) and the [3rd party Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) for this project.  Be sure that you're logged into your Neura account -- it should like similar to the picture below.  If you need the password to access the Neura app, contact us at build [at] theneura [dot] com and be sure to note that you're working on this Quickstart project. 
 
-![Both apps installed](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoAppsInPhone.png)
-
-####Be sure to activate your account with Neura.   
-If you need the password to access the Neura app, contact us at build [at] theneura [dot] com and be sure to note that you're working on this project. Your Neura app should look similar to this:
-
-![Working Neura app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoNeuraApp2.png)
+![Both apps installed](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoAppsInPhone.png)  ![Working Neura app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoNeuraApp2.png)
 
 ###2. Activate the demo app
 Enter the following `APP ID`, `APP SECRET`, and `PERMISSION` name in the app and click `Neura authenticate`.  
