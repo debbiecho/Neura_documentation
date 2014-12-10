@@ -1,7 +1,125 @@
 
-#Neura SDK for Android
+#Neura for Android
+
+Neura has built an [Android app available in the Play Store]( ) for users and an [Android SDK
+for developers](jar_file_here).  Add Neura to your app to enable it to subscribe to events and request data objects for your users.  Currently, Neura event notifications are only available for Android; Neura does not offer event notifications for iOS. 
+
+### Here's how to integrate with Neura:  
+  1. [Ensure]( ) your users have the Neura app  
+  2. [Register]( ) your app with Neura  
+  3. [Add]( ) Neura to your app  
+  4. [Query]( ) Neura for data objects to better understand your users  
+
+##  1. Ensure your users have the Neura app  
+[![Request access to Neura iOS on TestFlight]( )]( )
+
+Currently, Neura for iOS is available only through TestFlight so your users will need to [apply for access]( ).  When Neura grants them access, they'll need to (1) open the TestFlight invitation in their native iPhone Mail client and (2) create an account with Neura.  Please note that **users have been unable to install TestFlight with non-native mail clients**, such as Gmail and Sparrow.  If you need expedited access to the app contact us at build [at] theneura [dot] com.
+    
+![Install Neura with TestFlight]( ) ![TestFlight email in native iPhone mail]( ) ![TestFlight email in native iPhone mail]( )  
+
+##  2. Register your app with Neura  
+[![Register your app with Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRegisterApp.png)](https://dev.theneura.com)  
+
+If you don't already have a Neura user account, you need to first [get the Neura app]( ) and create a user account.  You only have one account with Neura -- we do not distinguish between a user account and a developer account.  If you need expedited access, contact us at build [at] theneura [dot] com.  
+
+Once you have an account with Neura, register your app at [Neura's developer site](https://dev.theneura.com) -- login using the same email and password as your Neura user account.  After you register your app, Neura will provide you with the credentials you'll need to add Neura into your app.      
+
+### 2.1 [Log in](https://dev.theneura.com) to Neura's developer website
+
+![Neura's developer website](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDevSite.png)  
+
+### 2.2 Let Neura know about your app
+[Provide](https://dev.theneura.com/#/register) your app name, company name, a brief description of your app, and an iOS Bundle ID.  Please note that **each iOS Bundle ID must be unique** -- you cannot use the same bundle ID for multiple apps.  
+![register your app]( )
+
+### 2.3 Select Neura events and data objects
+Select the [Neura events and data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you will want permission to access.  During the authentication process, Neura will ask your users to approve permission for you to access these events and data objects.  
+![Select data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_data_objects.png)
+
+### 2.4 Register
+The **Register** button is enabled only after you've completed all manditory fields.  Information for a successful registration is available in https://dev.theneura.com/#/manage . Please note that **you must click the App secret** to make it visible.  
+
+![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
+
+### 2.5 Example registration ***update for Android***
+In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to '*health and wellness*' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' data objects: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.    
+
+![register app]( )
+
+##  3. Add Neura to your app ***update for Android***
+
+[![Get the Neura SDK for iOS]( )]( )  
+
+### 3.1 Add Neura's SDK ***update for Android***
+The [Neura SDK for Android]( b) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
+
+### 3.2 Add the Neura URL schema ***update for Android***
+Open the `.plist` file. Under **URL Schemes** you need to create only one URL schema. Create your **URL Schema** by adding the prefix `neura` to the **App UID** that Neura gave you in the [registration process](https://github.com/NeuraLabs/Neura_documentation/tree/master/text/account.md). For example, if the **App UID** is `ASDF1234*****************************` then the **URL schema** value is `neuraASDF1234*****************************`.  
+
+
+### 3.3 Add authentication code ***update for Android***
+Add this authentication code to your app to activate authentication with the Neura app -- be sure to replace the example **App UID** and **App secret** with your unique credentials shown at https://dev.theneura.com/#/manage :
+```Objective-C
+// Neura authentication code
+- (IBAction)startNeuraAuth:(id)sender {    
+    [[Neura sharedInstance] setClientId:@"ABC123***********************************"]; // replace ABC123*********************************** with the App UID that Neura provides, shown at: https://dev.theneura.com/#/manage
+    [[Neura sharedInstance] setClientSecretId:@"xyz789***********************************"]; // replace xyz789*********************************** with the App Secret that Neura provides, shown at: https://dev.theneura.com/#/manage
+    [[Neura sharedInstance] setPermmisions:@"dailyActivitySummary, wellnessProfile,sleepData"]; //replace with the specific premissions you requested, shown at: https://dev.theneura.com/#/manage 
+    
+    // If there's an error in authenticating, Neura returns it here.
+    NSError *error = nil;
+    [[Neura sharedInstance] AuthenticationWithError:&error];
+    if (error) {
+        NSLog(@"Error: %@",error.userInfo[@"NSLocalizedDescription"]);
+        self.label.text = error.userInfo[@"NSLocalizedDescription"];
+    }
+}
+```
+The callback from the Neura app will return either the user's `access_token` or an error message. The `access_token` is permanent and unique to the user. You must use it when requesting the user's data objects. 
+####Example: successful authentication where Neura returns an `access_token`
+`neuraASDF1234********************************://?access_token=“qwer4567************************"`  
+
+####Example: failed authentication where Neura returns an error `neuraASDF1234********************************://?error=“ERROR_APP_MISSING_PERMISSIONS"`
+
+####All of Neura's error codes for iOS
+•	`ERROR_CODE_USER_NOT_LOGGED_IN`    •	`ERROR_APP_MISSING_PERMISSIONS`  •	`ERROR_USER_DENIED_PERMISSIONS`  •	`EXTRA_ERROR_CODE`  •	`ERROR_NOT_AUTORIZED_APP_SIGNITURE`  
+
+### 3.4 Request permission from the user to access their data
+Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
+
+
+##  4. Query Neura for data objects to better understand your users  
+
+Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like data objects that aren't currently available, please let us know at build [at] theneura [dot] com. 
+
+## 5. Subscribe to events for your users ***update for Android***
+
+
+
+------
+
 
 [![Neura Android SDK](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/android-sdk-image.jpg)](https://github.com/NeuraLabs/Neura_documentation/tree/master/resources/Neura_Android_SDK)
+
+***Android demo app APK vs. source code -- make sure the devs have a link to the source code (do the same for the iOS sample project)***
+
+What to do:
+- open source code for sample project
+- make sure the .jar file is there under lib
+
+
+If you have trouble compiling, be sure to update your Android SDK Manager. 
+
+The Neura SDK requries the Platform API level to be version 15 (Ice Cream Sandwich) or higher.
+
+
+- SDK android version 19
+
+
+***reminder for Chiki, send mikimer a new jar file***
+
+
+-------------
 
 
 You can add the Neura SDK for Android to your app so that your app can request PUSH event notifications and issue requests for data objects from Neura.  Your users will need to install the [Neura app from Google Play](https://play.google.com/store/apps/details?id=com.neura.weave&hl=en).  Once your users have installed the Neura app, they'll need to grant you permission to access their events and data objects.
