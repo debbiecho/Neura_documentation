@@ -52,7 +52,10 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 
 ##  3. Add Neura to your app 
 
-[![Get the Neura SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidSDK.png)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar)  
+[![Get the Neura SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidSDK.png)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar)  
+
+[![Get the Neura Demo app for Android - source code](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidDemoSourceCode.png)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip)  
+
 
 ### 3.1 Add Neura's SDK 
 The [Neura SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar) consists of the file **NeuraAndroidSDK.jar**, which you need to add to your app.  
