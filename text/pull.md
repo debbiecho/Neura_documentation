@@ -1,7 +1,7 @@
 # Requesting data objects
 Data objects contain [distilled user information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature), such as wellness, activity, or sleep information, during a period of time, in JSON format that you access asynchronously.  
 
-In this document we detail Neura's API endpoints for requesting data objects. (If you want to obtain instantaneous data, go to Neura [API endpoints for PUSH event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)). The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** authorization token, and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive a response. 
+In this document we detail Neura's API endpoints for requesting data objects. (If you want to obtain instantaneous data, go to Neura [API endpoints for PUSH event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)). The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** access token, and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive a response. 
 
 ##Neura data objects detailed below
   - `daily_summary`: Summary of the user's activity
@@ -10,7 +10,7 @@ In this document we detail Neura's API endpoints for requesting data objects. (I
   - `hrv`: Heart Rate Variable (for [NeuroSky](http://neurosky.com/) only) 
 
 ## API root endpoint
-The root endpoint is `https://wapi.theneura.com/v1`. **The Neura API is currently in V1 which is why the root endpoint ends with v1.**
+The root endpoint is `https://wapi.theneura.com/v1`. The Neura API is currently in V1 which is why the root endpoint ends with v1.
 
 ## Response to GET requests
 Neura returns a `status` indicating whether your GET request was a `success` or `error`. If the `status` is `success` then Neura returns a valid response, as detailed below. If the `status` is `error` Neura returns: 
@@ -18,8 +18,8 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
    - `status`: The status is `error`.
    - `timestamp`:  The time when Neura sent the response in [epoch time](http://en.wikipedia.org/wiki/Unix_time). 
    - `errors`: The complex object of error data.
-   -  `errors` > `code`: A snake_case string representing the error code. 
-   -  `errors` > `message`: A human-readable message describing the error.
+   - `errors` > `code`: A snake_case string representing the error code. 
+   - `errors` > `message`: A human-readable message describing the error.
 
 ###Example `error` response
 ```json
@@ -50,7 +50,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 
 ### Request query parameters
 
-#### Required  request parameters
+#### Required request parameters
 - `date`: The day for which you want information in YYYY-MM-DD format.
 
 #### Optional request parameters
@@ -60,7 +60,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 
 #### Required request headers
 
-- `authorization`: Bearer authorization token
+- `authorization`: `Bearer <access_token>`
 
 #### Optional request headers
 
@@ -76,9 +76,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
   - `data` > `steps`: The number of steps the user walked on `date`.  If the user has multiple step-counting devices, then Neura the merges datasets to best reflect total steps walked without double-counting.
   - `data` > `calories`: The amount of calories the user burned on `date` in kilocalories (kcal).
    - `data` > `heartRate`: The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with NeuroSky. 
-  - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). **(If the user weighed himself once, it will return this value, if twice, it will return the average, and if he didn't weigh himself, there will be no data available)**
-
-  **is this if the user measured their weight that day? how does this work exactly?**
+  - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). (If the user weighed himself once, it will return this value, if twice, it will return the average of the two values, and if he didn't weigh himself, no data will be returned.)
 
 
 ### Example `daily_summary` request
@@ -146,7 +144,7 @@ None.
 
 #### Required request headers
 
-- `authorization`: Bearer **<access_token>** 
+- `authorization`: `Bearer **<access_token>**` 
 
 #### Optional request headers
 
@@ -160,13 +158,13 @@ None.
   - `data` > `steps`: Neura returns the average daily steps during the period.
   - `data` > `calories`: Neura returns the average calories burned during the period.   
   - `data` > `activityPlaces`: The complex object of places and the activities that the user does at those locations. 
-  - `data` > `activityPlaces` > `type`: The type of location either `work` or `workout`.   **In the Word doc it looks like there's a different response for `work` vs. `workout`. Is that true? If so, update text below**
-  - `data` > `activityPlaces` > `type` > `steps`: The average steps at the location. 
+  - `data` > `activityPlaces` > `type`: The type of location either `work` or `workout`.  
+  - `data` > `activityPlaces` > `type` > `steps`: The average number of steps taken at the location. 
   - `data` > `activityPlaces` > `type` > `calories`: The average calories burned at the location. 
-  - `data` > `activityPlaces` > `type` > `length`: The average time spent at the location in minutes. 
+  - `data` > `activityPlaces` > `type` > `length`: The average time spent at the location (minutes). 
 
 ### Example `activity` request
-
+`
 ```http
 GET https://wapi.theneura.com/v1/users/profile/activity
 Authorization: Bearer asdf1234**************************
@@ -228,7 +226,7 @@ None.
 
 #### Required request headers
 
-- `authorization`: Bearer <access_token>
+- `authorization`: `Bearer <access_token>`
 
 #### Optional request headers
 
