@@ -3,6 +3,15 @@ Data objects contain [distilled user information](https://github.com/NeuraLabs/N
 
 In this document we detail Neura's API endpoints for requesting data objects, information about a user over time and/or in a specific place. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** authorization token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive a response. 
 
+##Neura data objects detailed below
+  - `daily_summary`: a summary of the user's activity
+  - `activity`: Wellness Activity Profile -  
+  - `sleep`: Sleep Profile - 
+  - `hrv`: Heart Rate Variable (for [Neurosky](http://neurosky.com/) only) 
+
+***Business decision: do we want to release `activity`? If our goal is to generate API queries, then it doesn't make sense to release average values. "Insights" is another issue...***
+
+
 ## API root endpoint
 
 The Neura API is currently in V1 so each call starts with `https://wapi.theneura.com/v1`. 
@@ -31,12 +40,6 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 }
 ```
 
-
-###Neura **data objects** detailed below
-  - `daily_summary`: a summary of the user's activity
-  - `activity`: Wellness Activity Profile -  
-  - `sleep`: Sleep Profile - 
-  - `hrv`: Heart Rate Variable (for [Neurosky](http://neurosky.com/) only) 
 
 
 ---------
