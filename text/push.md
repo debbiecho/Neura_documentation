@@ -1,52 +1,53 @@
 # Neura API endpoints for PUSH event subscriptions
-Event subscriptions are changes in [the state of a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature) that Neura delivers synchronously as a callback. 
 
-In this document Neura details API endpoints that you can use to subscribe to PUSH notifications for events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  **Is JSON true for PUSH events?**.  You must [be authenticated, provide a **Bearer** authorization token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive PUSH notifications. 
+Event are changes in [the state of a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature) that Neura delivers. 
 
-`POST https://wapi.theneura.com/v1/subscriptions`
-**Is this true? when I tested it was GET not POST**
-###Neura events detailed below
-  - `userIsWalking`: user is walking
-  - `phoneShaking`: user is shaking their phone **Does userIsIdle / userIsNotIdle work for this? If not, Ori to decide test case per product discussion on Nov 18th**  
+Neura sends events to you, either to your server using webhook or to your mobile app through Neura's [Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) app. 
 
-**Mikimer & Berman to play with more events!**
+In this document Neura details API endpoints that you can use to subscribe to PUSH notifications for events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** access token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive PUSH notifications.
 
-## GET a subscription to an event
+_____________
+
+In this project, we will do the following: 
+1. Subscribe to an event
+2. Get subscription list
+3. Get a specific subscription
+4. Unsubscribe
+5. Event list
+
+##1. Subscribe to an event
 
 ### Resource URI
 
-**`https://wapi.theneura.com/v1/users/profile/<event>`**
+**`POST https://wapi.theneura.com/v1/subscriptions`**
 
 ### Request query parameters
 
 #### Required request parameters
-- `subscription_id`: Your subscription identifier for the event. 
+- `event_name`: (string) This is the name of the event to which you are subscribing.   [List of events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions)
+- `method`: (string) How Neura will notify you about the event, either `all`, `push`, or `webhook`. If you don't specify a `method`, Neura defaults to `method=all`.
+- `identifier`: (string) The name you give to identify your subscription.
+ 
 
 #### Optional request parameters
-- `method`: How Neura will notify you about the event, either `all`, `push`, or `webhook`. If you don't specify a `method`, Neura defaults to `method=all`.
-- `state`: Customer’s can set it. It is always included into subscribed notification event. **Clarify with Berman. This description makes no sense**- `webhook_id`: The webhook where Neura will send the event notification. The default value is the default application subscriber url that was defined in the application registration process. **Can this be clearer?**
+- `state`: (string) Value sent and received by the customer.  This allows the customer to give another parameter to identify their subscription.
+- `webhook_id`: (string) The webhook where Neura will send the event notification. The default value is the default application subscriber url that was defined in the application registration process. 
 
 ### Request headers
 
 #### Required request headers
 
-- `authorization`: Bearer authorization token
+- `authorization`: `Bearer <access_token>`
 
-#### Optional request headers
-
-- `Cache-Control`: Specifies if the server should circumvent the server cache
-
-
-## Neura notification for event subscription
-- `notificationTimestamp`:  The time when Neura sent the response in epoch time. **Mike changed from Unix GTM time**- `state`: State that customer has set previously in the subscription. **clarify with Berman**    - `identifier`: Customer’s subscription id that was set in the event subscription **do we really use two different names for the same thing? why?**- `event`: The complex object of event data       -  `timestamp`: Timestamp of the event in Unix time (GTM time) **can we change this to be parallel to PULL requests? Let's be consistent wherever possible**       -  `userId`: Unique user id that had event occurred **clarify with Berman**       -  `eventName`: The name of the event you subscribed to.       -  `[metadata]`: Metadata is unique to each event, as detailed in event descriptions.
-
+### Neura's response to event subscription request
+`status`: either failure/success
+`timestamp`: the time when the request was processed 
 
 ### Example subscription `<event>` request
 
 ```http
-GET https://wapi.theneura.com/v1/users/profile/call
+POST https://wapi.theneura.com/v1/subscriptions
 Authorization: Bearer asdf1234**************************
-Cache-Control: no-cache
 ```
 
 ### Example subscription `<event>` response
@@ -60,95 +61,47 @@ Content-Type: application/json
 #### Body
 ```json
 {
-   }
+	status:"success"
+	timestamp: 1418240617		
+ }
 ```
- 
-## Unsubscribe from an event subscriptionDelete a subscription for the user. 
+##2. Get subscription list
+### Resource URI
 
-### Resource URI`DELETE https://wapi.theneura.com/v1/user/events/unsubscribe`
-### Request query parameters
-
-#### Required request parameters
-None.
-
-#### Optional request parameters
-None.
-
-### Request headers
-
-#### Required request headers
-
-- `authorization`: Bearer authorization token
-
-#### Optional request headers
-
-- `Cache-Control`: Specifies if the server should circumvent the server cache
-
-## Response for `unsubscribe` 
-
-**What does Neura return?**
-
-
-### Example unsubscribe `unsubscribe` request
-
-```http
-GET https://wapi.theneura.com/v1/users/profile/call
-Authorization: Bearer asdf1234**************************
-Cache-Control: no-cache
-```
-
-### Example unsubscribe `unsubscribe` response
-
-#### Headers
-```http
-status: 200 OK
-version: HTTP/1.1
-Content-Type: application/json
-```
-#### Body
-```json
-{
-   }
-```
-
-##GET a list of user events that you've subscribed to 
-You can request that Neura provide you with a list of user events that you've subscribed to.### Resource URI
-
-**`GET https://wapi.theneura.com/v1/user/events/subscriptions`**
+**`GET https://wapi.theneura.com/v1/subscriptions`**
 
 ### Request query parameters
 
 #### Required request parameters
-None.
+None 
 
 #### Optional request parameters
-- `identifier`:  Identifies the webhook to which to notify the events. If you don't specify a value, Neura will default to the application subscriber url that you defined in the application registration process. 
+None
 
 ### Request headers
 
 #### Required request headers
 
-- `authorization`: Bearer authorization token
+- `authorization`: `Bearer <access_token>`
 
-#### Optional request headers
+### Neura's response to subscription list request
+`status`: either failure/success  
+`timestamp`: the time when the request was processed  
+`size`: The number of subscription list objects in the response  
+`items`: The complex object representing the subscription list   
+`items`>`created_at`: The timestamp when the subscription was created  
+`items`>`identifier`: The identifier of the subscription    
+`items`>`event`: The event name  
+`items`>`state`: The state defined for the subscription  
 
-- `Cache-Control`: Specifies if the server should circumvent the server cache
-
-## Response for `subscriptions` 
-
-- `userId`:The user's Neura ID
-- `timestamp`: The time when Neura sent the response in epoch time. 
-- `subscriptions`: Subscription complex object **Calrify with Berman**     - `subscriptionName`: Event name
-
-### Example subscription list `subscriptions` request
+### Example of a subscription list request
 
 ```http
-GET https://wapi.theneura.com/v1/users/profile/call
+GET https://wapi.theneura.com/v1/subscriptions
 Authorization: Bearer asdf1234**************************
-Cache-Control: no-cache
 ```
 
-### Example subscription list `call` response
+### Example of a subscription list response
 
 #### Headers
 ```http
@@ -159,11 +112,126 @@ Content-Type: application/json
 #### Body
 ```json
 {
-   }
+  "status": "success",
+  "timestamp": 1418244427,
+  "size": 1,
+  "items": [
+    {
+    	created_at:  1418214427,
+     	identifier:  "aaa",
+     	event:       "userStartedWalking",
+     	state:       "bbb"
+     }
+  ]
+} 
 ```
- 
 
-##`<events>` available for PUSH notification subscriptions 
+##3. Get a specific subscription
+### Resource URI
+
+**`GET https://wapi.theneura.com/v1/subscriptions/<identifier>`**
+
+### Request query parameters
+
+#### Required request parameters
+`identifier`: the subscription identifier 
+
+#### Optional request parameters
+None
+
+### Request headers
+
+#### Required request headers
+
+- `authorization`: `Bearer <access_token>`
+
+### Neura's response to subscription list request
+`status`: either failure/success  
+`timestamp`: the time when the request was processed  
+`size`: The number of subscription list objects in the response  
+`items`: The complex object representing the subscription list   
+`items`>`created_at`: The timestamp when the subscription was created  
+`items`>`identifier`: The identifier of the subscription    
+`items`>`event`: The event name  
+`items`>`state`: The state defined for the subscription  
+
+### Example of a subscription list request
+
+```http
+GET https://wapi.theneura.com/v1/subscriptions/aaa
+Authorization: Bearer asdf1234**************************
+```
+
+### Example of a subscription list response
+
+#### Headers
+```http
+status: 200 OK
+version: HTTP/1.1
+Content-Type: application/json
+```
+#### Body
+```json
+{
+  "status": "success",
+  "timestamp": 1418244427,
+  "data":
+  {
+     created_at:  1418214427,
+     identifier:  "aaa",
+     event:       "userStartedWalking",
+     state:       "bbb"
+  }
+} 
+```
+
+##4. Unsubscribe
+### Resource URI
+
+**`DELETE https://wapi.theneura.com/v1/subscriptions/<identifier>`**
+
+### Request query parameters
+
+#### Required request parameters
+`identifier`: the subscription identifier 
+
+#### Optional request parameters
+None
+
+### Request headers
+
+#### Required request headers
+
+- `authorization`: `Bearer <access_token>`
+
+### Neura's response to subscription list request
+`status`: either failure/success  
+`timestamp`: the time when the request was processed  
+
+### Example of a subscription list request
+
+```http
+DELETE https://wapi.theneura.com/v1/subscriptions/aaa
+Authorization: Bearer asdf1234**************************
+```
+
+### Example of a subscription list response
+
+#### Headers
+```http
+status: 200 OK
+version: HTTP/1.1
+Content-Type: application/json
+```
+#### Body
+```json
+{
+  "status": "success",
+  "timestamp": 1418244427,
+} 
+```
+
+##5.List of Events available for subscription
 The events are detailed below, organized into the following categories:  
 
 - Events at home
@@ -171,12 +239,9 @@ The events are detailed below, organized into the following categories:
 - Events around town
 - Other events
 
-**list associated metadata**
-
 
 ###Events at home
 `userArrivedHome`
-
 
 `userStartedSleeping`
 
