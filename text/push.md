@@ -9,11 +9,11 @@ In this document Neura details API endpoints that you can use to subscribe to PU
 _____________
 
 In this project, we will do the following: 
-1. Subscribe to an event
-2. Get subscription list
-3. Get a specific subscription
-4. Unsubscribe
-5. Event list
+1. [Subscribe to an event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#1-subscribe-to-an-event)  
+2. [Get subscription list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-subscription-list)  
+3. [Get a specific subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
+4. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#4-unsubscribe)  
+5. [Event list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5list-of-events-available-for-subscription)  
 
 ##1. Subscribe to an event
 
@@ -231,7 +231,7 @@ Content-Type: application/json
 } 
 ```
 
-##5.List of Events available for subscription
+##5. List of Events available for subscription
 The events are detailed below, organized into the following categories:  
 
 - Events at home
