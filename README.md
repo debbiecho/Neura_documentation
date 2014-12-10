@@ -8,7 +8,7 @@ You can use the Neura API and SDKs to securely access user data by subscribing t
 ### Get started in minutes
  - [Quickstart: request wellness information for a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (3-minute project) _100% done!_
  - [Quickstart: subscribe to a push notification for **Android**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (5-minute project) _80% done -- mikimer update images_
- - [Quickstart: authenticate a user as a 3rd party app for **iOS**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md) (5-minute project) _90% done -- mikimer update with new demo app image_
+ - [Quickstart: authenticate a user as a 3rd party app for **iOS**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md) (5-minute project) _90% done -- jen #5 update with new demo app image_
 
 ### Learn more
  - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md)  _90% done. Jen #1 need to make professional quality diagrams_   
