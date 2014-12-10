@@ -16,16 +16,16 @@ for developers](jar_file_here).  Add Neura to your app to enable it to subscribe
 
 Currently, Neura's for Android app is in closed beta, meaning that users will receive a password after they [apply for access](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2).  After Neura grants them access, they'll need to (1) open the Android app and (2) create an account with Neura. If you need expedited access to the app contact us at build [at] theneura [dot] com.  
 
-**Developers must create a user account with an email and password**. [Neura's Developer site](https://dev.theneura.com) requires developers to login with their user credentials; if developers create an account with Facebook or Gmail, then they won't have the necessary credentials.
+**Developers must create a user account with an email and password**. [Neura's Developer site](https://dev.theneura.com) requires developers to login with their user credentials; if a developer creates an account with Facebook or Gmail, then they won't have the necessary credentials.
     
 ![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/CreateNeuraAccountFramedAndroid.png)  ![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/createDevAccountAndroidFramed.png)
 
 ##  2. Register your app with Neura  
 [![Register your app with Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRegisterApp.png)](https://dev.theneura.com)  
 
-If you don't already have a Neura user account, you need to first [get the Neura app]( ) and create a user account.  You only have one account with Neura -- we do not distinguish between a user account and a developer account.  If you need expedited access, contact us at build [at] theneura [dot] com.  
+If you don't already have a Neura user account, you need to first [get the Neura app]( ) and create a user account.  **Again, make sure that create a user account using an email and password, not Facebook or Gmail.** You only have one account with Neura -- we do not distinguish between a user account and a developer account.  If you need expedited access, contact us at build [at] theneura [dot] com.  
 
-Once you have an account with Neura, register your app at [Neura's developer site](https://dev.theneura.com) -- login using the same email and password as your Neura user account.  After you register your app, Neura will provide you with the credentials you'll need to add Neura into your app.      
+Once you have an account with Neura, register your app at [Neura's developer site](https://dev.theneura.com) -- login using the same email and password as your Neura user account.  After you register your app, Neura will provide you with the credentials (`App UID` and `App Secret`) you'll need to add Neura into your app.      
 
 ### 2.1 [Log in](https://dev.theneura.com) to Neura's developer website
 
