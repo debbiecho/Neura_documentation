@@ -1,0 +1,5 @@
+iOS uses `access_token` whereas Android uses `accessToken`.  Let's pick one convention and use it consistently throughout.
+
+Account creation. Let's simplify and be consistent: remove the **sign up** option and simply require users to **sign in** with their Neura user credentials.   
+
+Get a description of the error codes from Triinu what these mean. Michael says that she defined the error codes. 
