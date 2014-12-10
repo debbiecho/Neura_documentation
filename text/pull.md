@@ -10,8 +10,7 @@ In this document we detail Neura's API endpoints for requesting data objects. (I
   - `hrv`: Heart Rate Variable (for [NeuroSky](http://neurosky.com/) only) 
 
 ## API root endpoint
-The Neura API is currently in V1 so each call starts with `https://wapi.theneura.com/v1`. 
-**What else do we need to say about the root endpoint?** ask Berman
+The root endpoint is `https://wapi.theneura.com/v1`. **The Neura API is currently in V1 which is why the root endpoint ends with v1.**
 
 ## Response to GET requests
 Neura returns a `status` indicating whether your GET request was a `success` or `error`. If the `status` is `success` then Neura returns a valid response, as detailed below. If the `status` is `error` Neura returns: 
@@ -77,7 +76,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
   - `data` > `steps`: The number of steps the user walked on `date`.  If the user has multiple step-counting devices, then Neura the merges datasets to best reflect total steps walked without double-counting.
   - `data` > `calories`: The amount of calories the user burned on `date` in kilocalories (kcal).
    - `data` > `heartRate`: The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with NeuroSky. 
-  - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). 
+  - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). **(If the user weighed himself once, it will return this value, if twice, it will return the average, and if he didn't weigh himself, there will be no data available)**
 
   **is this if the user measured their weight that day? how does this work exactly?**
 
@@ -147,7 +146,7 @@ None.
 
 #### Required request headers
 
-- `authorization`: Bearer authorization token  **Is this the same as `accessToken`?**
+- `authorization`: Bearer **<access_token>** 
 
 #### Optional request headers
 
@@ -165,7 +164,6 @@ None.
   - `data` > `activityPlaces` > `type` > `steps`: The average steps at the location. 
   - `data` > `activityPlaces` > `type` > `calories`: The average calories burned at the location. 
   - `data` > `activityPlaces` > `type` > `length`: The average time spent at the location in minutes. 
-  - **the word doc lists `numOfTimesInDay` but that doesn't show up in Postman. Do we still include it? how does it work exactly?**
 
 ### Example `activity` request
 
@@ -230,7 +228,7 @@ None.
 
 #### Required request headers
 
-- `authorization`: Bearer authorization token
+- `authorization`: Bearer <access_token>
 
 #### Optional request headers
 
@@ -242,9 +240,9 @@ None.
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `data`:  The complex object of sleep data. If data are not available for any of the sub-objects then Neura returns 0.
   - `data` > `length`: The average duration of time sleeping in minutes during the period. 
-  - `data` > `deepSleep`:  The average duration of deep sleep in minutes during the period. **how are we defining deep sleep? benchmark w/ fitbit, jawbone**
-  - `data` > `lightSleep`: The average duration of light sleep in minutes during the period. **what does it mean when this is 0 as in the example below?**
-  - `data` > `efficiency`: The average sleep efficiency during the period. **what does sleep efficiency mean to Neura? how are we measuring/defining it?**
+  - `data` > `deepSleep`:  The average duration of deep sleep in minutes during the period. 
+  - `data` > `lightSleep`: The average duration of light sleep in minutes during the period. 
+  - `data` > `efficiency`: The average sleep efficiency during the period. 
 
 
 ### Example `sleep` request
@@ -305,7 +303,7 @@ None.
 
 #### Required request headers
 
-- `authorization`: Bearer authorization token
+- `authorization`: Bearer <access_token>
 
 #### Optional request headers
 
@@ -315,9 +313,9 @@ None.
 
   - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
-  - `items`:  The complex object of heart rate data. If data are not available for any of the sub-objects then Neura returns 0. **why is this `items` and all other data objects use `data`?**
-  - `items` > `value`: The heart rate variable measure. **clarify this**
-  - `items` > `timestamp`: The timestamp when data were queried 
+  - `items`:  The complex object of heart rate data. If data are not available for any of the sub-objects then Neura returns 0.
+  - `items` > `value`: Heart rate. 
+  - `items` > `timestamp`: The timestamp when data were queried. 
 
 ### Example `hrv` request
 
