@@ -1,4 +1,5 @@
 
+
 #Neura for iOS
 
 Neura has built an [iOS app available via TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) for users and an [iOS SDK
@@ -13,7 +14,7 @@ for developers](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SamplePro
 ##  1. Ensure your users have the Neura app  
 [![Request access to Neura iOS on TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRequestAccessiOS.png)](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2)
 
-Currently, Neura for iOS is available only through TestFlight so your users will need to [apply for access](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2).  When Neura grants them access, they'll need to (1) open the TestFlight invitation in their native iPhone Mail client and (2) create an account with Neura.  Please note that **users have been unable to install TestFlight with non-native mail clients**, such as Gmail and Sparrow.  If you need expedited access to the app contact us at build [at] theneura [dot] com.
+Currently, Neura for iOS is available only through TestFlight so your users will need to [apply for access](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2).  When Neura grants them access, they'll need to (1) open the TestFlight invitation in their native iPhone Mail client and (2) create an account with Neura.  Please note that **users have been unable to install TestFlight with non-native mail clients**, such as Gmail and Sparrow.  If you need expedited access to the app, contact us at build [at] theneura [dot] com.
     
 ![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/HowToGetNeuraAppiOSFramed.png) ![TestFlight email in native iPhone mail](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/TestFlightIniPhoneMailFramed.png) ![TestFlight email in native iPhone mail](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/CreateNeuraAccountFramed.png)  
 
@@ -37,7 +38,7 @@ Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentatio
 ![Declare permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_permissions.png)
 
 ### 2.4 Register
-The **Register** button is enabled only after you've completed all manditory fields.  Information for a successful registration is available in https://dev.theneura.com/#/manage . Please note that **you must click the App secret** to make it visible.  
+The **Register** button is enabled only after you've completed all mandatory fields.  Information for successful registration is available in https://dev.theneura.com/#/manage. Please note that **you must click the App secret** to make it visible.  
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
@@ -75,14 +76,21 @@ Add this authentication code to your app to activate authentication with the Neu
     }
 }
 ```
-The callback from the Neura app will return either the user's `access_token` or an error message. The `access_token` is permanent and unique to the user. You must use it when requesting the user's data objects. 
-####Example: successful authentication where Neura returns an `access_token`
+
+The callback from the Neura app will return either the user's `access_token` or an error message. The `access_token` is permanent and unique to the user. You must use it when requesting the user's data objects. 
+
+####Example: successful authentication where Neura returns an `access_token`
 `neuraASDF1234********************************://?access_token=“qwer4567************************"`  
 
-####Example: failed authentication where Neura returns an error `neuraASDF1234********************************://?error=“ERROR_APP_MISSING_PERMISSIONS"`
+####Example: failed authentication where Neura returns an error 
+`neuraASDF1234********************************://?error=“ERROR_APP_MISSING_PERMISSIONS"`
 
 ####All of Neura's error codes for iOS
-•	`ERROR_CODE_USER_NOT_LOGGED_IN`    •	`ERROR_APP_MISSING_PERMISSIONS`  •	`ERROR_USER_DENIED_PERMISSIONS`  •	`EXTRA_ERROR_CODE`  •	`ERROR_NOT_AUTORIZED_APP_SIGNITURE`  
+•	`ERROR_CODE_USER_NOT_LOGGED_IN`    
+•	`ERROR_APP_MISSING_PERMISSIONS`  
+•	`ERROR_USER_DENIED_PERMISSIONS`  
+•	`EXTRA_ERROR_CODE`  
+•	`ERROR_NOT_AUTORIZED_APP_SIGNITURE`  
 
 ### 3.4 Request permission from the user to access their data
 Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
@@ -91,18 +99,6 @@ Once your users have the Neura app and you've added Neura to your app, the final
 ##  4. Query Neura for data objects to better understand your users  
 
 Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like data objects that aren't currently available, please let us know at build [at] theneura [dot] com. 
-
-
-
-------------
-
-# Internal Neura notes
-
-fix throughout. iOS uses `access_token` whereas Android uses `accessToken`.  Let's pick one convention and use it consistently throughout.
-
-Account creation. Let's simplify and be consistent: remove the **sign up** option and simply require users to **sign in** with their Neura user credentials.   
-
-Get a description of the error codes from Triinu what these mean. Michael says that she defined the error codes. 
 
 
 
