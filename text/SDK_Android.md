@@ -55,40 +55,13 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 [![Get the Neura SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidSDK.png)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar)  
 
 ### 3.1 Add Neura's SDK 
-The [Neura SDK for Android]( b) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
-
-### 3.2 Add the Neura URL schema 
-Open the `.plist` file. Under **URL Schemes** you need to create only one URL schema. Create your **URL Schema** by adding the prefix `neura` to the **App UID** that Neura gave you in the [registration process](https://github.com/NeuraLabs/Neura_documentation/tree/master/text/account.md). For example, if the **App UID** is `ASDF1234*****************************` then the **URL schema** value is `neuraASDF1234*****************************`.  
+The [Neura SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar) consists of the file **NeuraAndroidSDK.jar**, which you need to add to your app.  
 
 
-### 3.3 Add authentication code 
-Add this authentication code to your app to activate authentication with the Neura app -- be sure to replace the example **App UID** and **App secret** with your unique credentials shown at https://dev.theneura.com/#/manage :
-```Objective-C
-// Neura authentication code
-- (IBAction)startNeuraAuth:(id)sender {    
-    [[Neura sharedInstance] setClientId:@"ABC123***********************************"]; // replace ABC123*********************************** with the App UID that Neura provides, shown at: https://dev.theneura.com/#/manage
-    [[Neura sharedInstance] setClientSecretId:@"xyz789***********************************"]; // replace xyz789*********************************** with the App Secret that Neura provides, shown at: https://dev.theneura.com/#/manage
-    [[Neura sharedInstance] setPermmisions:@"dailyActivitySummary, wellnessProfile,sleepData"]; //replace with the specific premissions you requested, shown at: https://dev.theneura.com/#/manage 
-    
-    // If there's an error in authenticating, Neura returns it here.
-    NSError *error = nil;
-    [[Neura sharedInstance] AuthenticationWithError:&error];
-    if (error) {
-        NSLog(@"Error: %@",error.userInfo[@"NSLocalizedDescription"]);
-        self.label.text = error.userInfo[@"NSLocalizedDescription"];
-    }
-}
-```
-The callback from the Neura app will return either the user's `access_token` or an error message. The `access_token` is permanent and unique to the user. You must use it when requesting the user's data objects. 
-####Example: successful authentication where Neura returns an `access_token`
-`neuraASDF1234********************************://?access_token=“qwer4567************************"`  
 
-####Example: failed authentication where Neura returns an error `neuraASDF1234********************************://?error=“ERROR_APP_MISSING_PERMISSIONS"`
 
-####All of Neura's error codes for iOS
-•	`ERROR_CODE_USER_NOT_LOGGED_IN`    •	`ERROR_APP_MISSING_PERMISSIONS`  •	`ERROR_USER_DENIED_PERMISSIONS`  •	`EXTRA_ERROR_CODE`  •	`ERROR_NOT_AUTORIZED_APP_SIGNITURE`  
 
-### 3.4 Request permission from the user to access their data
+### 3.XX Request permission from the user to access their data
 Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
 
 
