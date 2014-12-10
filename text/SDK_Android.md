@@ -32,8 +32,8 @@ Once you have an account with Neura, register your app at [Neura's developer sit
 ![Neura's developer website](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDevSite.png)  
 
 ### 2.2 Let Neura know about your app
-[Provide](https://dev.theneura.com/#/register) your app name, company name, a brief description of your app, and an iOS Bundle ID.  Please note that **each iOS Bundle ID must be unique** -- you cannot use the same bundle ID for multiple apps.  
-![register your app]( )
+[Provide](https://dev.theneura.com/#/register) your app name, company name, a brief description of your app, package name, component class name, and key hash.     
+![register your app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_top_Android.png)
 
 ### 2.3 Declare permissions 
 Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you might want permission to access.  During the authentication process, you will provide a subset of these permissions which Neura will ask your users to approve.  Android apps have access to both [event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) and [data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md); iOS apps only have access to data objects.
