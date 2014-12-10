@@ -6,7 +6,7 @@ This project demonstrates Neura's ability to notify a 3rd party app of user even
 _Note: Event subscriptions are [available for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md). We're currently building them for iOS._
 
 ##The response you'll recieve
-![Demo app event notifications](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/iOS_auth_app.png)
+![Demo app event notifications](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/iOS_auth_app_Framed.png)
 
 ##Instructions
 
