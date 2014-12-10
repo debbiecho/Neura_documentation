@@ -75,7 +75,3 @@ Neura puts user privacy first and we expect developers to do the same.  We've de
 HTTPS is required for all Neura APIs because we transmit private user information. Users trust your application with their data and Neura expects you respect this trust. We require that your application not retransmit insecurely, retain indefinitely, nor share with third parties any data sent via the Neura API. 
 
 ***Need to extend privacy policy before release?
-#Mikimer & Eroc to chat about
-Eric, can you build out our privacy policy? I benchmarked **Privacy** with Jawbone, Fitbit & Nest.  They raise a good point that once Neura transmits data, we need to limit how it can be used by developers.  How do we protect users?  *probably good to talk w/ triinu about this: what was RSA's approach?*
-
-
