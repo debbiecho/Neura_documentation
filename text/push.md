@@ -13,7 +13,8 @@ In this project, we will do the following:
 2. [Get subscription list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-subscription-list)  
 3. [Get a specific subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
 4. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#4-unsubscribe)  
-5. [Event list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5list-of-events-available-for-subscription)  
+5. [Neura HTTPS request to webhook]()
+6. [Event list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5list-of-events-available-for-subscription)  
 
 ##1. Subscribe to an event
 
@@ -230,8 +231,38 @@ Content-Type: application/json
   "timestamp": 1418244427,
 } 
 ```
+##5. Neura HTTPS request to webhook
+If you subscribed to an event and set webhook state, neura will send an HTTPS request to the webhook
+### Resource URI
 
-##5. List of Events available for subscription
+**`POST https://<webhook>`**
+
+#### neura will send the following request parameters
+`name`: 
+`identifier`: 
+`timestamp`:
+`metadata`: 
+`state`: 
+
+### Expected response to webhook request
+response with status code 200
+
+### Example of a subscription list request
+
+```http
+POST https://your_domain/blabla
+```
+
+### Example of a subscription list response
+
+#### Headers
+```http
+status: 200 OK
+version: HTTP/1.1
+Content-Type: application/json
+```
+
+##6. List of Events available for subscription
 The events are detailed below, organized into the following categories:  
 
 - Events at home
