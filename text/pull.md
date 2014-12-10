@@ -1,24 +1,20 @@
 # Requesting data objects
-Data objects contain [distilled user information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature), such as wellness, activity or sleep information, during a period of time in JSON format that you access asynchronously.  
+Data objects contain [distilled user information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature), such as wellness, activity, or sleep information, during a period of time, in JSON format that you access asynchronously.  
 
-In this document we detail Neura's API endpoints for requesting data objects, information about a user over time and/or in a specific place. The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** authorization token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive a response. 
+In this document we detail Neura's API endpoints for requesting data objects. (If you want to obtain instantaneous data, go to Neura [API endpoints for PUSH event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)). The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** authorization token, and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive a response. 
 
 ##Neura data objects detailed below
-  - `daily_summary`: a summary of the user's activity
-  - `activity`: Wellness Activity Profile -  
-  - `sleep`: Sleep Profile - 
-  - `hrv`: Heart Rate Variable (for [Neurosky](http://neurosky.com/) only) 
-
-***Business decision: do we want to release `activity`? If our goal is to generate API queries, then it doesn't make sense to release average values. "Insights" is another issue...***
-
+  - `daily_summary`: Summary of the user's activity
+  - `activity`: Wellness Activity Profile   
+  - `sleep`: Sleep Profile 
+  - `hrv`: Heart Rate Variable (for [NeuroSky](http://neurosky.com/) only) 
 
 ## API root endpoint
-
 The Neura API is currently in V1 so each call starts with `https://wapi.theneura.com/v1`. 
-**What else do we need to say about the root endpoint?**
+**What else do we need to say about the root endpoint?** ask Berman
 
-### Response to GET requests
-Neura returns a `status` indicating whether your GET request was a `success` or `error`. If the `status` is `success` then Neura returns a valid response, as detailed below. If the `status` is  `error` Neura returns: 
+## Response to GET requests
+Neura returns a `status` indicating whether your GET request was a `success` or `error`. If the `status` is `success` then Neura returns a valid response, as detailed below. If the `status` is `error` Neura returns: 
 
    - `status`: The status is `error`.
    - `timestamp`:  The time when Neura sent the response in [epoch time](http://en.wikipedia.org/wiki/Unix_time). 
@@ -47,7 +43,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 
 ## GET /users/profile/daily_summary
 
-`daily_summary` is a data object containing a user’s wellness information for a single day. `daily_summary` is calculated based on [a Neura day](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#time-and-timezones), from the time when the user awoke on `date` until the time the user awoke on the following calendar day (`date` + 1 day).  If Neura is unable to identfy when the user awoke, then `daily_summary` is unavailale for that day.
+`daily_summary` is a data object containing a user’s wellness information for a single day. `daily_summary` is calculated based on [a Neura day](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#time-and-timezones), from the time when the user awoke on `date` until the time the user awoke on the following calendar day (`date` + 1 day).  If Neura is unable to identfy when the user awoke, then `daily_summary` is unavailable for that day.
 
 ### Resource URI
 
@@ -59,7 +55,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 - `date`: The day for which you want information in YYYY-MM-DD format.
 
 #### Optional request parameters
-- `source`: The single partner device for which you want information. If you don't specify `source` then Neura returns data aggregated from all the user's devices.  As of October 2014, `source` is only available for Neurosky; use the format: `source=neurosky`. 
+- `source`: The single partner device for which you want information. If you don't specify `source` then Neura returns data aggregated from all the user's devices.  As of October 2014, `source` is only available for NeuroSky; use the format: `source=neurosky`. 
 
 ### Request headers
 
@@ -76,12 +72,14 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
   - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `data`:  The complex object of wellness data. If data is not available for any of the sub-objects then Neura returns 0.
-  - `data` > `date`: Neura echoes the `date` in your Request parameter in the in the format YYYY-MM-DD.   
+  - `data` > `date`: Neura echoes the `date` in your Request parameter in the format YYYY-MM-DD.   
   - `data` > `minutesWalk`: The number of minutes that the user was continuously active either running or walking while outside their home. 
-  - `data` > `steps`: The number of steps the user walked on `date`.  If the user has multiple step-counting devices then Neura the merges datasets to best reflect total steps walked without double counting.
+  - `data` > `steps`: The number of steps the user walked on `date`.  If the user has multiple step-counting devices, then Neura the merges datasets to best reflect total steps walked without double-counting.
   - `data` > `calories`: The amount of calories the user burned on `date` in kilocalories (kcal).
-   - `data` > `heartRate`: The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with Neurosky. 
-  - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). **is this if the user measured their weight that day? how does this work exactly?**
+   - `data` > `heartRate`: The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with NeuroSky. 
+  - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). 
+
+  **is this if the user measured their weight that day? how does this work exactly?**
 
 
 ### Example `daily_summary` request
@@ -159,13 +157,13 @@ None.
 
   - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
-  - `data`:  The complex object of wellness data. If data is not available for any of the sub-objects then Neura returns 0.
+  - `data`:  The complex object of wellness data. If data are not available for any of the sub-objects then Neura returns 0.
   - `data` > `steps`: Neura returns the average daily steps during the period.
   - `data` > `calories`: Neura returns the average calories burned during the period.   
   - `data` > `activityPlaces`: The complex object of places and the activities that the user does at those locations. 
   - `data` > `activityPlaces` > `type`: The type of location either `work` or `workout`.   **In the Word doc it looks like there's a different response for `work` vs. `workout`. Is that true? If so, update text below**
   - `data` > `activityPlaces` > `type` > `steps`: The average steps at the location. 
-  - `data` > `activityPlaces` > `type` > `calories`: The average calories at the location. 
+  - `data` > `activityPlaces` > `type` > `calories`: The average calories burned at the location. 
   - `data` > `activityPlaces` > `type` > `length`: The average time spent at the location in minutes. 
   - **the word doc lists `numOfTimesInDay` but that doesn't show up in Postman. Do we still include it? how does it work exactly?**
 
@@ -242,7 +240,7 @@ None.
 
   - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
-  - `data`:  The complex object of sleep data. If data is not available for any of the sub-objects then Neura returns 0.
+  - `data`:  The complex object of sleep data. If data are not available for any of the sub-objects then Neura returns 0.
   - `data` > `length`: The average duration of time sleeping in minutes during the period. 
   - `data` > `deepSleep`:  The average duration of deep sleep in minutes during the period. **how are we defining deep sleep? benchmark w/ fitbit, jawbone**
   - `data` > `lightSleep`: The average duration of light sleep in minutes during the period. **what does it mean when this is 0 as in the example below?**
@@ -317,9 +315,9 @@ None.
 
   - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
-  - `items`:  The complex object of heart rate data. If data is not available for any of the sub-objects then Neura returns 0. **why is this `items` and all other data objects use `data`?**
+  - `items`:  The complex object of heart rate data. If data are not available for any of the sub-objects then Neura returns 0. **why is this `items` and all other data objects use `data`?**
   - `items` > `value`: The heart rate variable measure. **clarify this**
-  - `items` > `timestamp`: The timestamp when data was  
+  - `items` > `timestamp`: The timestamp when data were queried 
 
 ### Example `hrv` request
 
@@ -350,35 +348,6 @@ Content-Type: application/json
 
 -----
 
-
-
-
-
-
-
-
-------------
-
-#Things for Mikimer & Berman to discuss on this page
-
-**Neura will use the term 'data objects' instead of 'services' to benchmark with Automatic. Neura will use the term 'event subscription' to benchmark with Fitbit. [background research here](https://github.com/mikimer/apricot/blob/master/GitHub%20notes.md)**
-
-Let's get/create a bug filing & tracking tool. For instance, Neura always returns `success` even when there's an error. How would/should mikimer file this error?
-
-**What will it take to change the names of the API calls to be more meaningful?  Mike's suggestions:**
-
-  - `wellness_day` instead of `daily_summary` since it provides wellness information for a single day  
-  - `wellness_period` instead of `activity` since it provides wellness information for a period of time  
-  - `sleep_period` instead of `sleep` since it provides sleep information for a period of time  
-  - `hrv_period` instead of `hrv` since it provides heart rate variable info for a period of time.  
-  - `daily_summary` > `details` instead of `data` since "`data`" is so broad it isn't meaningful.  
-  - `daily_summary` > `data` > `activityOutside` instead of `minutesWalk` since (1) we don't embed units in any other object names, (2) it's walking, running, or any other kind of exercise, and (3) it's not clear that this excludes walking indoors.  
-  - `activity` > `data` > `averageSteps` instead of `steps` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `steps`  
-  - `activity` > `data` > `averageCalories` instead of `calories` so that it's clear it's an average, not a sum and to differentiate from `daily_summary` > `data` > `calories`  
-  - `exercise` instead of `workout` since non-native english speakers have trouble with phrasal verbs and to clearly distinguish between *work* and *working out*
-  - `data` > `activityPlaces` > `location` instead of `type` since it's specifically a type of *location*  
-  - Can we make `daily_summary` and `activity` parallel to `sleep`? `Sleep` can do either a single day or a period, but we differentiate between `daily_summary` and `activity`. Can we simplify?
-  - For `data`, differentiate between when a value is 0 and when there is no data. Currently, Neura returns 0 if there's no data, which isn't the same as measuring zero. Example: user left their device at home all day (0 steps) vs. user turned off their device (no data).  
 
 
 
