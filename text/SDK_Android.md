@@ -5,14 +5,14 @@ Neura has built an [Android app available in the Play Store]( ) for users and an
 for developers](jar_file_here).  Add Neura to your app to enable it to subscribe to events and request data objects for your users.  Currently, Neura event notifications are only available for Android; Neura does not offer event notifications for iOS. 
 
 ### Here's how to integrate with Neura:  
-  1. [Ensure]( ) your users have the Neura app  
-  2. [Register]( ) your app with Neura  
-  3. [Add]( ) Neura to your app  
-  4. [Query]( ) Neura for data objects to better understand your users  
-  5. [Subscribe]( ) to events for your users
+  1. [Ensure](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#1-ensure-your-users-have-the-neura-app) your users have the Neura app  
+  2. [Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#2-register-your-app-with-neura) your app with Neura  
+  3. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#3-add-neura-to-your-app-update-for-android) Neura to your app  
+  4. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#4-query-neura-for-data-objects-to-better-understand-your-users) Neura for data objects to better understand your users  
+  5. [Subscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#5-subscribe-to-events-for-your-users-update-for-android) to events for your users
 
 ##  1. Ensure your users have the Neura app  
-[![Request access to Neura iOS on TestFlight]( )]( )
+[![Get Neura's Android app](https://play.google.com/store/apps/details?id=com.neura.weave&hl=en)]( )
 
 Currently, Neura for iOS is available only through TestFlight so your users will need to [apply for access]( ).  When Neura grants them access, they'll need to (1) open the TestFlight invitation in their native iPhone Mail client and (2) create an account with Neura.  Please note that **users have been unable to install TestFlight with non-native mail clients**, such as Gmail and Sparrow.  If you need expedited access to the app contact us at build [at] theneura [dot] com.
     
