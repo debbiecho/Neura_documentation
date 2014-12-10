@@ -12,7 +12,7 @@ for developers](jar_file_here).  Add Neura to your app to enable it to subscribe
   5. [Subscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#5-subscribe-to-events-for-your-users-update-for-android) to events for your users
 
 ##  1. Ensure your users have the Neura app  
-[![Get Neura's Android app](https://play.google.com/store/apps/details?id=com.neura.weave&hl=en)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidApp.png)
+[![Get Neura's Android app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidApp.png)](https://play.google.com/store/apps/details?id=com.neura.weave&hl=en)
 
 Currently, Neura for iOS is available only through TestFlight so your users will need to [apply for access]( ).  When Neura grants them access, they'll need to (1) open the TestFlight invitation in their native iPhone Mail client and (2) create an account with Neura.  Please note that **users have been unable to install TestFlight with non-native mail clients**, such as Gmail and Sparrow.  If you need expedited access to the app contact us at build [at] theneura [dot] com.
     
