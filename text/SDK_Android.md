@@ -45,9 +45,10 @@ The **Register** button is enabled only after you've completed all manditory fie
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
 ### 2.5 Example registration
-In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to '*health and wellness*' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' data objects: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.    
+In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_seven** that relates to '*smart home*' and uses the Component Name `com.3rd_party.demo.demo.NeuraReceiver`, Package Name `com.3rd_party`, and Key Hash `12344321`.  They have declared permission for events `userFinishedWalking`, `userFinishedDriving`, `userStartedDriving`, and `userStartedWalking` as well as the data objects `dailyActivitySummary` and `sleepData`.  Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.    
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/ExampleAppRegistrationAndroid.png)
+
 
 
 
