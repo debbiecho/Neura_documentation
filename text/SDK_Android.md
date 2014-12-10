@@ -9,6 +9,7 @@ for developers](jar_file_here).  Add Neura to your app to enable it to subscribe
   2. [Register]( ) your app with Neura  
   3. [Add]( ) Neura to your app  
   4. [Query]( ) Neura for data objects to better understand your users  
+  5. [Subscribe]( ) to events for your users
 
 ##  1. Ensure your users have the Neura app  
 [![Request access to Neura iOS on TestFlight]( )]( )
@@ -32,9 +33,9 @@ Once you have an account with Neura, register your app at [Neura's developer sit
 [Provide](https://dev.theneura.com/#/register) your app name, company name, a brief description of your app, and an iOS Bundle ID.  Please note that **each iOS Bundle ID must be unique** -- you cannot use the same bundle ID for multiple apps.  
 ![register your app]( )
 
-### 2.3 Select Neura events and data objects
-Select the [Neura events and data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you will want permission to access.  During the authentication process, Neura will ask your users to approve permission for you to access these events and data objects.  
-![Select data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_data_objects.png)
+### 2.3 Declare permissions 
+Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you might want permission to access.  During the authentication process, you will provide a subset of these permissions which Neura will ask your users to approve.  Android apps have access to both [event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) and [data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md); iOS apps only have access to data objects.
+![Declare permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_permissions.png)
 
 ### 2.4 Register
 The **Register** button is enabled only after you've completed all manditory fields.  Information for a successful registration is available in https://dev.theneura.com/#/manage . Please note that **you must click the App secret** to make it visible.  
