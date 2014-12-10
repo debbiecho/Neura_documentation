@@ -36,11 +36,11 @@ Once you have an account with Neura, register your app at [Neura's developer sit
 ![register your app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_top_Android.png)
 
 ### 2.3 Declare permissions 
-Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you might want permission to access.  During the authentication process, you will provide a subset of these permissions which Neura will ask your users to approve.  Android apps have access to both [event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) and [data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md); iOS apps only have access to data objects.
+Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) and [Neura events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) that your app might want permission to access.  Later during the authentication process, you will specify a subset of these permissions that Neura will ask your users to approve.  Android apps have access to both events and data objects; iOS apps only have access to data objects.  
 ![Declare permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_permissions.png)
 
 ### 2.4 Register
-The **Register** button is enabled only after you've completed all manditory fields.  Information for a successful registration is available in https://dev.theneura.com/#/manage . Please note that **you must click the App secret** to make it visible.  
+The **Register** button is enabled only after you've completed all manditory fields.  If your registration is successful, it will appear in https://dev.theneura.com/#/manage . Please note that **you must click the App secret** to make it visible.  
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
