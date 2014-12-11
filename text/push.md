@@ -21,8 +21,8 @@ This document consists of the following sections:
 ### Request query parameters  
 
 #### Required request parameters
-- `event_name`: (string) This is the `<name>` of the event to which you are subscribing. We provide a full [list below](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions).
-- `method`: (string) How Neura will notify you about the event, either `all`, `push`, or `webhook`. If you don't specify a `method`, Neura defaults to `method=all`.
+- `event_name`: (string) This is the `<name>` of the event to which you are subscribing. We provide a full [list of event names](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions) below.
+- `method`: (string) How Neura will notify you about the event, either `all`, `push`, or `webhook`. Neura defaults to `method=all`.
 - `identifier`: (string) The name you give to identify your subscription.
  
 
@@ -37,8 +37,8 @@ This document consists of the following sections:
 - `authorization`: `Bearer <access_token>`
 
 ### Neura's response to event subscription request
-`status`: either failure/success
-`timestamp`: the time when the request was processed 
+`status`: Either failure or success.  
+`timestamp`: The time when Neura processed the request. 
 
 ### Example subscription `<event>` request
 
