@@ -14,14 +14,14 @@ This document consists of the following sections:
 
 ##1. Subscribe to an event
 
-### Resource URI
+### Resource URI  
 
-**`POST https://wapi.theneura.com/v1/subscriptions`**
+**`POST https://wapi.theneura.com/v1/subscriptions`**  
 
-### Request query parameters
+### Request query parameters  
 
 #### Required request parameters
-- `event_name`: (string) This is the <name> of the event to which you are subscribing.   [List of events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions)
+- `event_name`: (string) This is the name of the event to which you are subscribing.   [List of events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions)
 - `method`: (string) How Neura will notify you about the event, either `all`, `push`, or `webhook`. If you don't specify a `method`, Neura defaults to `method=all`.
 - `identifier`: (string) The name you give to identify your subscription.
  
