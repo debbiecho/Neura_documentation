@@ -32,14 +32,12 @@ Because the API is in alpha, we appreciate your patience as we continue to impro
 **Timeline** is the interface in the Neura app that allows the user to scroll through personal events that Neura has recorded. 
 
 ##Why build with Neura?
-Neura is the perfect complement to any app, service, or internet-of-things (IoT) device that enhances user experience through the smart use of data.  A common reason developers build with Neura is that they instantly benefit from Neura's [30+ integrations](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) and that Neura provides contextual knowledge, as opposed to raw data that needs to be processed for meaning and insight.
+Neura is the perfect complement to any app, service, or internet-of-things (IoT) device that wants to enhance user experience through the smart use of data.  A common reason developers build with Neura is that Neura provides contextual knowledge, as opposed to raw data that needs to be processed for meaning and insight.
 
-Additional benefits of building with Neura include:
-
-  - More data. Access data from all of your users' IoT devices.
+Additional benefits of building with Neura include:  
+  - More data. Access data from more than [30+ IoT devices.](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md)  
   - Freemium pricing. Only pay when you generate value for users.
   - Machine learning. Neura gets better the more you use it.
-
 
 ## Getting your users on Neura
 Your users will need to install the Neura app, create an account with Neura, and grant you access to their data.  Neura performs well for users with only a smartphone; for users who onboard smart devices, Neura performs even better.  
