@@ -59,5 +59,10 @@ Also, please encourage your users to send Neura data from their devices that int
  	- Body Analyzer
 
   
+
+## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
+
+
+
  
  
