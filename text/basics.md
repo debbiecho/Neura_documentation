@@ -40,15 +40,16 @@ Additional benefits of building with Neura include:
   - Machine learning. Neura gets better the more you use it.
 
 ## Getting your users on Neura
-Your users will need to install the Neura app, create an account with Neura, and grant you access to their data.  Neura performs well for users with only a smartphone; for users who onboard smart devices, Neura performs even better.  
+Your users will need to install the Neura app, create an account with Neura, and grant you access to their data.  Neura performs well for users with only a smartphone; for users who onboard [IoT devices](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md), Neura performs even better.  
 
 Neura is available for users with smartphones running Android or iOS.  The Neura app has been optimized for the following smartphone models:  
 **Android**: Galaxy S3, Galaxy S4, Nexus 4, Nexus 5, LG G2.  
-**iOS**: 7.0 running on iPhone 4, iPhone 4S, iPhone 5, iPhone 5C, iPhone 5S iPhone 6.  
+**iOS**: 7.0 running on iPhone 4, iPhone 4S, iPhone 5, iPhone 5C, iPhone 5S,  iPhone 6.  
 
 
 ## Days, time, and time zones
-A Neura day begins on the calendar day when the user awakes and finishes the following calendar day just before the user awakes to best convey the day from the perspective of the user.  Neura treats the event when the user awoke to be the "anchor" that defines their day. Consequently, a calendar day is always 24 hours long, whereas the length of a Neura day varies with user sleep patterns.  Additionally, if Neura is unable to detect when a user awoke (e.g. because their phone is off), then there are not data objects available for that day.  
+A "Neura day" is from when a user wakes up one day to when they wake up the next day.  Consequently, a calendar day is always 24 hours long, whereas the length of a Neura day varies with user sleep patterns.  
+Specifically, Neura treats the event when the user awoke to be the "anchor" that defines their day.  A Neura day begins on the calendar day when the user awakes and finishes the following calendar day just before the user awakes; we believe this  best conveys a day from the perspective of the user.  Additionally, if Neura is unable to detect when a user awoke (e.g. because their phone is off), then there may not be data objects available for that day.  
 
 ![Neura's view of a person's day](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDailyCalendar.jpg)
 
@@ -60,9 +61,7 @@ Time is conveyed differently in the Neura app versus the Neura API to make the m
 
 For users, the Neura app always displays time in the user's current timezone.  When a user changes timezones, Neura automatically updates their timeline.  On a normal day, a user might awake at 9am on Monday morning in San Francisco (PT) and awake on Tuesday in San Francisco at 8am.  Therefore, for Neura, Monday results in a 23 hour day.  However, if a user awakes in San Francisco on Tuesday at 8am and then flies to New York and wakes up in New York on Wednesday morning at 10am (ET), for Neura, Tuesday results in a 26-hour day.  
 
-![Neura frames events in a user's timezone and always returns UTC](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraUTC.jpg)   
-
-## Neura's data inputs
+## Data gathered by the Neura app
 Neura utilizes data gathered by the Neura app and [integrated devices](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) that the user has authorized for Neura to access.  The Neura app gathers data from the the user's phone's:  
   - Wifi
   - Bluetooth
