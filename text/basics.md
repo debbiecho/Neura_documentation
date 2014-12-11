@@ -1,6 +1,6 @@
 #An introduction to Neura for developers
 
-####Neura distills raw data from a user's smartphone and internet-of-things (IoT) devices into contextual knowledge that make apps and devices smarter and enhance the user's life.
+####Neura distills raw data from a user's smartphone and internet-of-things (IoT) devices into contextual knowledge.  Developers can use this contextual knowledge to make smarter apps and devices that enhance the user's life.  Let the magic flow...
 
 ![Neura data flow diagram](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDataFlowDiagram.png)
 
