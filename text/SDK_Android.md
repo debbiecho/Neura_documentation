@@ -211,25 +211,7 @@ Now that you have your user's permission and their unique `access_token` you can
 
 ------
 
-
-[![Neura Android SDK](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/android-sdk-image.jpg)](https://github.com/NeuraLabs/Neura_documentation/tree/master/resources/Neura_Android_SDK)
-
-***Android demo app APK vs. source code -- make sure the devs have a link to the source code (do the same for the iOS sample project)***
-
-What to do:
-- open source code for sample project
-- make sure the .jar file is there under lib
-
-
-If you have trouble compiling, be sure to update your Android SDK Manager. 
-
-The Neura SDK requries the Platform API level to be version 15 (Ice Cream Sandwich) or higher.
-
-
-- SDK android version 19
-
-
-***reminder for Chiki, send mikimer a new jar file***
+***reminder for Chiki, send mikimer a new jar file, apk file, etc.***
 
 
 -------------
