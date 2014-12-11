@@ -34,7 +34,7 @@ This document consists of the following sections:
 
 ### Request headers
 
-#### Required request headers
+#### Required request headers  
 
 - `authorization`: `Bearer <access_token>`
 
@@ -233,7 +233,7 @@ Content-Type: application/json
 When you subscribed to an event and set webhook state, neura will send an HTTPS request to the webhook once event occurred. You should response to this request with status code 200.
 ### Resource URI
 
-**`POST https://<webhook>`**
+`POST https://<webhook>`
 
 #### neura will send the following request parameters
 `name`: The name of occuring event 
