@@ -65,9 +65,7 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 We've created [NeuraAndroidDemoSourceCode.zip](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip) for you to view in your favorite Java application ([Eclipse](https://eclipse.org/), [Android Studio](https://developer.android.com/sdk/index.html), etc.) so that you can see a working 3rd party app in action.  The app is simple: it allows a user to enter credentials to subscribe to events and get an `accessToken` to query data objects.  We've heavily commented the classes `MainActivity.java` and `NeuraReceiver.java` so that it's clear what's going on.
 
 ### 3.2 Add Neura's SDK 
-The [Neura SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar) consists of the file **NeuraAndroidSDK.jar**, which you need to add to your app.  
-
-The Neura SDK requries the Platform API level to be version 15 (Ice Cream Sandwich) or higher. Also, ensure the SDK android is version 19 or higher. Make sure that the .jar file is under `lib`. If you have trouble compiling, be sure to update your Android SDK Manager. 
+The [Neura SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar) consists of the file **NeuraAndroidSDK.jar**, which you need to add to your app.  The Neura SDK requries the Platform API level to be version 15 (Ice Cream Sandwich) or higher. Also, ensure the SDK android is version 19 or higher. Make sure that the **.jar** file is under `lib`. If you have trouble compiling, be sure to update your Android SDK Manager. 
 
 ### 3.3 Add authentication code
 Add the following **authentication code** to your app to activate authentication with the Neura app. You can replace `appId` and `appSecret` with your unique credentials shown at https://dev.theneura.com/#/manage :
