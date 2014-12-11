@@ -3,16 +3,17 @@
 Neura provides context. We distill raw data into contextual knowledge so that you can make **smarter** apps and internet-of-things (IoT) devices.  
 
 ###Neura is ready for you to build awesome apps
-You can use the Neura API and SDKs to securely access user data by subscribing to PUSH events or requesting a data object.  User privacy is critical to us, so we ensure that users have approved your access to their data with OAuth2 authentication.
+You can use the Neura API and SDKs to securely access user data by subscribing events or requesting a data object.  User privacy is critical to us, so we ensure that users have approved your access to their data with OAuth2 authentication.
 
 ### Get started in minutes
- - [Quickstart: request wellness information for a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (3-minute project)  
- - [Quickstart: subscribe to a push notification for **Android**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (5-minute project)  
- - [Quickstart: authenticate a user as a 3rd party app for **iOS**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md) (5-minute project)  
+Here are quickstart projects to test drive Neura in minutes. 
+ - [Quickstart: request wellness information for a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) (3 minutes)  
+ - [Quickstart: subscribe to a push notification for **Android**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (5 minutes)  
+ - [Quickstart: authenticate a user as a 3rd party app for **iOS**](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md) (5 minutes)  
 
 ### Learn more
  - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md)  _95% done. one last diagram from ori_   
- - [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md)   
+ - [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md)  *get hrv JSON response example from chiki* 
  - [API event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)  _50% done. Jen #3. Berman to fill in_ 
  - [Neura on Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) _85% done. !דָחוּף! finalize section #3 with Berman and/or chiki_ 
  - [Neura on iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md) _60% done. Jen #4. clarify a few things with Michael_   
