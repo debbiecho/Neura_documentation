@@ -1,8 +1,0 @@
-Sleep service
-**how are we defining "deep sleep"? benchmark w/ fitbit, jawbone**
-**what does it mean when this is 0 as in the example below?** 
-**what does sleep efficiency mean to Neura? how are we measuring/defining it?**
-
-HRV Service
-**why is this `items` and all other data objects use `data`?**
-Check: - `items` > `timestamp`: The timestamp when data were queried. 
