@@ -68,7 +68,7 @@ We've created [NeuraAndroidDemoSourceCode.zip](https://github.com/NeuraLabs/Neur
 The [Neura SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar) consists of the file **NeuraAndroidSDK.jar**, which you need to add to your app.  The Neura SDK requries the Platform API level to be version 15 (Ice Cream Sandwich) or higher. Also, ensure the SDK android is version 19 or higher. Make sure that the **.jar** file is under `lib`. If you have trouble compiling, be sure to update your Android SDK Manager. 
 
 ### 3.3 Add authentication code
-Add the following **authentication code** to your app to activate authentication with the Neura app. You can replace `appId` and `appSecret` with your unique credentials shown at https://dev.theneura.com/#/manage :
+Add the following **authentication code** to your app to activate authentication with the Neura app. You need replace `appId` and `appSecret` with your unique credentials and the permmission list with the requested permissions. All three can be found at https://dev.theneura.com/#/manage:
 
 ```java
 	// Authenticate with Neura, where the app launches authorization within the Neura app -- the user will see a Neura screen
@@ -76,22 +76,19 @@ Add the following **authentication code** to your app to activate authentication
 	// These permissions must be a subset of permissions you declared on Neura's developer website, https://dev.theneura.com/#/manage
 	private void performNeuraAuthentication() {
 
-		String appId = getAppId();
-		String appSecret = getAppSecret();
-
 		AuthenticationRequest authenticationRequest = new AuthenticationRequest();
-		authenticationRequest.setAppId(appId);
-		authenticationRequest.setAppSecret(appSecret);
+		authenticationRequest.setAppId("ABC123***********************************");
+		authenticationRequest.setAppSecret("xyz789***********************************");
 
-		String[] permissions = getAppPermisisons();
-
-		ArrayList<Permission> permissionsList = Permission.list(permissions);
-
-		authenticationRequest.setPermissions(permissionsList);
-
+		authenticationRequest.setPermissions(new ArrayList<String>() {{
+	  	add("dailyActivitySummary");
+	    add("wellnessProfile");
+	    add("sleepData")
+	  }};);
+		
 		boolean neuraInstalled = NeuraAuthUtil.authenticate(MainActivity.this,
-				NEURA_AUTHENTICATION_REQUEST_CODE, authenticationRequest);
-
+			NEURA_AUTHENTICATION_REQUEST_CODE, authenticationRequest);
+		
 		// check whether the user has installed the Neura app. 
 		// If not, we created a method for you in the Neura SDK to easily direct the user to the Play Store to get the app
 		if (!neuraInstalled) {
@@ -99,21 +96,20 @@ Add the following **authentication code** to your app to activate authentication
 		}
 	}
 ```	
+### 3.4 Add authentication callback handeling
+Once user completed the authentication process you will get a callback to the "onActivityResult" function. 
 
 ```java
-	// The demo app reacts to the authentication request
+	// The demo app reacts to the callback of authentication request
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-
+		// Hendeling callback of authentication request
 		if (requestCode == NEURA_AUTHENTICATION_REQUEST_CODE) {
 			if (resultCode == RESULT_OK) {
 				String accessToken = NeuraAuthUtil.extractToken(data);
-				saveAccessTokenPersistent(accessToken);
 				Toast.makeText(MainActivity.this, "Authenticate Success!",
 						Toast.LENGTH_SHORT).show();
-
-				refreshUi();
 			} else {
 				int errorCode = data.getIntExtra(NeuraConsts.EXTRA_ERROR_CODE,
 						-1);
@@ -123,15 +119,32 @@ Add the following **authentication code** to your app to activate authentication
 						"Authenticate Failed: "
 								+ NeuraUtil.errorCodeToString(errorCode),
 						Toast.LENGTH_SHORT).show();
-
-				// TODO handle one of the error codes described in the
-				// documentation
-
 			}
 		}
 	}
 ```
+### 3.5 Subscribe to events
+Next step would be to subscribe to push event. After subscribing to an event you will get a callback to your android app and/or to your defined webhook each time the event occurs.   
+```java
+	// Subscribe to this app to receive events from Neura
+	// In order to receive events, the user must have first granted permission
+	private void registerToNeuraSpecificEvents(String accessToken, Context context, String eventName) {
+		NeuraEventsRequest eventsReuest = new NeuraEventsRequest();
+		eventsReuest.setAccessToken(<accessToken>);
 
+		eventsReuest.setEventName(eventName);
+
+		/**
+		 * App will stay registered to the event (even if the registered app is
+		 * not running at all) until it will explicitly call
+		 * NeuraUtil.unregisterEvent()...
+		 */
+		NeuraUtil.registerEvent(context, eventsReuest);
+	}
+```
+
+### 3.6 Handle broadcast from subscription request/ received event  
+Once subsription request is processed you will get a broadcast to the broadcatReceiver you have registerd when creating the app on https://dev.theneura.com/#/manag. An event occurred to the user will broadcast to the same broadcast receiver as well. You should implament your receiver to handle both.  
 
 ```java
 public class NeuraReceiver extends BroadcastReceiver {
@@ -140,55 +153,26 @@ public class NeuraReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        String action = intent.getAction();
-        String eventName = intent.getStringExtra(NeuraConsts.EXTRA_EVENT_NAME);
+      String action = intent.getAction();
+      String eventName = intent.getStringExtra(NeuraConsts.EXTRA_EVENT_NAME);
 
-        if (action.equalsIgnoreCase(NeuraConsts.ACTION_EVENT_REGISTRATION_RESPONSE)) {
-            boolean success = intent.getBooleanExtra(NeuraConsts.EXTRA_SUCCESS, false);
+      if (action.equalsIgnoreCase(NeuraConsts.ACTION_EVENT_REGISTRATION_RESPONSE)) {
+        boolean success = intent.getBooleanExtra(NeuraConsts.EXTRA_SUCCESS, false);
 
-            if (success) {
-                Toast.makeText(context, "Registered successfully to event " + eventName, Toast.LENGTH_LONG).show();
-            } else {
-                int errorCode = intent.getIntExtra(NeuraConsts.EXTRA_ERROR_CODE, -1);
-                String error = NeuraUtil.errorCodeToString(errorCode);
-                String message = "Registration to event " + eventName + " has failed! error = " + error;
-                Toast.makeText(context, message, Toast.LENGTH_LONG).show();
-            }
-
+        if (success) {
+          Toast.makeText(context, "Registered successfully to event " + eventName, Toast.LENGTH_LONG).show();
         } else {
-            handleNeuraEvent(context, intent, eventName);
+          int errorCode = intent.getIntExtra(NeuraConsts.EXTRA_ERROR_CODE, -1);
+          String error = NeuraUtil.errorCodeToString(errorCode);
+          String message = "Registration to event " + eventName + " has failed! error = " + error;
+          Toast.makeText(context, message, Toast.LENGTH_LONG).show();
         }
+
+      } else {
+        handleNeuraEvent(context, intent, eventName);
+      }
     }
 ```
-
-
-### 3.4 Request permission from the user to access their data
-Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
-
-
-##  4. Query Neura for data objects to better understand your users  
-
-Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like data objects that aren't currently available, please let us know at build [at] theneura [dot] com. 
-
-## 5. Subscribe to events for your users 
-
-
-```java	
-	// Subscribe to receive events from Neura
-	// In order to receive events, the user must have first granted permission
-	// Once the app subscribes to an event, Neura will continue notify the app until it calls NeuraUtil.unregisterEvent() -- reseting the app won't stop event notifications
-	private void registerToNeuraSpecificEvents(String accessToken,
-			Context context, String eventName) {
-		NeuraEventsRequest eventsRequest = new NeuraEventsRequest();
-		eventsRequest.setAccessToken(accessToken);
-
-		eventsRequest.setEventName(eventName);
-
-		NeuraUtil.registerEvent(context, eventsRequest);
-	}
-```	
-
-
 ```java	
    // This event handler executes when Neura sends an event broadcast  
     // For the demo app, we simply have a notification pop up on the user's phone
@@ -211,6 +195,13 @@ Now that you have your user's permission and their unique `access_token` you can
 }
 ```
 
+### 3.7 Request permission from the user to access their data
+Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
+
+
+##  4. Query Neura for data objects to better understand your users  
+
+Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like data objects that aren't currently available, please let us know at build [at] theneura [dot] com. 
 
 ------
 
@@ -393,12 +384,37 @@ You can unsubscribe your app from event notifications.
     }
 ```
 
-##ProGuardIf you are using ProGuard on the release build of your app, you must add this snippet to your app's proguard-project.txt config file:`-keepnames class * implements java.io.Serializable````
--keepclassmembers class * implements java.io.Serializable {    static final long serialVersionUID;    private static final java.io.ObjectStreamField[] serialPersistentFields;    !static !transient <fields>;    private void writeObject(java.io.ObjectOutputStream);    private void readObject(java.io.ObjectInputStream);    java.lang.Object writeReplace();    java.lang.Object readResolve();}
-```
+##ProGuard
+If you are using ProGuard on the release build of your app, you must add this snippet to your app's proguard-project.txt config file:
+`-keepnames class * implements java.io.Serializable`
 
-##Error CodesNeura's Android SDK has the following error codes:  
-    public static final int ERROR_CODE_USER_NOT_LOGGED_IN = 1;    public static final int ERROR_INVALID_APP_ID = 2;    public static final int ERROR_USER_DENIED_PERMISSIONS = 3;    public static final int ERROR_MISSING_ANDROID_PLATFORM = 4;    public static final int ERROR_SERVER_ERROR = 5;    public static final int ERROR_UNEXPECTED_SERVER_RESPONSE = 6;    public static final int ERROR_NOT_AUTORIZED_APP_SIGNITURE = 7;    public static final int ERROR_APP_MISSING_PERMISSIONS = 8;    public static final int ERROR_NO_NETWORK = 9;    public static final int ERROR_USER_CANCELED_AUTHENTICATION = 10;    public static final int ERROR_ILLEGAL_PERMISSIONS = 11;
+```
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    !static !transient <fields>;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+```
+
+
+##Error Codes
+Neura's Android SDK has the following error codes:  
+
+    public static final int ERROR_CODE_USER_NOT_LOGGED_IN = 1;
+    public static final int ERROR_INVALID_APP_ID = 2;
+    public static final int ERROR_USER_DENIED_PERMISSIONS = 3;
+    public static final int ERROR_MISSING_ANDROID_PLATFORM = 4;
+    public static final int ERROR_SERVER_ERROR = 5;
+    public static final int ERROR_UNEXPECTED_SERVER_RESPONSE = 6;
+    public static final int ERROR_NOT_AUTORIZED_APP_SIGNITURE = 7;
+    public static final int ERROR_APP_MISSING_PERMISSIONS = 8;
+    public static final int ERROR_NO_NETWORK = 9;
+    public static final int ERROR_USER_CANCELED_AUTHENTICATION = 10;
+    public static final int ERROR_ILLEGAL_PERMISSIONS = 11;
 
 
 
