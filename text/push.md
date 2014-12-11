@@ -115,10 +115,10 @@ Content-Type: application/json
   "size": 1,
   "items": [
     {
-    	created_at:  1418214427,
-     	identifier:  "aaa",
-     	event:       "userStartedWalking",
-     	state:       "bbb"
+    	"created_at":  1418214427,
+     	"identifier":  "aaa",
+     	"event":       "userStartedWalking",
+     	"state":       "bbb"
      }
   ]
 } 
