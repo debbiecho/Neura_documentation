@@ -13,7 +13,7 @@ _Note: Event subscriptions are [available for Android](https://github.com/NeuraL
 ##Instructions
 
 ###1. Install the apps
-You must have both the [Neura app](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2) and the [3rd party demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraiOSDemoSourceCode.zip) for this project.  
+You must have both the [Neura app](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2) and the [3rd party demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraiOSDemoSourceCode.zip?raw=true) for this project.  
 
 ####Be sure to activate your account with Neura.   
 If you need the password to access the Neura app, contact us at build [at] theneura [dot] com and be sure to note that you're working on this project. Your Neura app should look similar to this:
