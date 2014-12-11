@@ -12,7 +12,7 @@ You can use the Neura API and SDKs to securely access user data by subscribing t
 
 ### Learn more
  - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md)  _95% done. one last diagram from ori_   
- - [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) _90% done. Jen #2. a few questions for Berman_  
+ - [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md)   
  - [API event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)  _50% done. Jen #3. Berman to fill in_ 
  - [Neura on Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) _85% done. !דָחוּף! finalize section #3 with Berman and/or chiki_ 
  - [Neura on iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md) _60% done. Jen #4. clarify a few things with Michael_   
