@@ -16,11 +16,14 @@ Neura has built an [Android app](https://play.google.com/store/apps/details?id=c
 
 Your users must have both your app and the Neura app; if your users don't have the Neura app with an active account then your app will not be able to enjoy the benefits of Neura.  Currently, Neura's for Android app is in closed beta, meaning that users will receive a password after they [apply for access](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2).  After Neura grants them access, they'll need to launch the app, enter their password, and create an account with Neura. If you need expedited access to the app contact us at build [at] theneura [dot] com.   
 
-![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/CreateNeuraAccountFramedAndroid.png)  ![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/createDevAccountAndroidFramed.png)  
+![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/CreateNeuraAccountFramedAndroid.png)  ![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/EnterPasswordAndroid.png)  
+
 
 **Developers must create a user account with an email and password**. [Neura's Developer site](https://dev.theneura.com) requires developers to login with their user credentials; if a developer creates an account with Facebook or Gmail, then they won't have the necessary credentials.
     
-![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/EnterPasswordAndroid.png)  
+![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/createDevAccountAndroidFramed.png)  
+
+
 
 ##  2. Register your app with Neura  
 [![Register your app with Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRegisterApp.png)](https://dev.theneura.com)  
@@ -54,9 +57,9 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 
 ##  3. Add Neura to your app 
 
-[![Get the Neura SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidSDK.png)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar)  
+[![Get the Neura SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidSDK.png)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar?raw=true)  
 
-[![Get the Neura Demo app for Android - source code](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidDemoSourceCode.png)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip)  
+[![Get the Neura Demo app for Android - source code](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidDemoSourceCode.png)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip?raw=true)  
 
 ### 3.1 Review the source code in Neura's demo app
 We've created [NeuraAndroidDemoSourceCode.zip](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip) for you to view in [Eclipse](https://eclipse.org/) so that you can see a working 3rd party app in action.  The app is simple: it allows a user to enter credentials to subscribe to events and get an `accessToken` to query data objects.  We've heavily commented the classes `MainActivity.java` and `NeuraReceiver.java` so that it's clear what's going on.
