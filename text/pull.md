@@ -1,13 +1,11 @@
 # Requesting data objects
 Data objects contain [distilled user information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature), such as wellness, activity, or sleep information, during a period of time, in JSON format that you access asynchronously.  
 
-In this document we detail Neura's API endpoints for requesting data objects. (If you want to obtain instantaneous data, go to Neura [API endpoints for PUSH event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)). The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** access token, and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive a response. 
+In this document we detail Neura's API endpoints for requesting data objects. (If you want to obtain instantaneous data, go to Neura [event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)). The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated,](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) provide a **Bearer** access token, and have user permission to receive a response. 
 
 ##Neura data objects detailed below
-  - `daily_summary`: Summary of the user's activity
-  - `activity`: Wellness Activity Profile   
-  - `sleep`: Sleep Profile 
-  - `hrv`: Heart Rate Variable (for [NeuroSky](http://neurosky.com/) only) 
+  - [`daily_summary`](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofiledaily_summary) is a summary of the user's activity for a day
+  - [`sleep`](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofilesleep) is the user's sleep profile for a day 
 
 ## API root endpoint
 The root endpoint is `https://wapi.theneura.com/v1`. The Neura API is currently in V1 which is why the root endpoint ends with v1.
@@ -35,9 +33,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 }
 ```
 
-
-
----------
+---------  
 
 
 ## GET /users/profile/daily_summary
@@ -123,85 +119,6 @@ Content-Type: application/json
 ---------
 
 
-## GET /users/profile/activity 
-
-`Activity` is a data object containing a user’s wellness information during a period of time beginning on `start_date` and ending on `end_date`, inclusive.  
-
-### Resource URI
-
-**`https://wapi.theneura.com/v1/users/profile/activity`**
-
-### Request query parameters
-
-#### Required request parameters
-- `start_date`  The first day for which you want information in YYYY-MM-DD format.
-- `end_date`  The last day for which you want information in YYYY-MM-DD format.
-
-#### Optional request parameters
-None.
-
-### Request headers
-
-#### Required request headers
-
-- `authorization`: `Bearer **<access_token>**` 
-
-#### Optional request headers
-
-- `Cache-Control`: Specifies if the server should circumvent the server cache
-
-## Response for `activity` 
-
-  - `status`: The status is `success`.
-  - `timestamp`: The time when Neura sent the response in epoch time. 
-  - `data`:  The complex object of wellness data. If data are not available for any of the sub-objects then Neura returns 0.
-  - `data` > `steps`: Neura returns the average daily steps during the period.
-  - `data` > `calories`: Neura returns the average calories burned during the period.   
-  - `data` > `activityPlaces`: The complex object of places and the activities that the user does at those locations. 
-  - `data` > `activityPlaces` > `type`: The type of location either `work` or `workout`.  
-  - `data` > `activityPlaces` > `type` > `steps`: The average number of steps taken at the location. 
-  - `data` > `activityPlaces` > `type` > `calories`: The average calories burned at the location. 
-  - `data` > `activityPlaces` > `type` > `length`: The average time spent at the location (minutes). 
-
-### Example `activity` request
-`
-```http
-GET https://wapi.theneura.com/v1/users/profile/activity
-Authorization: Bearer asdf1234**************************
-Cache-Control: no-cache
-```
-
-### Example `activity` response
-
-#### Headers
-```http
-status: 200 OK
-version: HTTP/1.1
-Content-Type: application/json
-```
-#### Body
-```json
-{
-"status": "success",
-"timestamp": 1416526587,
-"data": {
-  "calories": 1914.8622890088939,
-  "steps": 11096.583672086723,
-  "activityPlaces": [
-    {
-    "label": "workout",
-    "steps": 2216.2600026130676,
-    "calories": 148.26000261306763
-    }
-    ]
-  }
-}
-```
- 
-
----------
-
-
 ## GET /users/profile/sleep 
 
 `sleep` is a data object containing a user’s sleep information either for a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive.   
@@ -272,5 +189,6 @@ Content-Type: application/json
   }
 }
 ```
+ 
  
 
