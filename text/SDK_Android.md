@@ -1,8 +1,8 @@
 
 #Neura for Android
 
-Neura has built an [Android app available in the Play Store]( ) for users and an [Android SDK
-for developers](jar_file_here).  Add Neura to your app to enable it to subscribe to events and request data objects for your users.  Currently, Neura event notifications are only available for Android; Neura does not offer event notifications for iOS. 
+Neura has built an [Android app](https://play.google.com/store/apps/details?id=com.neura.weave&hl=en) for users, available in the Google Play Store, as well as an [Android SDK
+](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar) and an [Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) with [source code](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip) for developers.  Add Neura to your app to enable it to subscribe to events and request data objects for your users.  Currently, Neura data objects and events are available for Android; Neura only offers data objects for iOS. 
 
 ### Here's how to integrate with Neura:  
   1. [Ensure](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#1-ensure-your-users-have-the-neura-app) your users have the Neura app  
@@ -23,7 +23,7 @@ Currently, Neura's for Android app is in closed beta, meaning that users will re
 ##  2. Register your app with Neura  
 [![Register your app with Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRegisterApp.png)](https://dev.theneura.com)  
 
-If you don't already have a Neura user account, you need to first [get the Neura app]( ) and create a user account.  **Again, make sure that create a user account using an email and password, not Facebook or Gmail.** You only have one account with Neura -- we do not distinguish between a user account and a developer account.  If you need expedited access, contact us at build [at] theneura [dot] com.  
+If you don't already have a Neura user account, you need to first [get the Neura app]( ) and create a user account.  **Again, make sure that you create a user account using an email and password; do not select the Facebook or Gmail options.** You only have one account with Neura -- we do not distinguish between a user account and a developer account.  If you need expedited access, contact us at build [at] theneura [dot] com.  
 
 Once you have an account with Neura, register your app at [Neura's developer site](https://dev.theneura.com) -- login using the same email and password as your Neura user account.  After you register your app, Neura will provide you with the credentials (`App UID` and `App Secret`) you'll need to add Neura into your app.      
 
@@ -40,12 +40,12 @@ Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentatio
 ![Declare permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_permissions.png)
 
 ### 2.4 Register
-The **Register** button is enabled only after you've completed all manditory fields.  If your registration is successful, it will appear in https://dev.theneura.com/#/manage . Please note that **you must click the App secret** to make it visible.  
+The **Register** button is enabled only after you've completed all manditory fields.  If your registration is successful, it will appear in https://dev.theneura.com/#/manage  
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
 ### 2.5 Example registration
-In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_seven** that relates to '*smart home*' and uses the Component Name `com.3rd_party.demo.demo.NeuraReceiver`, Package Name `com.3rd_party`, and Key Hash `12344321`.  They have declared permission for events `userFinishedWalking`, `userFinishedDriving`, `userStartedDriving`, and `userStartedWalking` as well as the data objects `dailyActivitySummary` and `sleepData`.  Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.    
+In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_seven** that relates to '*smart home*' and uses the Component Name `com.3rd_party.demo.demo.NeuraReceiver`, Package Name `com.3rd_party`, and Key Hash `12344321`.  They have declared permission for events `userFinishedWalking`, `userFinishedDriving`, `userStartedDriving`, and `userStartedWalking` as well as the data objects `dailyActivitySummary` and `sleepData`.  Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.   Please note that **you must click the App secret** to make it visible.   
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/ExampleAppRegistrationAndroid.png)
 
@@ -64,11 +64,102 @@ The [Neura SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blo
 
 The Neura SDK requries the Platform API level to be version 15 (Ice Cream Sandwich) or higher. Also, ensure the SDK android is version 19 or higher. Make sure that the .jar file is under `lib`. If you have trouble compiling, be sure to update your Android SDK Manager. 
 
-### 3.3 
-***Mikimer stopped here***
+### 3.3 Add authentication code
+Add the following **authentication code** to your app to activate authentication with the Neura app. You can replace `appId` and `appSecret` with your unique credentials shown at https://dev.theneura.com/#/manage :
+
+```java
+	// Authenticate with Neura, where the app launches authorization within the Neura app -- the user will see a Neura screen
+	// Request from Neura an accessToken for this user for the requested permissions; the callback is onActivityResult
+	// These permissions must be a subset of permissions you declared on Neura's developer website, https://dev.theneura.com/#/manage
+	private void performNeuraAuthentication() {
+
+		String appId = getAppId();
+		String appSecret = getAppSecret();
+
+		AuthenticationRequest authenticationRequest = new AuthenticationRequest();
+		authenticationRequest.setAppId(appId);
+		authenticationRequest.setAppSecret(appSecret);
+
+		String[] permissions = getAppPermisisons();
+
+		ArrayList<Permission> permissionsList = Permission.list(permissions);
+
+		authenticationRequest.setPermissions(permissionsList);
+
+		boolean neuraInstalled = NeuraAuthUtil.authenticate(MainActivity.this,
+				NEURA_AUTHENTICATION_REQUEST_CODE, authenticationRequest);
+
+		// check whether the user has installed the Neura app. 
+		// If not, we created a method for you in the Neura SDK to easily direct the user to the Play Store to get the app
+		if (!neuraInstalled) {
+			NeuraUtil.redirectToGooglePlayNeuraMeDownloadPage(this);
+		}
+	}
+```	
+
+```java
+	// The demo app reacts to the authentication request
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+
+		if (requestCode == NEURA_AUTHENTICATION_REQUEST_CODE) {
+			if (resultCode == RESULT_OK) {
+				String accessToken = NeuraAuthUtil.extractToken(data);
+				saveAccessTokenPersistent(accessToken);
+				Toast.makeText(MainActivity.this, "Authenticate Success!",
+						Toast.LENGTH_SHORT).show();
+
+				refreshUi();
+			} else {
+				int errorCode = data.getIntExtra(NeuraConsts.EXTRA_ERROR_CODE,
+						-1);
+
+				Toast.makeText(
+						MainActivity.this,
+						"Authenticate Failed: "
+								+ NeuraUtil.errorCodeToString(errorCode),
+						Toast.LENGTH_SHORT).show();
+
+				// TODO handle one of the error codes described in the
+				// documentation
+
+			}
+		}
+	}
+```
 
 
-### 3.XX Request permission from the user to access their data
+```java
+public class NeuraReceiver extends BroadcastReceiver {
+
+	// Determine whether the broadcast is in response to the app registering an event or whether Neura is sending an event notification
+    @Override
+    public void onReceive(Context context, Intent intent) {
+
+        String action = intent.getAction();
+        String eventName = intent.getStringExtra(NeuraConsts.EXTRA_EVENT_NAME);
+
+        if (action.equalsIgnoreCase(NeuraConsts.ACTION_EVENT_REGISTRATION_RESPONSE)) {
+            boolean success = intent.getBooleanExtra(NeuraConsts.EXTRA_SUCCESS, false);
+
+            if (success) {
+                Toast.makeText(context, "Registered successfully to event " + eventName, Toast.LENGTH_LONG).show();
+            } else {
+                int errorCode = intent.getIntExtra(NeuraConsts.EXTRA_ERROR_CODE, -1);
+                String error = NeuraUtil.errorCodeToString(errorCode);
+                String message = "Registration to event " + eventName + " has failed! error = " + error;
+                Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+            }
+
+        } else {
+            handleNeuraEvent(context, intent, eventName);
+        }
+    }
+```
+
+
+### 3.4 Request permission from the user to access their data
 Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
 
 
@@ -78,6 +169,44 @@ Now that you have your user's permission and their unique `access_token` you can
 
 ## 5. Subscribe to events for your users 
 
+
+```java	
+	// Subscribe to receive events from Neura
+	// In order to receive events, the user must have first granted permission
+	// Once the app subscribes to an event, Neura will continue notify the app until it calls NeuraUtil.unregisterEvent() -- reseting the app won't stop event notifications
+	private void registerToNeuraSpecificEvents(String accessToken,
+			Context context, String eventName) {
+		NeuraEventsRequest eventsRequest = new NeuraEventsRequest();
+		eventsRequest.setAccessToken(accessToken);
+
+		eventsRequest.setEventName(eventName);
+
+		NeuraUtil.registerEvent(context, eventsRequest);
+	}
+```	
+
+
+```java	
+   // This event handler executes when Neura sends an event broadcast  
+    // For the demo app, we simply have a notification pop up on the user's phone
+    // In your app, we hope that you're much more creative. Turn on a light, lock a door, let the magic flow
+    private void handleNeuraEvent(Context context, Intent intent, String eventName) {
+
+        /**
+         * the intent Bundle will contain key value pairs of additional parameters related to the event, according to the documentation
+         */
+
+        String title = "Neura Event";
+        String message = "Event Accured: " + eventName + ", ";
+
+        Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        Notification notification = new Notification.Builder(context).setSound(uri).setSmallIcon(R.drawable.ic_launcher).setContentTitle(title)
+                .setContentText(message).build();
+        notificationManager.notify(45, notification);
+    }
+}
+```
 
 
 ------
