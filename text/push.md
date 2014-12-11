@@ -1,20 +1,18 @@
-# Neura API endpoints for PUSH event subscriptions
+# Subscribing to events
 
-Event are changes in [the state of a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature) that Neura delivers. 
+Events are changes in [the state of a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature) that Neura delivers. 
 
 Neura sends events to you, either to your server using webhook or to your mobile app through Neura's [Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) app. 
 
-In this document Neura details API endpoints that you can use to subscribe to PUSH notifications for events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated, provide a **Bearer** access token and have user permission](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) to receive PUSH notifications.
+In this document Neura details API endpoints that you can use to subscribe to events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md), provide a **Bearer** access token and have user permission to receive PUSH notifications.
 
-_____________
-
-In this project, we will do the following:  
-1. [Subscribe to an event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#1-subscribe-to-an-event)  
-2. [Get subscription list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-subscription-list)  
-3. [Get a specific subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
-4. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#4-unsubscribe)  
-5. [Neura HTTPS request to webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-https-request-to-webhook)
-6. [Event list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5list-of-events-available-for-subscription)  
+This document consists of the following sections:  
+  1. [Subscribe to an event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#1-subscribe-to-an-event)  
+  2. [Get subscription list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-subscription-list)  
+  3. [Get a specific subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
+  4. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#4-unsubscribe)  
+  5. [Neura HTTPS request to webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-https-request-to-webhook)  
+  6. [Event list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5list-of-events-available-for-subscription)  
 
 ##1. Subscribe to an event
 
@@ -270,74 +268,30 @@ Content-Type: application/json
 ```
 
 ##6. List of Events available for subscription
-The events are detailed below, organized into the following categories:  
+The events are detailed below, organized into events by location and events by activity.
 
-- Events at home
-- Events at work
-- Events around town
-- Other events
-
-
-###Events at home
-`userArrivedHome`
-
-`userStartedSleeping`
-
-`userLeftHome`
-
-`userWokeUp`
+###Events by location
+`userArrivedHome`  
+`userLeftHome`  
+`userArrivedToWork`  
+`userLeftWork`  
+`userArrivedToGym`   
+`userLeftGym`  
 
 
-###Events at work
-`userIsAtWork` 
-
-`userArrivedToWork`
-
-`userLeftWork`
-
-
-###Events around town
-`userIsCycling`
-
-`userIsDriving`
-
-`userFinishedRunning`
-
-`userFinishedCycling`
-
-`userStartedCycling`
-
-`userIsAtGym`
-
-`userStartedRunning`
-
-`userIsRunning`
-
-`userArrivedToGym`
-
-`userFinishedWorkOut`
-
-`userIsWorkingOut`
-
-`userStartedWorkOut`
-
-`userFinishedDriving`
-
-`userStartedDriving`
-
-`userLeftGym`
-
-
-###Other events
-`userIsWalking`
-
-`userFinishedWalking`
-
-`userIsIdle`
-
-`userIsNoLongerIdle`
-
-`userStartedWalking`
+###Events by activity
+`userStartedSleeping`  
+`userWokeUp`  
+`userStartedWalking`  
+`userFinishedWalking`  
+`userStartedDriving`  
+`userFinishedDriving`  
+`userStartedRunning`  
+`userFinishedRunning`  
+`userStartedCycling`  
+`userFinishedCycling`  
+`userStartedWorkOut`  
+`userFinishedWorkOut`  
 
 
 
