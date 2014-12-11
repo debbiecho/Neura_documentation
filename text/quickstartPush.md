@@ -22,14 +22,13 @@ Enter the following `APP UID`, `APP SECRET`, and `PERMISSION` name in the demo a
 > APP SECRET: 95767dfa44a840db4a6666b2005943ff93a832f9c54cb34411ea602139b69e61  
 > PERMISSION: userStartedWalking  
 
-Your app should now look like this:
-
-![Demo app with completed fields](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoCompletedEvents.png)
+Your app should now look like this:  
+![Demo app with completed fields](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoCompletedPermissions.png)
 
 ###3. Subscribe to Events 
 Now that you have permission, enter `userStartedWalking` to subscribe to this event and click **(2) Subscribe event**. 
 
-![Demo app with completed fields](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoCompletedPermissions.png)
+![Demo app with completed fields](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoCompletedEvents.png)
 
 
 ###4. Take it for a spin
