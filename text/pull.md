@@ -241,21 +241,3 @@ Authorization: Bearer asdf1234**************************
 Cache-Control: no-cache
 ```
 
-### Example `hrv` response
-
-#### Headers
-```http
-status: 200 OK
-version: HTTP/1.1
-Content-Type: application/json
-```
-#### Body
-```json
-{
-***mikimer to get example from berman -- i couldn't get this from Postman***
-   }
-```
- 
- 
- 
-
