@@ -58,9 +58,9 @@ Content-Type: application/json
 #### Body
 ```json
 {
-	status:"success",
-	timestamp: 1418240617		
- }
+  "status": "success",
+  "timestamp": 1418244427 
+}
 ```
 
 ##2. Get subscription list
