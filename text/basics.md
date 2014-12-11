@@ -61,7 +61,7 @@ Neura considers a user changing timezones as an [edge case](http://en.wikipedia.
 ### Differences in time between the Neura app and the Neura API 
 Time is conveyed differently in the Neura app versus the Neura API to make the most sense for each audience.  The Neura API uses [epoch time](http://en.wikipedia.org/wiki/Unix_time) so that developers don't need to worry about differences in time zones between different users.  For instance, when Neura delivers an event or a data object, it returns a `timestamp` in epoch time.
 
-For users, the Neura app always displays time in the user's current timezone.  When a user changes timezones, Neura automatically updates their timeline.  On a normal day, a user might awake at 9am on Monday morning in San Francisco (PT) and awake on Tuesday in San Francisco at 8am.  Therefore, for Neura, Monday results in a 23 hour day.  However, if a user awakes in San Francisco on Tuesday at 8am and then flies to New York and wakes up in New York on Wednesday morning at 10am (ET), for Neura, Tuesday results in a 26-hour day.  
+For users, the Neura app always displays time in the user's current timezone.  When a user changes timezones, Neura automatically updates their timeline.  In the example above, let's say the user awakes in San Francisco on Sunday at 9am PT and then flies to Chicago. On Monday morning, they wake up in Chicago at 11am CT, Neura considers Sunday to be a 26-hour day.  
 
 ## Data gathered by the Neura app
 Neura utilizes data gathered by the Neura app and [integrated devices](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) that the user has authorized for Neura to access.  The Neura app gathers data from the the user's phone's:  
@@ -78,3 +78,8 @@ Neura puts user privacy first and we expect developers to do the same.  We've de
 
 HTTPS is required for all Neura APIs because we transmit private user information. Users trust your application with their data and Neura expects you respect this trust. We require that your application not retransmit insecurely, retain indefinitely, nor share with third parties any data sent via the Neura API. 
 
+## Go forth and build
+You can now build with Neura [on Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) and [on iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md). Your app can query Neura [data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md); Android apps can also [subscribe to events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md). 
+
+
+## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
