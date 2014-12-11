@@ -58,10 +58,11 @@ Content-Type: application/json
 #### Body
 ```json
 {
-	status:"success"
+	status:"success",
 	timestamp: 1418240617		
  }
 ```
+
 ##2. Get subscription list
 ### Resource URI
 
