@@ -6,6 +6,7 @@ In this document we detail Neura's API endpoints for requesting data objects. (I
 ##Neura data objects detailed below
   - [`daily_summary`](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofiledaily_summary) is a summary of the user's activity for a day
   - [`sleep`](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofilesleep) is the user's sleep profile for a day 
+  - [`hrv`](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofilehrv) is the user's heart rate variable data
 
 ## API root endpoint
 The root endpoint is `https://wapi.theneura.com/v1`. The Neura API is currently in V1 which is why the root endpoint ends with v1.
@@ -195,7 +196,7 @@ Content-Type: application/json
 
 ## GET /users/profile/hrv 
 
-`hrv` is a data object containing a user’s heart rate information either on a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive. This service is only available for users that have integrated Neurosky with Neura and requires a **Bearer** authorization token.
+`hrv` is a data object containing a user’s heart rate information either on a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive. This service is only available for users that have integrated [Neurosky](http://neurosky.com/) with Neura and requires a **Bearer** authorization token.
 
 
 ### Resource URI
