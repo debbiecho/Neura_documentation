@@ -21,14 +21,14 @@ This document consists of the following sections:
 ### Request query parameters  
 
 #### Required request parameters
-- `event_name`: (string) This is the name of the event to which you are subscribing.   [List of events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions)
+- `event_name`: (string) This is the `<name>` of the event to which you are subscribing. We provide a full [list below](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions).
 - `method`: (string) How Neura will notify you about the event, either `all`, `push`, or `webhook`. If you don't specify a `method`, Neura defaults to `method=all`.
 - `identifier`: (string) The name you give to identify your subscription.
  
 
 #### Optional request parameters
-- `state`: (string) Value sent and received by the customer.  This allows the customer to give another parameter to identify their subscription.
-- `webhook_id`: (string) The webhook where Neura will send the event notification. The default value is the default application subscriber url that was defined in the application registration process. 
+- `state`: (string) Value sent and received by the customer.  This allows the customer to give another parameter to identify their subscription. ***what are we trying to say? who's the customer? "you" the developer?***
+- `webhook_id`: (string) The webhook where Neura will send the event notification. The default value is the default application subscriber URL that was defined in the application registration process. ***clarify. who defined it? neura or the dev?***
 
 ### Request headers
 
