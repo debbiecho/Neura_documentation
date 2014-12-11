@@ -27,7 +27,7 @@ This document consists of the following sections:
  
 
 #### Optional request parameters
-- `state`: (string) Value sent and received by the customer.  This allows the customer to give another parameter to identify their subscription. ***what are we trying to say? who's the customer? "you" the developer?***
+- `state`: (string) This is a value that we echo back to you in our response.
 - `webhook_id`: (string) The webhook where Neura will send the event notification. The default value is the default application subscriber URL that was defined in the application registration process. ***clarify. who defined it? neura or the dev?***
 
 ### Request headers
