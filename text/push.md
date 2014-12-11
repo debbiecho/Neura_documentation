@@ -1,6 +1,6 @@
 # Subscribing to events
 
-Events are changes in [the state of a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature) that Neura delivers.  Neura sends events to you, either to your server using webhook or to your mobile app through Neura's [Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) app. 
+Events are changes in [the state of a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature) that Neura delivers.  After you subscribe to an event, Neura sends that event to you, either to your server using webhook or to your mobile app through Neura's [Android app](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md). 
 
 In this document Neura details API endpoints that you can use to subscribe to events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md), provide a **Bearer** access token and have user permission to receive PUSH notifications.
 
@@ -21,7 +21,7 @@ This document consists of the following sections:
 ### Request query parameters  
 
 #### Required request parameters
-- `event_name`: (string) This is the `<name>` of the event to which you are subscribing. We provide a full [list of event names](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions) below.
+- `event_name`: (string) This is the name of the event to which you are subscribing. We provide a full [list of event names](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions) below.
 - `method`: (string) How Neura will notify you about the event, either `all`, `push`, or `webhook`. Neura defaults to `method=all`.
 - `identifier`: (string) The name you give to identify your subscription.
  
