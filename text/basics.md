@@ -1,6 +1,7 @@
 #An introduction to Neura for developers
 
-####Neura distills raw data from a user's smartphone and internet-of-things (IoT) devices into contextual knowledge.  Developers can use this contextual knowledge to make smarter apps and devices that enhance the user's life.  Let the magic flow...
+###Neura distills raw data from a user's smartphone and [internet-of-things (IoT)](http://en.wikipedia.org/wiki/Internet_of_Things) devices into contextual knowledge.  
+###Developers can use Neura's contextual knowledge to make smarter apps and IoT devices that enhance the user's life.  Let the magic flow...
 
 ![Neura data flow diagram](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDataFlowDiagram.png)
 
@@ -51,7 +52,7 @@ Neura is available for users with smartphones running Android or iOS.  The Neura
 A "Neura day" is from when a user wakes up one day to when they wake up the next day.  Consequently, a calendar day is always 24 hours long, whereas the length of a Neura day varies with user sleep patterns.  
 Specifically, Neura treats the event when the user awoke to be the "anchor" that defines their day.  A Neura day begins on the calendar day when the user awakes and finishes the following calendar day just before the user awakes; we believe this  best conveys a day from the perspective of the user.  Additionally, if Neura is unable to detect when a user awoke (e.g. because their phone is off), then there may not be data objects available for that day.  
 
-![Neura's view of a person's day](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraDailyCalendar.jpg)
+![Neura's view of a person's day](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/semantic_cycle.png)
 
 ### Timezone changes
 Neura considers a user changing timezones as an [edge case](http://en.wikipedia.org/wiki/Edge_case). Consequently, our approach is to always calculate events based on the timezone the user was in when they awoke, regardless of their timezone the rest of the day.
