@@ -27,8 +27,8 @@ This document consists of the following sections:
  
 
 #### Optional request parameters
-- `state`: (string) This is a value that we echo back to you in our response.
-- `webhook_id`: (string) The webhook where Neura will send the event notification. The default value is the default application subscriber URL that was defined in the application registration process. ***clarify. who defined it? neura or the dev?***
+- `state`: (string) This is a value that we echo back to you with the event.
+- `webhook_id`: (string) All webhooks must declared when you register your app. This is the webhook where Neura will send this specific event. The default value is the default application subscriber URL that you define when you register your app. 
 
 ### Request headers
 
