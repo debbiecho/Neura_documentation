@@ -13,7 +13,7 @@ In this project, we will do the following:
 2. [Get subscription list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-subscription-list)  
 3. [Get a specific subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
 4. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#4-unsubscribe)  
-5. [Neura HTTPS request to webhook]()
+5. [Neura HTTPS request to webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-https-request-to-webhook)
 6. [Event list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5list-of-events-available-for-subscription)  
 
 ##1. Subscribe to an event
@@ -232,17 +232,17 @@ Content-Type: application/json
 } 
 ```
 ##5. Neura HTTPS request to webhook
-If you subscribed to an event and set webhook state, neura will send an HTTPS request to the webhook
+When you subscribed to an event and set webhook state, neura will send an HTTPS request to the webhook once event occurred. You should response to this request with status code 200.
 ### Resource URI
 
 **`POST https://<webhook>`**
 
 #### neura will send the following request parameters
-`name`: 
-`identifier`: 
-`timestamp`:
-`metadata`: 
-`state`: 
+`name`: The name of occuring event 
+`timestamp`: The timestamp when the event generated
+`metadata`: Metadata about the event
+`state`: The state you set for the subscription
+`identifier`: The identifier you set to the subscription
 
 ### Expected response to webhook request
 response with status code 200
@@ -250,7 +250,14 @@ response with status code 200
 ### Example of a subscription list request
 
 ```http
-POST https://your_domain/blabla
+POST https://your_domain/asdfg
+{
+  name: "userStartedWalking",
+  timestamp: 1418214427,
+  metadata: {},
+  state: "aaa",
+  identifier: "bbb"
+}
 ```
 
 ### Example of a subscription list response
