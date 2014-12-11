@@ -16,7 +16,7 @@ You can use the Neura API and SDKs to securely access user data by subscribing t
  - [Authentication and permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) _40% done - mikimer & berman to complete; possibly move to basics.md_
  - [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) _90% done. Jen #2. a few questions for Berman_  
  - [API event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)  _50% done. Jen #3. Berman to fill in_ 
- - [Neura on Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) _80% done. a few things to clarify with chiki_ 
+ - [Neura on Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) _85% done. THE MOST PRESSING! finalize section #3 with Berman and/or chiki_ 
  - [Neura on iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md) _60% done. Jen #4. clarify a few things with Michael_   
  - [Integrated devices that can send data to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) _100% done!_ 
  - [Current status of the Neura API](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/status.md) _80% done. Mikimer to chat with Triinu & Berman about how to maintain this page_ 
