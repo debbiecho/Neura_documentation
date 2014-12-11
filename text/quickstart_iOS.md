@@ -1,5 +1,5 @@
 #Quickstart: Authenticate with Neura's demo 3rd Party App on iOS
-In this project you will authenticate with the Neura to receive your unique `accessToken` so that you can request your own data from Neura.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md#instructions) for this project are detailed below -- it should take you less than 10 minutes, if you've already set up your Neura account; it **requires an account** with Neura and an iOS phone.  
+In this project you will authenticate with the Neura to receive your unique `accessToken` so that you can request your own data from Neura.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md#instructions) for this project are detailed below -- it should take you less than 5 minutes, if you've already set up your Neura account; it **requires an account** with Neura and an iOS phone.  
 
 This project demonstrates Neura's ability to notify a 3rd party app of user events. A practical application of this project is that you can use it to develop an app that intelligently reacts to your users' actions in real time.  
 

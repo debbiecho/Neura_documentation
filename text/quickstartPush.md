@@ -15,8 +15,8 @@ You must have both the [Neura app](https://theneura.prefinery.com/betas/4624/tes
 
 ![Both apps installed](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoAppsInPhone.png)  ![Working Neura app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoNeuraApp2.png)
 
-###2. Activate the demo app
-Enter the following `APP UID`, `APP SECRET`, and `PERMISSION` name in the app and click **Neura authenticate**.  
+###2. Secure permissions
+Enter the following `APP UID`, `APP SECRET`, and `PERMISSION` name in the demo app and click **(1) Neura authenticate**.  
 
 > APP UID: 3b06106c458337babc3e0eaec4e8fd2fba19edd009d41ba422e518ff4b169766  
 > APP SECRET: 95767dfa44a840db4a6666b2005943ff93a832f9c54cb34411ea602139b69e61  
@@ -26,7 +26,10 @@ Your app should now look like this:
 
 ![Demo app with completed fields](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoCompletedFields.png)
 
-###3. Take it for a spin
+###3. Subscribe to Events 
+Now that you have permission, enter `userStartedWalking` to subscribe to this event and click **(2) Subscribe event** 
+
+###4. Take it for a spin
 The `userStartedWalking` event is triggered when the user leaves the building and takes a walk outside.  After you walk about 100 meters out the door, the demo app will send you the notification.
 
 ------
