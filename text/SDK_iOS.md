@@ -15,7 +15,7 @@ Neura has built an [iOS app](https://github.com/NeuraLabs/Neura_documentation/bl
 
 Currently, Neura for iOS is available only through TestFlight so your users will need to [apply for access](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2).  When Neura grants them access, they'll need to (1) open the TestFlight invitation in their native iPhone Mail client and (2) create an account with Neura.  Please note that **users have been unable to install TestFlight with non-native mail clients**, such as Gmail and Sparrow.  If you need expedited access to the app, contact us at build [at] theneura [dot] com.
 
-Please note that **developers must create a user account with an email and password**. Neura's Developer site requires developers to login with their user credentials; if a developer creates an account with Facebook or Gmail, then they won't have the necessary credentials.
+Please note that **developers must create a user account with an email and password**. Neura's Developer site requires you to login with your user credentials; if a developer creates an account with Facebook or Gmail, then you won't have the necessary credentials.
     
 ![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/HowToGetNeuraAppiOSFramed.png) ![TestFlight email in native iPhone mail](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/TestFlightIniPhoneMailFramed.png) ![TestFlight email in native iPhone mail](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/CreateNeuraAccountFramed.png)  
 
