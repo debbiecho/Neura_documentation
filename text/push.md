@@ -293,6 +293,8 @@ The events are detailed below, organized into events by location and events by a
 `userFinishedWorkOut`  
 
 
+## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
+
 
 
 

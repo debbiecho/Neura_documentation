@@ -418,19 +418,7 @@ Neura's Android SDK has the following error codes:
 
 
 
----------
-
-#Internal issues to discuss:
-
-1. **Chiki, why don't we start by showing the Neura libraries to include? Don't devs need to first include libraries?**
-2. I replaced `authorization key` with `accessToken` is that ok?
-3. 
-
-
-##remove internal issues before publishing
-
-
-
+## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
 
 
 

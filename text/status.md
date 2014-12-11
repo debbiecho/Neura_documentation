@@ -9,3 +9,6 @@ The API is in alpha. Whenever possible, we'll give developers 10 days notice via
 ##Change log
 **November 13th 2014** 
 Began documenting changes.
+
+## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
+
