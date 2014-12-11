@@ -49,10 +49,14 @@ Neura is available for users with smartphones running Android or iOS.  The Neura
 
 
 ## Days, time, and time zones
-A "Neura day" is from when a user wakes up one day to when they wake up the next day.  Consequently, a calendar day is always 24 hours long, whereas the length of a Neura day varies with user sleep patterns.  
-Specifically, Neura treats the event when the user awoke to be the "anchor" that defines their day.  A Neura day begins on the calendar day when the user awakes and finishes the following calendar day just before the user awakes; we believe this  best conveys a day from the perspective of the user.  Additionally, if Neura is unable to detect when a user awoke (e.g. because their phone is off), then there may not be data objects available for that day.  
+A "Neura day" is from when a user wakes up one day to when they wake up the next day.  Consequently, a calendar day is always 24 hours long, whereas the length of a Neura day varies with user sleep patterns.  If a user wakes up at 6am on Friday and then wakes up at 10am on Saturday, then Neura says their Friday was 28 hours; Neura doesn't consider w.
+
+ Thursday and then wakes up at 6am on Friday
 
 ![Neura's view of a person's day](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/semantic_cycle.png)
+
+Specifically, Neura treats the event when the user awoke to be the "anchor" that defines their day.  A Neura day begins on the calendar day when the user awakes and finishes the following calendar day just before the user awakes; we believe this  best conveys a day from the perspective of the user.  Additionally, if Neura is unable to detect when a user awoke (e.g. because their phone is off), then there may not be data objects available for that day.  
+
 
 ### Timezone changes
 Neura considers a user changing timezones as an [edge case](http://en.wikipedia.org/wiki/Edge_case). Consequently, our approach is to always calculate events based on the timezone the user was in when they awoke, regardless of their timezone the rest of the day.
