@@ -24,10 +24,13 @@ Enter the following `APP UID`, `APP SECRET`, and `PERMISSION` name in the demo a
 
 Your app should now look like this:
 
-![Demo app with completed fields](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoCompletedFields.png)
+![Demo app with completed fields](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoCompletedEvents.png)
 
 ###3. Subscribe to Events 
-Now that you have permission, enter `userStartedWalking` to subscribe to this event and click **(2) Subscribe event** 
+Now that you have permission, enter `userStartedWalking` to subscribe to this event and click **(2) Subscribe event**. 
+
+![Demo app with completed fields](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoCompletedPermissions.png)
+
 
 ###4. Take it for a spin
 The `userStartedWalking` event is triggered when the user leaves the building and takes a walk outside.  After you walk about 100 meters out the door, the demo app will send you the notification.
