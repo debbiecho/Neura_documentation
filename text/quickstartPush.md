@@ -1,6 +1,6 @@
 
 #Quickstart: Subscribe to events on Android
-In this project you will use Neura's [3rd party Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) to subscribe to Neura events on Android for `userStartedWalking` for your personal Neura user account.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md#instructions) for this project are detailed below -- it should take you less than 5 minutes, if you've already set up your Neura user account; it **requires an account** with Neura and an Android phone.  
+In this project you will use Neura's [3rd party Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk?raw=true) to subscribe to Neura events on Android for `userStartedWalking` for your personal Neura user account.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md#instructions) for this project are detailed below -- it should take you less than 5 minutes, if you've already set up your Neura user account; it **requires an account** with Neura and an Android phone.  
 
 This project demonstrates Neura's ability to notify a third party app about user events. A practical application of this project would be to develop an app that reacts intelligently to users' actions in real time, such as turning on the lights when they wake up or locking the door when they leave home. 
 
@@ -11,7 +11,7 @@ This project demonstrates Neura's ability to notify a third party app about user
 ##Instructions
 
 ###1. Install the apps
-You must have both the [Neura app](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2) and the [third party Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) for this project.  Be sure that you're logged into your Neura account -- it should like similar to the picture below.  If you need the password to access the Neura app, contact us at build [at] theneura [dot] com and be sure to note that you're working on this Quickstart project. 
+You must have both the [Neura app](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2) and the [third party Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk?raw=true) for this project.  Be sure that you're logged into your Neura account -- it should like similar to the picture below.  If you need the password to access the Neura app, contact us at build [at] theneura [dot] com and be sure to note that you're working on this Quickstart project. 
 
 ![Both apps installed](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoAppsInPhone.png)  ![Working Neura app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/demoNeuraApp2.png)
 
