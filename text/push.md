@@ -9,7 +9,7 @@ This document consists of the following sections:
   2. [Get a list of your event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-subscription-list)  
   3. [Get information for an existing subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
   4. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#4-unsubscribe)  
-  5. [Neura HTTPS request to webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-https-request-to-webhook)  
+  5. [Neura POSTs an event to your webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-posts-an-event-to-your-webhook)  
   6. [Event list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5list-of-events-available-for-subscription)  
 
 ##1. Subscribe to an event
@@ -22,7 +22,7 @@ This document consists of the following sections:
 
 #### Required request parameters
 - `event_name`: (string) This is the name of the event to which you are subscribing. We provide a full [list of event names](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions) below.
-- `method`: (string) How Neura will notify you about the event, either `all`, `push`, or `webhook`. Neura defaults to `method=all`.
+- `method`: (string) How Neura will notify you about the event, either `all`, `push`, or `webhook`. Neura defaults to `method=all`.  If you specify `method=webhook` then Neura will [POST to your webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-posts-an-event-to-your-webhook) every time the event occurs.  If you specify `method=push` then Neura will PUSH to your mobile app (only available [for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md)).  If you specify `method=all` then Neura will do both.
 - `identifier`: (string) The name you give to identify your subscription.  
 
 #### Optional request parameters
@@ -232,38 +232,36 @@ Content-Type: application/json
 ```
 
 ##5. Neura POSTs an event to your webhook
-After you do ... we'll do...
+After you've successfully [subscribed to an event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#1-subscribe-to-an-event) then Neura will POST to your webhook every time the event occurs, if you set `method=all` or `method=webhook`.
 
-When you subscribe to an event and set the webhook state, Neura will send an HTTPS request to the webhook every time the event occurrs. You should respond to this request with status code 200.  
+### The resource URI that you provide
 
-### Resource URI
-
-**`POST https://<webhook>`**
+**`POST https://<your webhook>`**
 
 #### Neura will send the following request parameters
-`name`: The name of occuring event 
-`timestamp`: The timestamp when the event generated
-`metadata`: Metadata about the event
-`state`: The state you set for the subscription
-`identifier`: The identifier you set to the subscription
+`name`: Neura's name of event  
+`timestamp`: The timestamp when Neura recognized the event  
+`metadata`: Metadata about the event  
+`state`: The state you set for the subscription  
+`identifier`: The identifier you set to the subscription  
 
 ### Expected response to webhook request
-response with status code 200
+Neura expects you to respond with status code 200.
 
-### Example of a subscription list request
+### Example request
 
 ```http
-POST https://your_domain/asdfg
+POST https://your_domain.com/send_my_event_here
 {
-  name: "userStartedWalking",
-  timestamp: 1418214427,
-  metadata: {},
-  state: "aaa",
-  identifier: "bbb"
+  "name": "userStartedWalking",
+  "timestamp": 1418214427,
+  "metadata": {},
+  "state": "my_first_event",
+  "identifier": "send_me_this_message"
 }
 ```
 
-### Example of a subscription list response
+### Example response
 
 #### Headers
 ```http
