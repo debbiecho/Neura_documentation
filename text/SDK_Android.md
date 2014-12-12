@@ -95,8 +95,9 @@ Add the following **authentication code** to your app to authenticate with the N
 		}
 	}
 ```	
-### 3.4 Add authentication callback handeling
-Once user completed the authentication process you will get a callback to the "onActivityResult" function. 
+
+### 3.4 Add authentication callback handling
+Once user completed the authentication process you will get a callback to the `onActivityResult` function. 
 
 ```java
 	// The demo app reacts to the callback of authentication request
