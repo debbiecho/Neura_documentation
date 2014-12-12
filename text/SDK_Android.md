@@ -124,16 +124,16 @@ When you run the **authentication code** your app will launch authentication in 
 	}
 ```
 
-### 3.5 Subscribe to events
-Next step would be to subscribe to push event. After subscribing to an event you will get a callback to your Android app and/or to your defined webhook each time the event occurs.   
+### 3.5 Subscribe to events in the Android SDK 
+After your user has authenticated with Neura, you can subscribe to the for which they granted you permission. Replace the **access token** (`asdf**************************`) with the `accessToken` that Neura sent you for the user, and the **event name** (`userStartedWalking`) with the event you want to subscribe to.     
 ```java
 	// Subscribe to this app to receive events from Neura
 	// In order to receive events, the user must have first granted permission
 	private void registerToNeuraSpecificEvents(String accessToken, Context context, String eventName) {
 		NeuraEventsRequest eventsReuest = new NeuraEventsRequest();
-		eventsReuest.setAccessToken(<accessToken>);
+		eventsReuest.setAccessToken("asdf********************");
 
-		eventsReuest.setEventName(eventName);
+		eventsReuest.setEventName("userStartedWalking");
 
 		/**
 		 * App will stay registered to the event (even if the registered app is
@@ -144,8 +144,8 @@ Next step would be to subscribe to push event. After subscribing to an event you
 	}
 ```
 
-### 3.6 Handle broadcast from subscription request/ received event  
-Once subsription request is processed you will get a broadcast to the broadcatReceiver you have registerd when creating the app on https://dev.theneura.com/#/manag. An event occurred to the user will broadcast to the same broadcast receiver as well. You should implament your receiver to handle both.  
+### 3.6 Implement your `broadcastReceiver`  
+Neura will broadcast to the `broadcatReceiver` that [you declared](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#22-let-neura-know-about-your-app) as the **component name** both (1) a response to your subscription request and (2) events. You need to implement your `broadcastReceiver` to handle both broadcasts.  
 
 ```java
 public class NeuraReceiver extends BroadcastReceiver {
