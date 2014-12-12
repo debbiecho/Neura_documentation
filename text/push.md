@@ -4,10 +4,17 @@ Events are changes in [the state of a user](https://github.com/NeuraLabs/Neura_d
 
 In this document Neura details API endpoints that you can use to subscribe to events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md), provide an access token and have user permission to receive PUSH notifications.
 
+<<<<<<< HEAD
 This document consists of the following sections:  
   1. [Create an event subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#1-subscribe-to-an-event)  
   2. [Get a of list of your subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-subscription-list)  
   3. [Get information for an existing subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
+=======
+This document consists of the following sections:  
+  1. [Subscribe to an event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#1-subscribe-to-an-event)  
+  2. [Get subscription list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-subscription-list)  
+  3. [Get a specific subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
+>>>>>>> 379a31d82e13ce6b396f92d20c7cb666cdc81c40
   4. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#4-unsubscribe)  
   5. [Neura HTTPS request to webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-https-request-to-webhook)  
   6. [Event list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5list-of-events-available-for-subscription)  
@@ -27,7 +34,11 @@ This document consists of the following sections:
 
 #### Optional request parameters
 - `state`: (string) This is a value that we echo back to you with the event.
+<<<<<<< HEAD
 - `webhook_id`: (string) This is the webhook where Neura will send this specific event. You must declare all webhooks when you first register your app.  The default value is the default application subscriber URL that you define when you register your app. 
+=======
+- `webhook_id`: (string) All webhooks must declared when you first register your app. This is the webhook where Neura will send this specific event. The default value is the default application subscriber URL that you define when you register your app. 
+>>>>>>> 379a31d82e13ce6b396f92d20c7cb666cdc81c40
 
 ### Request headers
 
@@ -228,12 +239,13 @@ Content-Type: application/json
 } 
 ```
 ##5. Neura HTTPS request to webhook
-When you subscribed to an event and set webhook state, neura will send an HTTPS request to the webhook once event occurred. You should response to this request with status code 200.
+When you subscribe to an event and set the webhook state, Neura will send an HTTPS request to the webhook once the event has occurred. You should respond to this request with status code 200.
+
 ### Resource URI
 
 **`POST https://<webhook>`**
 
-#### neura will send the following request parameters
+#### Neura will send the following request parameters
 `name`: The name of occuring event 
 `timestamp`: The timestamp when the event generated
 `metadata`: Metadata about the event

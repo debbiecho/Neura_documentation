@@ -45,7 +45,7 @@ Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentatio
 ![Declare permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_permissions.png)
 
 ### 2.4 Register
-The **Register** button is enabled only after you've completed all manditory fields.  If your registration is successful, it will appear in https://dev.theneura.com/#/manage  
+The **Register** button is enabled only after you've completed all mandatory fields.  If your registration is successful, it will appear in https://dev.theneura.com/#/manage  
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
@@ -124,7 +124,7 @@ Once user completed the authentication process you will get a callback to the "o
 	}
 ```
 ### 3.5 Subscribe to events
-Next step would be to subscribe to push event. After subscribing to an event you will get a callback to your android app and/or to your defined webhook each time the event occurs.   
+Next step would be to subscribe to push event. After subscribing to an event you will get a callback to your Android app and/or to your defined webhook each time the event occurs.   
 ```java
 	// Subscribe to this app to receive events from Neura
 	// In order to receive events, the user must have first granted permission
