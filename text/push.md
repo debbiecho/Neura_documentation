@@ -2,12 +2,12 @@
 
 Events are changes in [the state of a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature).  After you subscribe to an event, Neura sends that event to you, either to your server using webhook or to your mobile app through Neura's [Android app](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md). 
 
-In this document Neura details API endpoints that you can use to subscribe to events.  The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md), provide an access token and have user permission to receive PUSH notifications.
+In this document Neura details API endpoints that you can use to subscribe to events for a single user.  **You can only subscribe to events for one user at a time.**   The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md), provide an access token and have user permission to receive PUSH notifications.
 
 This document consists of the following sections:  
   1. [Subscribe to an event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#1-subscribe-to-an-event)  
-  2. [Get subscription list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-subscription-list)  
-  3. [Get a specific subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
+  2. [Get a list of your event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-subscription-list)  
+  3. [Get information for an existing subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
   4. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#4-unsubscribe)  
   5. [Neura HTTPS request to webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-https-request-to-webhook)  
   6. [Event list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5list-of-events-available-for-subscription)  
@@ -62,7 +62,9 @@ Content-Type: application/json
 }
 ```
 
-##2. Get subscription list
+##2. Get a list of your event subscriptions
+Neura can provide you a list of your event subscriptions for a user, identified by their unique `access_token`.
+
 ### Resource URI
 
 **`GET https://wapi.theneura.com/v1/subscriptions`**
@@ -82,14 +84,14 @@ None
 - `authorization`: `Bearer <access_token>`
 
 ### Neura's response to subscription list request
-`status`: either failure/success  
-`timestamp`: the time when the request was processed  
-`size`: The number of subscription list objects in the response  
-`items`: The complex object representing the subscription list   
-`items`>`created_at`: The timestamp when the subscription was created  
-`items`>`identifier`: The identifier of the subscription    
-`items`>`event`: The event name  
-`items`>`state`: The state defined for the subscription  
+`status`: Either failure or success.  
+`timestamp`: The time when Neura processed the request.  
+`size`: The number of subscription list objects in the response.  
+`items`: The complex object representing the subscription list.   
+`items`>`created_at`: The timestamp when you created the subscription.  
+`items`>`identifier`: The identifier of the subscription that you created.   
+`items`>`event`: The event name from the [list below](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions).   
+`items`>`state`: Neura echos back the state you defined for the subscription.  
 
 ### Example of a subscription list request
 
@@ -115,15 +117,15 @@ Content-Type: application/json
   "items": [
     {
     	"created_at":  1418214427,
-     	"identifier":  "aaa",
+     	"identifier":  "my_first_event",
      	"event":       "userStartedWalking",
-     	"state":       "bbb"
+     	"state":       "send_me_this_message"
      }
   ]
 } 
 ```
 
-##3. Get a specific subscription
+##3. Get information for an existing subscription
 ### Resource URI
 
 **`GET https://wapi.theneura.com/v1/subscriptions/<identifier>`**
@@ -142,24 +144,25 @@ None
 
 - `authorization`: `Bearer <access_token>`
 
-### Neura's response to subscription list request
-`status`: either failure/success  
-`timestamp`: the time when the request was processed  
-`size`: The number of subscription list objects in the response  
-`items`: The complex object representing the subscription list   
-`items`>`created_at`: The timestamp when the subscription was created  
-`items`>`identifier`: The identifier of the subscription    
-`items`>`event`: The event name  
-`items`>`state`: The state defined for the subscription  
+### Neura's response  
+`status`: Either failure or success.  
+`timestamp`: The time when Neura processed the request.  
+`data`: The complex object representing the subscription info.   
+`data`>`created_at`: The timestamp when you created the subscription.  
+`data`>`identifier`: The identifier of the subscription that you created.   
+`data`>`event`: The event name from the [list below](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions).   
+`data`>`state`: Neura echos back the state you defined for the subscription.  
 
-### Example of a subscription list request
+
+
+### Example request
 
 ```http
-GET https://wapi.theneura.com/v1/subscriptions/aaa
+GET https://wapi.theneura.com/v1/subscriptions/my_first_event
 Authorization: Bearer asdf1234**************************
 ```
 
-### Example of a subscription list response
+### Example response
 
 #### Headers
 ```http
@@ -174,10 +177,10 @@ Content-Type: application/json
   "timestamp": 1418244427,
   "data":
   {
-     created_at:  1418214427,
-     identifier:  "aaa",
-     event:       "userStartedWalking",
-     state:       "bbb"
+    	"created_at":  1418214427,
+     	"identifier":  "my_first_event",
+     	"event":       "userStartedWalking",
+     	"state":       "send_me_this_message"
   }
 } 
 ```
@@ -208,7 +211,7 @@ None
 ### Example of a subscription list request
 
 ```http
-DELETE https://wapi.theneura.com/v1/subscriptions/aaa
+DELETE https://wapi.theneura.com/v1/subscriptions/my_first_event
 Authorization: Bearer asdf1234**************************
 ```
 
@@ -227,8 +230,11 @@ Content-Type: application/json
   "timestamp": 1418244427,
 } 
 ```
-##5. Neura HTTPS request to webhook
-When you subscribe to an event and set the webhook state, Neura will send an HTTPS request to the webhook once the event has occurred. You should respond to this request with status code 200.
+
+##5. Neura POSTs an event to your webhook
+After you do ... we'll do...
+
+When you subscribe to an event and set the webhook state, Neura will send an HTTPS request to the webhook every time the event occurrs. You should respond to this request with status code 200.  
 
 ### Resource URI
 
