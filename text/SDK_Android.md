@@ -196,9 +196,6 @@ public class NeuraReceiver extends BroadcastReceiver {
 }
 ```
 
-### 3.7 Request permission from the user to access their data
-Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
-
 
 ##  4. Query Neura for data objects to better understand your users  
 
