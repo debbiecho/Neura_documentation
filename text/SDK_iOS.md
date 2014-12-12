@@ -56,7 +56,7 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 The [Neura SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraSDKiOS.zip?raw=true) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
 
 ### 3.2 Add the Neura URL schema
-Open the `.plist` file. Under **URL Schemes** you need to create only one URL schema. Create your **URL Schema** by adding the prefix `neura` to the **App UID** that Neura gave you in the [registration process](https://github.com/NeuraLabs/Neura_documentation/tree/master/text/account.md). For example, if the **App UID** is `ASDF1234*****************************` then the **URL schema** value is `neuraASDF1234*****************************`.  
+Open the `.plist` file. Under **URL Schemes** you need to create only one URL schema. Create your **URL Schema** by adding the prefix `neura` to the **App UID** that Neura gave you. For example, if the **App UID** is `ASDF1234*****************************` then the **URL schema** value is `neuraASDF1234*****************************`.  
 
 
 ### 3.3 Add authentication code
