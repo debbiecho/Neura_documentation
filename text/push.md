@@ -229,12 +229,13 @@ Content-Type: application/json
 } 
 ```
 ##5. Neura HTTPS request to webhook
-When you subscribed to an event and set webhook state, neura will send an HTTPS request to the webhook once event occurred. You should response to this request with status code 200.
+When you subscribe to an event and set the webhook state, Neura will send an HTTPS request to the webhook once the event has occurred. You should respond to this request with status code 200.
+
 ### Resource URI
 
 **`POST https://<webhook>`**
 
-#### neura will send the following request parameters
+#### Neura will send the following request parameters
 `name`: The name of occuring event 
 `timestamp`: The timestamp when the event generated
 `metadata`: Metadata about the event
