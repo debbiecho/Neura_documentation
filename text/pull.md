@@ -206,7 +206,8 @@ Content-Type: application/json
 ### Request query parameters
 
 #### Required request parameters
-Use the single `date` for a data on a single day or the `start_date` and `end_date` parameters for a period.  If you include all 3 parameters Neura will return an `error`. **have neura return `error`. currently we return `success` and an empty data object**
+Use the single `date` for a data on a single day or the `start_date` and `end_date` parameters for a period.  If you include all 3 parameters Neura will return an `error`.  
+  
 - `date`: The day for which you want information in YYYY-MM-DD format.  
 OR
 - `start_date`: The first day for which you want information in YYYY-MM-DD format.
@@ -229,8 +230,8 @@ None.
 
   - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
-  - `items`:  The complex object of heart rate data. If data is not available for any of the sub-objects then Neura returns 0. **why is this `items` and all other data objects use `data`?**
-  - `items` > `value`: The heart rate variable measure. **clarify this**
+  - `items`:  The complex object of heart rate data. If data is not available for any of the sub-objects then Neura returns 0.   
+  - `items` > `value`: The heart rate variable measure.   
   - `items` > `timestamp`: The timestamp when data was  
 
 ### Example `hrv` request
