@@ -2,7 +2,7 @@
 
 #Neura for iOS
 
-Neura has built an [iOS app](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) for users  available via TestFlight as well as an [iOS SDK](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) and [demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraiOSDemoSourceCode.zip?raw=true) for developers.  Add Neura to your app to enable it to request data objects for your users.  Currently, event notifications are only available for Android. 
+Neura has built an [iOS app](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) for users  available via TestFlight as well as an [iOS SDK](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraSDKiOS.zip?raw=true) and [demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraiOSDemoSourceCode.zip?raw=true) for developers.  Add Neura to your app to enable it to request data objects for your users.  Currently, event notifications are only available for Android. 
 
 ### Here's how to integrate with Neura:  
   1. [Ensure](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) your users have the Neura app  
@@ -50,10 +50,10 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 
 ##  3. Add Neura to your app 
 
-[![Get the Neura SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetSDKiOS.png)](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib)  
+[![Get the Neura SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetSDKiOS.png)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraSDKiOS.zip?raw=true)  
 
 ### 3.1 Add Neura's SDK 
-The [Neura SDK for iOS](https://github.com/NeuraLabs/neura_ios_sdk/tree/master/SampleProject/NeuraAuthSampleApp/lib) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
+The [Neura SDK for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraSDKiOS.zip?raw=true) consists of the files **Neura.h** and **libNeura.a**, which you need to add to your app.  
 
 ### 3.2 Add the Neura URL schema
 Open the `.plist` file. Under **URL Schemes** you need to create only one URL schema. Create your **URL Schema** by adding the prefix `neura` to the **App UID** that Neura gave you in the [registration process](https://github.com/NeuraLabs/Neura_documentation/tree/master/text/account.md). For example, if the **App UID** is `ASDF1234*****************************` then the **URL schema** value is `neuraASDF1234*****************************`.  
