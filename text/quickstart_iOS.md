@@ -7,7 +7,7 @@ _Note: Event subscriptions are [available for Android](https://github.com/NeuraL
 
 
 
-##The response you'll recieve
+##The response you'll receive
 ![Demo app event notifications](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/iOS_auth_app_Framed.png)
 
 ##Instructions
