@@ -97,7 +97,7 @@ Add the following **authentication code** to your app to authenticate with the N
 ```	
 
 ### 3.4 Add authentication callback handling
-Once user completed the authentication process you will get a callback to the `onActivityResult` function. 
+When you run the **authentication code** your app will launch authentication in the Neura app.  After the user completes authentication with Neura, the Neura app will send you a callback to the `onActivityResult` function. 
 
 ```java
 	// The demo app reacts to the callback of authentication request
@@ -123,6 +123,7 @@ Once user completed the authentication process you will get a callback to the `o
 		}
 	}
 ```
+
 ### 3.5 Subscribe to events
 Next step would be to subscribe to push event. After subscribing to an event you will get a callback to your Android app and/or to your defined webhook each time the event occurs.   
 ```java
