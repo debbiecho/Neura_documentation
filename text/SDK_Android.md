@@ -27,9 +27,9 @@ If you need expedited access to the app, contact us at build [at] theneura [dot]
 ##  2. Ensure your users have the Neura app  
 [![Get Neura's Android app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidApp.png)](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2)
 
-You must have both your app and the Neura app; if you don't have the Neura app with an active account then your app will not be able to enjoy the benefits of Neura.  Currently, Neura's for Android app is in closed beta, meaning that users will receive a password after they [apply for access](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2).  After Neura grants them access, they'll need to launch the app, enter their password, and create an account with Neura. 
+Users will receive a password after they [apply for access](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2).  After Neura grants them access, they'll need to launch the app, enter their password, and create an account with Neura. 
 
-**Users must create an account using an email and password**. [Neura's Developer site](https://dev.theneura.com) requires developers to login with their user credentials; if a developer creates an account with Facebook or Gmail, they won't have the necessary credentials. If you need expedited access to the app, contact us at build [at] theneura [dot] com.   
+**Users must create an account using an email and password**. [Neura's Developer site](https://dev.theneura.com) requires developers to login with their user credentials; if a developer creates an account with Facebook or Gmail, they won't have the necessary credentials. If users need expedited access to the app, have them contact us at build [at] theneura [dot] com.   
 
 
 ![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/CreateNeuraAccountFramedAndroid.png)  ![Install Neura with TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/EnterPasswordAndroid.png)  
