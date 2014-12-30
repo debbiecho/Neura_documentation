@@ -6,7 +6,7 @@ Neura has built an [Android app](https://play.google.com/store/apps/details?id=c
 
 ### Here's how to integrate with Neura:  
   1. [Download and Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#1-ensure-your-users-have-the-neura-app) for the Neura app  
-  2. [Ensure] your users download and register for the Neura app
+  2. [Ensure] (https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#2-ensure-your-users-have-the-neura-app) your users download and register for the Neura app
   3. [Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#2-register-your-app-with-neura) your app with Neura  
   3. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#3-add-neura-to-your-app-update-for-android) Neura to your app  
   4. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#4-query-neura-for-data-objects-to-better-understand-your-users) Neura for data objects to better understand your users  
