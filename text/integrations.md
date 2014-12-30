@@ -5,6 +5,7 @@ Users can send data to Neura from the following devices.  If you would like an i
 Please note that Neura's relationship with integrated devices is read-only; if you want Neura to write data to your app or IoT device, [begin here](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md).
 Also, please encourage your users to send Neura data from their devices that integrate with Neura so that Neura can provide you with the most accurate events and data objects.
 
+Note: If a user operates only one activity tracker on a given day, Neura will use its data.  However, if a user operates multiple activity trackers, Neura will use the highest quality data available for that day.
 
 ##Neura integrations:
 
