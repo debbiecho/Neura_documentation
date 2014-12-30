@@ -6,7 +6,7 @@ Neura has built an [iOS app](https://github.com/NeuraLabs/Neura_documentation/bl
 
 ### Here's how to integrate with Neura:  
   1.  [Get](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#1-get-the-neura-app) the Neura app
-  2. [Ensure your users have the Neura app](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) your users have the Neura app  
+  2. [Ensure your users have the Neura app](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#2-ensure-your-users-have-the-neura-app)  
   2. [Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#2-register-your-app-with-neura) your app with Neura  
   3. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#3-add-neura-to-your-app) Neura to your app  
   4. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#4-query-data-objects-to-better-understand-your-users) Neura for data objects to better understand your users  
