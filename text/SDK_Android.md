@@ -194,7 +194,15 @@ public class NeuraReceiver extends BroadcastReceiver {
     }
 }
 ```
-
+###5.2 Register your broadcast receiver in the AndroidManifest.xml
+<receiver
+           android:name="<receiver full component name>" >
+           <intent-filter>
+               <action android:name="com.neura.android.ACTION_EVENT_REGISTRATION_RESPONSE" />
+           </intent-filter>
+       </receiver>
+ Replace <receiver full component name> with your receiver name for example: com.neura.samples.NeuraReceiver.
+ 
 ##6. Query Neura for data objects to better understand your users  
 
 Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like data objects that aren't currently available, please let us know at build [at] theneura [dot] com. 
