@@ -8,8 +8,8 @@ Neura has built an [Android app](https://play.google.com/store/apps/details?id=c
   2. [Ensure](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#1-ensure-your-users-have-the-neura-app) your users have the Neura app  
   3. [Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#2-register-your-app-with-neura) your app with Neura  
   4. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#3-add-neura-to-your-app-update-for-android) Neura to your app  
-  5. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#4-query-neura-for-data-objects-to-better-understand-your-users) Neura for data objects to better understand your users  
-  6. [Subscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#5-subscribe-to-events-for-your-users-update-for-android) to events for your users
+  5. [Subscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#4-query-neura-for-data-objects-to-better-understand-your-users) Neura for data objects to better understand your users  
+  6. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#5-subscribe-to-events-for-your-users-update-for-android) to events for your users
 
 ##  1. Get the Neura app [![Get Neura's Android app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidApp.png)](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2)
 
