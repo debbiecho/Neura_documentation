@@ -10,7 +10,7 @@ Neura has built an [Android app](https://play.google.com/store/apps/details?id=c
   4. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#4-add-neura-to-your-app) Neura to your app  
   5. [Subscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#5-subscribe-to-events-in-the-android-sdk) Neura for data objects to better understand your users  
   6. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#6-query-neura-for-data-objects-to-better-understand-your-users) to events for your users
-  7. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/reviseandroid/text/SDK_Android.md#7-unsubscribe-to-events) from the Neura app
+  7. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/reviseandroid/text/SDK_Android.md#7-unsubscribe-to-events) from events
 
 ##  1. Get the Neura app [![Get Neura's Android app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidApp.png)](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2)
 
@@ -240,30 +240,28 @@ Neura's Android SDK has the following error codes:
     public static final int ERROR_USER_CANCELED_AUTHENTICATION = 10;
     public static final int ERROR_ILLEGAL_PERMISSIONS = 11;
 
-##7. Unsubscribe to Events
+##7. Unsubscribe from Events
 
-The consumer’s application can also unsubscribe to events. If the events have been unsubscribed, then push events will no longer be sent to consumer’s application.
+You can unsubscribe your application from receiving events such that Neura will no longer send your application push events.
 
 Class and Method Descriptions:
 
-	void NeuraUtil.unregisterEvent (Context context, NeuraEventsRequest 	request);
+	void NeuraUtil.unregisterEvent (Context context, NeuraEventsRequest request);
 
 Required parameters:   
 
-* Context: Any Android Context class (not have to be Activity Context)
-* Request: NeuraEventsRequest instance
+* **Context**: Any Android Context class (this does not have to be Activity Context)
+* **Request**: `NeuraEventsRequest` instance
 
 Example:
 
     private void unregisterEvent(String accessToken, Context context, String eventId) {
 
-        NeuraEventsRequest eventsReuest = new NeuraEventsRequest();
+        NeuraEventsRequest eventsRequest = new NeuraEventsRequest();
 
-        eventsReuest.setAccessToken(accessToken);
+        eventsRequest.setAccessToken(accessToken);
 
-        eventsReuest.setEventId(eventId);
-
- 
+        eventsRequest.setEventId(eventId);
 
         NeuraUtil.unregisterEvent(context, eventsRequest);
 
