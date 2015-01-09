@@ -10,7 +10,7 @@ Neura has built an [Android app](https://play.google.com/store/apps/details?id=c
   4. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#4-add-neura-to-your-app) Neura to your app  
   5. [Subscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#5-subscribe-to-events-in-the-android-sdk) Neura for data objects to better understand your users  
   6. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#6-query-neura-for-data-objects-to-better-understand-your-users) to events for your users
-  7. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/reviseandroid/text/SDK_Android.md#7-unsubscribe-to-events)
+  7. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/reviseandroid/text/SDK_Android.md#7-unsubscribe-to-events)from the Neura app
 
 ##  1. Get the Neura app [![Get Neura's Android app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidApp.png)](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2)
 
