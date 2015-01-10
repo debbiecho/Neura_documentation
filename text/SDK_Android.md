@@ -242,7 +242,7 @@ Neura's Android SDK has the following error codes:
 
 ##7. Unsubscribe from Events
 
-You can unsubscribe your application from receiving events such that Neura will no longer send your application push events.
+You can unsubscribe your application from receiving events from Neura.
 
 Class and Method Descriptions:
 
