@@ -13,7 +13,7 @@ Here are quickstart projects to test drive Neura in minutes.
 
 ### Learn more
  - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md)   
- - [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md)   
+ - [API insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md)   
  - [API event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)   
  - [Neura on Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md)  
  - [Neura on iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md)  
