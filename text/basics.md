@@ -24,9 +24,9 @@ Because the API is in alpha, we appreciate your patience as we continue to impro
 
 **Events** are changes in the state of a user that Neura delivers as a callback to your server or mobile app.  Here are details on [subscribing to receive Neura events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md).
 
-**Data objects** contain user information, such as wellness, activity, or sleep information, during a period of time in JSON format that you access asynchronously.  Here are details on [sending requests for Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).
+**Insights** contain user information, such as wellness, activity, or sleep information, during a period of time in JSON format that you access asynchronously.  Here are details on [sending requests for Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).
 
-**Permissions** are where a user grants an app access to their personal events and data objects.  Developers need permission to subscribe to events or receive a data object.
+**Permissions** are where a user grants an app access to their personal events and insights.  Developers need permission to subscribe to events or receive an insight.
 
 **Subscriptions** are where an app receives a callback for a Neura event. 
 
