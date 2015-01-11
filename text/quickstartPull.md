@@ -1,6 +1,6 @@
 
 #Quickstart: Request wellness information
-In this project you will request the `daily_summary` data object from Neura's API to get health and wellness information for Bob, a dummy user.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md#instructions) for this project are detailed below -- it should take you less than 3 minutes; it **does not require an account** with Neura or a mobile phone.
+In this project you will request the `daily_summary` insight from Neura's API to get health and wellness information for Bob, a dummy user.  [Instructions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md#instructions) for this project are detailed below -- it should take you less than 3 minutes; it **does not require an account** with Neura or a mobile phone.
 
 This project demonstrates Neura's ability to provide distilled data to a third party app. A practical application of this project is that you can use it to develop an app that adapts to user behavior over time. 
 
@@ -40,7 +40,7 @@ This project demonstrates Neura's ability to provide distilled data to a third p
   6. For **Header** enter `Authorization`
   7. For  **Header Value** enter `Bearer b994215649adf4df0ae14579b919505a60d59f973adac419af8bea7d67cbae89`  
   8. Send the **GET** request  
-  9. View Neura's response in JSON summaring Bob's wellness information on November 14th, 2014.  The [API data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofiledaily_summary) documentation explains the response in detail, including the key-value pairs.
+  9. View Neura's response in JSON summaring Bob's wellness information on November 14th, 2014.  The [API insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofiledaily_summary) documentation explains the response in detail, including the key-value pairs.
 
 ###What you'll send  
 ```
