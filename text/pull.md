@@ -1,9 +1,9 @@
-# Requesting data objects
-Data objects contain [distilled user information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature), such as wellness, activity, or sleep information, during a period of time, in JSON format that you access asynchronously.  
+# Requesting insights
+Insights contain [distilled user information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature), such as wellness, activity, or sleep information, during a period of time, in JSON format that you access asynchronously.  
 
-In this document we detail Neura's API endpoints for requesting data objects. (If you want to obtain instantaneous data, go to Neura [event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)). The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated,](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) provide a **Bearer** access token, and have user permission to receive a response. 
+In this document we detail Neura's API endpoints for requesting insights. (If you want to obtain instantaneous data, go to Neura [event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)). The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated,](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) provide a **Bearer** access token, and have user permission to receive a response. 
 
-##Neura data objects detailed below
+##Neura insights detailed below
   - [`daily_summary`](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofiledaily_summary) is a summary of the user's activity for a day
   - [`sleep`](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofilesleep) is the user's sleep profile for a day 
   - [`hrv`](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofilehrv) is the user's heart rate variable data
@@ -39,7 +39,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 
 ## GET /users/profile/daily_summary
 
-`daily_summary` is a data object containing a user’s wellness information for a single day. `daily_summary` is calculated based on [a Neura day](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#days-time-and-time-zones), from the time when the user awoke on `date` until the time the user awoke on the following calendar day (`date` + 1 day).  If Neura is unable to identfy when the user awoke, then `daily_summary` is unavailable for that day.
+`daily_summary` is an insight containing a user’s wellness information for a single day. `daily_summary` is calculated based on [a Neura day](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#days-time-and-time-zones), from the time when the user awoke on `date` until the time the user awoke on the following calendar day (`date` + 1 day).  If Neura is unable to identfy when the user awoke, then `daily_summary` is unavailable for that day.
 
 ### Resource URI
 
