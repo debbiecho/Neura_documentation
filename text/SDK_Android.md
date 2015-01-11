@@ -1,14 +1,14 @@
 #Neura for Android
 
 Neura has built an [Android app](https://play.google.com/store/apps/details?id=com.neura.weave&hl=en) for users, available in the Google Play Store, as well as an [Android SDK
-](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar) and an [Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) with [source code](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip) for developers.  Add Neura to your app to enable it to subscribe to events and request data objects for your users. 
+](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar) and an [Android demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/DemoNeura3rdPartyApp.apk) with [source code](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip) for developers.  Add Neura to your app to enable it to subscribe to events and request insights for your users. 
 
 ### Here's how to integrate with Neura:  
   1. [Get](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#1-get-the-neura-app-) the Neura app 
   2. [Ensure](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#2-ensure-your-users-have-the-neura-app) your users have the Neura app  
   3. [Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#3-register-your-app-with-neura) your app with Neura  
   4. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#4-add-neura-to-your-app) Neura to your app  
-  5. [Subscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#5-subscribe-to-events-in-the-android-sdk) Neura for data objects to better understand your users  
+  5. [Subscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#5-subscribe-to-events-in-the-android-sdk) Neura for insights to better understand your users  
   6. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#6-query-neura-for-data-objects-to-better-understand-your-users) to events for your users
   7. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#7-unsubscribe-from-events) from events
 
