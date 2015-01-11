@@ -2,13 +2,13 @@
 
 #Neura for iOS
 
-Neura has built an [iOS app](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) for users  available via TestFlight as well as an [iOS SDK](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraSDKiOS.zip?raw=true) and [demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraiOSDemoSourceCode.zip?raw=true) for developers.  Add Neura to your app to enable it to request data objects for your users.  Currently, event notifications are only available for Android. 
+Neura has built an [iOS app](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) for users  available via TestFlight as well as an [iOS SDK](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraSDKiOS.zip?raw=true) and [demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraiOSDemoSourceCode.zip?raw=true) for developers.  Add Neura to your app to enable it to request insights for your users.  Currently, event notifications are only available for Android. 
 
 ### Here's how to integrate with Neura:  
   1. [Ensure](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) your users have the Neura app  
   2. [Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#2-register-your-app-with-neura) your app with Neura  
   3. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#3-add-neura-to-your-app) Neura to your app  
-  4. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#4-query-data-objects-to-better-understand-your-users) Neura for data objects to better understand your users  
+  4. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#4-query-data-objects-to-better-understand-your-users) Neura for insights to better understand your users  
 
 ##  1. Ensure your users have the Neura app  
 [![Request access to Neura iOS on TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRequestAccessiOS.png)](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2)
@@ -35,7 +35,7 @@ Once you have an account with Neura, register your app at [Neura's developer sit
 ![register your app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_top_iOS.png)
 
 ### 2.3 Declare permissions 
-Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you might want permission to access.  During the authentication process, you will provide a subset of these permissions which Neura will ask your users to approve.  Currently, iOS apps only have access to data objects; [Neura event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) are only available for Android.  
+Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you might want permission to access.  During the authentication process, you will provide a subset of these permissions which Neura will ask your users to approve.  Currently, iOS apps only have access to insights; [Neura event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) are only available for Android.  
 ![Declare permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_permissions.png)
 
 ### 2.4 Register
