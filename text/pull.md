@@ -158,7 +158,7 @@ None.
   - `data` > `length`: The average duration of time sleeping in minutes during the period. 
   - `data` > `deepSleep`:  The average duration of deep sleep in minutes during the period. 
   - `data` > `lightSleep`: The average duration of light sleep in minutes during the period. 
-  - `data` > `efficiency`: The average sleep efficiency during the period. 
+  - `data` > `efficiency`: The percentage of `deepSleep` out of the `length` of sleep.
 
 
 ### Example `sleep` request
