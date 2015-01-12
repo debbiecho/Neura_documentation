@@ -12,7 +12,8 @@ Neura has built an [Android app](https://play.google.com/store/apps/details?id=c
   6. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#6-query-neura-for-data-objects-to-better-understand-your-users) to events for your users
   7. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#7-unsubscribe-from-events) from events
 
-##  1. Get the Neura app [![Get Neura's Android app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidApp.png)](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2)
+##  1. Get the Neura app  
+[![Get Neura's Android app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidApp.png)](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2)
 
 Currently, Neura's for Android app is in closed beta, so you must [apply for access here](https://theneura.prefinery.com/betas/4624/testers/new?display=inline&version=2).  After Neura grants you access, you'll need to launch the app, enter your password, and create an account with Neura. If you need expedited access to the app contact us at build [at] theneura [dot] com.   
 
