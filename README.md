@@ -11,9 +11,6 @@ Here are quickstart projects to test drive Neura in minutes.
  - [Quickstart for **Android**: subscribe to a push notification](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md) (5 minutes)  
  - [Quickstart for **iOS**: authenticate a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md) (5 minutes)  
 
-[![Neura's developer site](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonNeuraDevSite.png)](https://dev.theneura.com)  
-
-
 ### Learn more
  - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md)   
  - [API insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md)   
@@ -22,6 +19,8 @@ Here are quickstart projects to test drive Neura in minutes.
  - [Neura on iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md)  
  - [Integrated devices that can send data to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) 
  - [Current status of the Neura API](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/status.md) 
+
+[![Neura's developer site](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonNeuraDevSite.png)](https://dev.theneura.com)  
 
 ### Questions? Comments? Wanna grab a beer?
 Reach out to us at build [at] theneura [dot] com.  We're serious about the :beer:.
