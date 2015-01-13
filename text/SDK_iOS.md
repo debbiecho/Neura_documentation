@@ -1,5 +1,3 @@
-
-
 #Neura for iOS
 
 Neura has built an [iOS app](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) for users  available via TestFlight as well as an [iOS SDK](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraSDKiOS.zip?raw=true) and [demo app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraiOSDemoSourceCode.zip?raw=true) for developers.  Add Neura to your app to enable it to request insights for your users.  Currently, event notifications are only available for Android. 
@@ -8,7 +6,7 @@ Neura has built an [iOS app](https://github.com/NeuraLabs/Neura_documentation/bl
   1. [Ensure](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#1-ensure-your-users-have-the-neura-app) your users have the Neura app  
   2. [Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#2-register-your-app-with-neura) your app with Neura  
   3. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#3-add-neura-to-your-app) Neura to your app  
-  4. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#4-query-data-objects-to-better-understand-your-users) Neura for insights to better understand your users  
+  4. [Query]() Neura for insights to better understand your users  
 
 ##  1. Ensure your users have the Neura app  
 [![Request access to Neura iOS on TestFlight](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonRequestAccessiOS.png)](https://theneura.prefinery.com/betas/4631/testers/new?display=inline&version=2)
@@ -35,7 +33,7 @@ Once you have an account with Neura, register your app at [Neura's developer sit
 ![register your app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_top_iOS.png)
 
 ### 2.3 Declare permissions 
-Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you might want permission to access.  During the authentication process, you will provide a subset of these permissions which Neura will ask your users to approve.  Currently, iOS apps only have access to insights; [Neura event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) are only available for Android.  
+Declare the [Neura insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) that you might want permission to access.  During the authentication process, you will provide a subset of these permissions which Neura will ask your users to approve.  Currently, iOS apps only have access to insights; [Neura event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) are only available for Android.  
 ![Declare permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_permissions.png)
 
 ### 2.4 Register
@@ -44,7 +42,7 @@ The **Register** button is enabled only after you've completed all mandatory fie
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
 ### 2.5 Example registration
-In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to '*health and wellness*' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' data objects: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.    
+In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_three** that relates to '*health and wellness*' and uses the iOS Bundle ID `com.neura.sample.auth3`. They have requested permission to access users' insights: `dailyActivitySummary`, `wellnessProfile`, and `sleepData`. Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.    
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/ExampleAppRegistrationiOS.png)
 
@@ -78,7 +76,7 @@ Add this authentication code to your app to activate authentication with the Neu
 }
 ```
 
-The callback from the Neura app will return either the user's `access_token` or an error message. The `access_token` is permanent and unique to the user. You must use it when requesting the user's data objects. 
+The callback from the Neura app will return either the user's `access_token` or an error message. The `access_token` is permanent and unique to the user. You must use it when requesting the user's insights. 
 
 ####Example: successful authentication where Neura returns an `access_token`
 `neuraASDF1234********************************://?access_token=“qwer4567************************"`  
@@ -97,9 +95,9 @@ The callback from the Neura app will return either the user's `access_token` or 
 Once your users have the Neura app and you've added Neura to your app, the final step is for them to grant you permission to access their data.  When you feel it is the right time, run the **Neura authentication code**.  Once your users grant you permission once, they won't need to do so again. 
 
 
-##  4. Query Neura for data objects to better understand your users  
+##  4. Query Neura for insights to better understand your users  
 
-Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like data objects that aren't currently available, please let us know at build [at] theneura [dot] com. 
+Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like insights that aren't currently available, please let us know at build [at] theneura [dot] com. 
 
 ## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
 
