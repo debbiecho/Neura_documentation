@@ -9,7 +9,7 @@ Neura has built an [Android app](https://play.google.com/store/apps/details?id=c
   3. [Register](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#3-register-your-app-with-neura) your app with Neura  
   4. [Add](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#4-add-neura-to-your-app) Neura to your app  
   5. [Subscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#5-subscribe-to-events-in-the-android-sdk) Neura for insights to better understand your users  
-  6. [Query](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#6-query-neura-for-data-objects-to-better-understand-your-users) to events for your users
+  6. [Query]() to events for your users
   7. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#7-unsubscribe-from-events) from events
 
 ##  1. Get the Neura app  
@@ -42,7 +42,7 @@ Once you have an account with Neura, register your app at [Neura's developer sit
 ![register your app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_top_Android.png)
 
 ### 3.3 Declare permissions 
-Declare the [Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) and [Neura events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) that your app might want permission to access.  Later during the authentication process, you will specify a subset of these permissions that Neura will ask your users to approve.  Android apps have access to both events and data objects; iOS apps only have access to data objects.  
+Declare the [Neura insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md) and [Neura events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md) that your app might want permission to access.  Later during the authentication process, you will specify a subset of these permissions that Neura will ask your users to approve.  Android apps have access to both events and insights; iOS apps only have access to insights.  
 ![Declare permissions](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_middle_permissions.png)
 
 ### 3.4 Register
@@ -51,7 +51,7 @@ The **Register** button is enabled only after you've completed all mandatory fie
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/Registration_page_bottom.png)
 
 ### 3.5 Example registration
-In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_seven** that relates to '*smart home*' and uses the Component Name `com.3rd_party.demo.demo.NeuraReceiver`, Package Name `com.3rd_party`, and Key Hash `12344321`.  They have declared permission for events `userFinishedWalking`, `userFinishedDriving`, `userStartedDriving`, and `userStartedWalking` as well as the data objects `dailyActivitySummary` and `sleepData`.  Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.   Please note that **you must click the App secret** to make it visible.   
+In this example a developer from **3rd_party_developer, Inc.** created an app called **Demo_app_number_seven** that relates to '*smart home*' and uses the Component Name `com.3rd_party.demo.demo.NeuraReceiver`, Package Name `com.3rd_party`, and Key Hash `12344321`.  They have declared permission for events `userFinishedWalking`, `userFinishedDriving`, `userStartedDriving`, and `userStartedWalking` as well as the insights `dailyActivitySummary` and `sleepData`.  Neura provides the **App UID** `ABC123***********************************` and the **App secret** `xyz789***********************************`.   Please note that **you must click the App secret** to make it visible.   
 
 ![register app](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/ExampleAppRegistrationAndroid.png)
 
@@ -63,7 +63,7 @@ In this example a developer from **3rd_party_developer, Inc.** created an app ca
 [![Get the Neura Demo app for Android - source code](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/buttonGetAndroidDemoSourceCode.png)](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip?raw=true)  
 
 ### 4.1 Review the source code in Neura's demo app
-We've created [NeuraAndroidDemoSourceCode.zip](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip) for you to view in your favorite Java IDE ([Eclipse](https://eclipse.org/), [Android Studio](https://developer.android.com/sdk/index.html), etc.) so that you can see a working 3rd party app in action.  The app is simple: it allows a user to enter credentials to subscribe to events and get an `accessToken` to query data objects.  We've heavily commented the classes `MainActivity.java` and `NeuraReceiver.java` so that it's clear what's going on.
+We've created [NeuraAndroidDemoSourceCode.zip](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidDemoSourceCode.zip) for you to view in your favorite Java IDE ([Eclipse](https://eclipse.org/), [Android Studio](https://developer.android.com/sdk/index.html), etc.) so that you can see a working 3rd party app in action.  The app is simple: it allows a user to enter credentials to subscribe to events and get an `accessToken` to query insights.  We've heavily commented the classes `MainActivity.java` and `NeuraReceiver.java` so that it's clear what's going on.
 
 ### 4.2 Add Neura's SDK 
 The [Neura SDK for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/resources/NeuraAndroidSDK.jar) consists of the file **NeuraAndroidSDK.jar**, which you need to add to your app.  The Neura SDK requries the Platform API level to be version 15 (Ice Cream Sandwich) or higher. Also, ensure the SDK android is version 19 or higher. Make sure that the **.jar** file is under `lib`. If you have trouble compiling, be sure to update your Android SDK Manager. 
@@ -205,9 +205,9 @@ public class NeuraReceiver extends BroadcastReceiver {
        </receiver>
  Replace <receiver full component name> with your receiver name for example: com.neura.samples.NeuraReceiver.
  
-##6. Query Neura for data objects to better understand your users  
+##6. Query Neura for insights to better understand your users  
 
-Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like data objects that aren't currently available, please let us know at build [at] theneura [dot] com. 
+Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like insights that aren't currently available, please let us know at build [at] theneura [dot] com. 
 
 
 ##ProGuard
