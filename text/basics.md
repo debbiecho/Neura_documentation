@@ -24,7 +24,7 @@ Because the API is in alpha, we appreciate your patience as we continue to impro
 
 **Events** are changes in the state of a user that Neura delivers as a callback to your server or mobile app.  Here are details on [subscribing to receive Neura events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md).
 
-**Insights** contain user information, such as wellness, activity, or sleep information, during a period of time in JSON format that you access asynchronously.  Here are details on [sending requests for Neura data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).
+**Insights** contain user information, such as wellness, activity, or sleep information, during a period of time in JSON format that you access asynchronously.  Here are details on [sending requests for Neura insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).
 
 **Permissions** are where a user grants an app access to their personal events and insights.  Developers need permission to subscribe to events or receive an insight.
 
@@ -59,7 +59,7 @@ Specifically, Neura treats the event when the user awoke to be the "anchor" that
 Neura considers a user changing timezones as an [edge case](http://en.wikipedia.org/wiki/Edge_case). Consequently, our approach is to always calculate events based on the timezone the user was in when they awoke, regardless of their timezone the rest of the day.
 
 ### Differences in time between the Neura app and the Neura API 
-Time is conveyed differently in the Neura app versus the Neura API to make the most sense for each audience.  The Neura API uses [epoch time](http://en.wikipedia.org/wiki/Unix_time) so that developers don't need to worry about differences in time zones between different users.  For instance, when Neura delivers an event or a data object, it returns a `timestamp` in epoch time.
+Time is conveyed differently in the Neura app versus the Neura API to make the most sense for each audience.  The Neura API uses [epoch time](http://en.wikipedia.org/wiki/Unix_time) so that developers don't need to worry about differences in time zones between different users.  For instance, when Neura delivers an event or an insight, it returns a `timestamp` in epoch time.
 
 For users, the Neura app always displays time in the user's current timezone.  When a user changes timezones, Neura automatically updates their timeline.  In the example above, let's say the user awakes in San Francisco on Sunday at 9am PT and then flies to Chicago. On Monday morning, they wake up in Chicago at 11am CT, Neura considers Sunday to be a 26-hour day.  
 
@@ -79,7 +79,7 @@ Neura puts user privacy first and we expect developers to do the same.  We've de
 HTTPS is required for all Neura APIs because we transmit private user information. Users trust your application with their data and Neura expects you respect this trust. We require that your application not retransmit insecurely, retain indefinitely, nor share with third parties any data sent via the Neura API. 
 
 ## Go forth and build
-You can now build with Neura [on Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) and [on iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md). Your app can query Neura [data objects](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md); Android apps can also [subscribe to events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md). 
+You can now build with Neura [on Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) and [on iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md). Your app can query Neura [insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md); Android apps can also [subscribe to events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md). 
 
 
 ## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
