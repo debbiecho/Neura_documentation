@@ -36,7 +36,6 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 
 ---------  
 
-
 ## GET /users/profile/daily_summary
 
 `daily_summary` is an insight containing a user’s wellness information for a single day. `daily_summary` is calculated based on [a Neura day](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#days-time-and-time-zones), from the time when the user awoke on `date` until the time the user awoke on the following calendar day (`date` + 1 day).  If Neura is unable to identfy when the user awoke, then `daily_summary` is unavailable for that day.
@@ -115,14 +114,11 @@ Content-Type: application/json
    }
 }
 ```
- 
-
 ---------
-
 
 ## GET /users/profile/sleep 
 
-`sleep` is a data object containing a user’s sleep information either for a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive.   
+`sleep` is an insight containing a user’s sleep information either for a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive.   
 
 ### Resource URI
 
@@ -196,7 +192,7 @@ Content-Type: application/json
 
 ## GET /users/profile/hrv 
 
-`hrv` is a data object containing a user’s heart rate information either on a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive. This service is only available for users that have integrated [Neurosky](http://neurosky.com/) with Neura and requires a **Bearer** authorization token.
+`hrv` is an insight containing a user’s heart rate information either on a single `date` or during a period of time beginning on `start_date` and ending on `end_date`, inclusive. This service is only available for users that have integrated [Neurosky](http://neurosky.com/) with Neura and requires a **Bearer** authorization token.
 
 
 ### Resource URI
