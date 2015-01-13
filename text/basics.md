@@ -18,7 +18,7 @@ Because the API is in alpha, we appreciate your patience as we continue to impro
 
 **Integrations** are apps, devices, and/or services that send input data to Neura, such as Fitbit, Jawbone, Nest, and Withings. Here is our [current list of integrations](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md); we're always adding more.  It is free for devices to integrate with Neura.
 
-**Developers** are third-party software developers that build apps, devices, and/or services that consume data output from Neura's API. Developers are also known as partners.  Since Neura has a freemium business model, some developers are also paying customers.
+**Developers** are third-party software developers that build apps, devices, and/or services that consume data output from Neura's API. Developers are also known as **partners**.  Since Neura has a freemium business model, some developers are also paying **customers**.
 
 **States** are moments where the user is doing a particular activity in a particular location.  
 
