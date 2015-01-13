@@ -1,9 +1,8 @@
-
 #Build with Neura 
 Neura provides context. We distill raw data into contextual knowledge so that you can make **smarter** apps and internet-of-things (IoT) devices.  
 
 ###Neura is ready for you to build awesome apps
-You can use the Neura API and SDKs to securely access user data by subscribing events or requesting a data object.  User privacy is critical to us, so we ensure that users have approved your access to their data with OAuth2 authentication.
+You can use the Neura API and SDKs to securely access user data by subscribing events or requesting an insight.  User privacy is critical to us, so we ensure that users have approved your access to their data with OAuth2 authentication.
 
 ### Get started in minutes
 Here are quickstart projects to test drive Neura in minutes. 
