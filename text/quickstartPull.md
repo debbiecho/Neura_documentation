@@ -32,7 +32,7 @@ This project demonstrates Neura's ability to provide distilled data to a third p
 
 
 ##Instructions
-  1.  If you don't already have a [tool to test a RESTful API](http://stackoverflow.com/questions/13965959/what-tools-can-i-use-to-test-restful-api), install [Postman for Google Chrome](http://www.getpostman.com/).
+  1.  If you don't already have a [tool to test a RESTful API](http://stackoverflow.com/questions/20495384/is-there-any-online-tool-to-test-rest-api), install [Postman for Google Chrome](http://www.getpostman.com/).
   2. Under the **Normal** tab, select a **GET** request.
   3. Under **Request URL** enter `https://wapi.theneura.com/v1/users/profile/daily_summary`  
   4. For **URL Parameter Key** enter `date`
