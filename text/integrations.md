@@ -12,7 +12,7 @@ Please note:
  - Belkin Wemo
 	 - Power outlet
  - BodyMedia
- 	- Fit 
+ 	- Fit* 
  	- Core 
  	- Link
  - Dropcam
@@ -23,11 +23,11 @@ Please note:
  - Facebook
  - Fitbit  
 	- Force
-	- Flex
-	- Zip  
+	- Flex*
+	- Zip*  
 	- One  
 	- Ultra  
-	- Aria  
+	- Aria*  
  - Google  
 	- Calendar  
   	- Glass
@@ -36,28 +36,28 @@ Please note:
  - iBeacon
  	- Bluetooth tag
  - Jawbone  
- 	- UP
- 	- UP 24
+ 	- UP*
+ 	- UP 24*
  - LG
 	 - WebOS TV
  - Nest
  	- Protect
  	- Thermostat  
  - Netatmo
-   - Thermostat
-   - Weather station
- - Nike  
-	- Fuelband
-	- Fuelband +
+   - Thermostat*
+   - Weather station*
+ - Nike*  
+	- Fuelband  
+	- Fuelband +  
  - Neurosky
-   - Biosensor
+   - Biosensor*
  - Philips 
 	 - Hue 	
  - Tesla
 	 - Model S
  - Withings
- 	- Pulse  
- 	- Body Analyzer
+ 	- Pulse*  
+ 	- Body Analyzer*
 
   
 
