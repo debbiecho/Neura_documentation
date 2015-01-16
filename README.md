@@ -2,7 +2,7 @@
 [Internet-of-things (IoT)](http://en.wikipedia.org/wiki/Internet_of_Things) devices generate too much raw data to be useful; your users might have an activity tracker or smart home detection system, but it's a pain for you to make use of the raw data.  Neura's artificial intelligence (AI) engine solves this big-data problem by distilling contextual knowledge and actionable insights. Neura enables your apps and IoT devices to be **smarter**.  
 
 ###Neura is ready for you to build awesome apps
-You can use the Neura API and SDKs to securely access user data by subscribing events or requesting an insight.  User privacy is critical to us, so we ensure that users have approved your access to their data with OAuth2 authentication.
+You can use the Neura API and SDKs to securely access user data by subscribing to events or requesting insights.  User privacy is critical to us, so users must approve your access to their data with OAuth2 authentication.
 
 ### Get started in minutes
 Here are quickstart projects to test drive Neura in minutes. 
