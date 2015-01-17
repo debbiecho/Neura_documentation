@@ -43,5 +43,4 @@ You can request other permissions and subscribe to more events including `userFi
 ##Congrats on finishing this quickstart project! 
 We hope it gives you a small taste of the power of Neura and motivates you to integrate your apps and IoT devices with Neura.  For next steps, [learn more](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) about Neura or [set up a developer account](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/account.md).
 
-
-
+##[Return to the Main Page](https://github.com/NeuraLabs/Neura_documentation#build-with-neura)
