@@ -57,3 +57,5 @@ Bob's data from November 1st to November 15th 2014 (`2014-11-01` to `2014-11-15`
 
 ##Congrats on finishing this quickstart project! 
 We hope it gives you a small taste of the power of Neura and motivates you to integrate your apps and IoT devices with Neura.  For next steps, you can [learn more](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md) about Neura.
+
+##[Return to the Main Page](https://github.com/NeuraLabs/Neura_documentation#build-with-neura)
