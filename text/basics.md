@@ -82,6 +82,4 @@ HTTPS is required for all Neura APIs because we transmit private user informatio
 You can now build with Neura [on Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md) and [on iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md). Your app can query Neura [insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md); Android apps can also [subscribe to events](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md). 
 
 
-## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
-
-
+## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation#build-with-neura)
