@@ -238,6 +238,6 @@ Authorization: Bearer asdf1234**************************
 Cache-Control: no-cache
 ```
 
-## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
+## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation#build-with-neura)
 
 
