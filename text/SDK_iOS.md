@@ -99,8 +99,4 @@ Once your users have the Neura app and you've added Neura to your app, the final
 
 Now that you have your user's permission and their unique `access_token` you can query Neura's API to [request insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md).  For a brief tutorial, you can refer to the [Quickstart: request wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md) project. We're always happy to consider requests, so if you'd like insights that aren't currently available, please let us know at build [at] theneura [dot] com. 
 
-## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
-
-
-
-
+## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation#build-with-neura)
