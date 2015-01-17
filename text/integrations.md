@@ -61,9 +61,4 @@ Please note:
 
   
 
-## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation)
-
-
-
- 
- 
+## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation#build-with-neura)
