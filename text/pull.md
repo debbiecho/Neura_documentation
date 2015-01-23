@@ -94,24 +94,49 @@ Content-Type: application/json
 #### Body
 ```json
 {
-   "status": "success",
-   "timestamp": 1415768620,
-   "data": {
-	   "date": 20141108,
-	   "createdAt": "2014-11-10T12:34:01Z",
-	   "minutesWalk": 169,
-	   "calories": 2471.0398383140564,
-	   "steps": 19665,
-	   "heartRate": 0,
-	   "weight": 0,
-	   "workDay": 0,
-	   "sleepData": {
-	     "length": 290,
-	     "deepSleep": 0,
-	     "lightSleep": 0
-   },
-   "activityPlaces": [ ]
-   }
+"status": "success",
+"timestamp": 1422053086,
+"data": {
+"date": 20141103,
+"createdAt": "2014-11-05T13:56:22Z",
+"minutesWalk": 27,
+"calories": 196.13300064956726,
+"steps": 4065,
+"heartRate": 0,
+"weight": 0,
+"workDay": 0,
+"sleepData": {
+"length": 4,
+"deepSleep": 250,
+"lightSleep": 0
+},
+"activityPlaces": [
+{
+"name": "Home",
+"steps": 1628,
+"calories": 87.21400034428402,
+"heartRate": 0
+},
+{
+"name": "Neura HQ",
+"steps": 214,
+"calories": 10.759000122551,
+"heartRate": 0
+},
+{
+"name": "Sand Hill Road. Menlo Park",
+"steps": 66,
+"calories": 2.89899992943,
+"heartRate": 0
+},
+{
+"name": "Whole Foods Market",
+"steps": 225,
+"calories": 9.8490001335833,
+"heartRate": 0
+}
+]
+}
 }
 ```
 ---------
