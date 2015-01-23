@@ -104,11 +104,10 @@ Content-Type: application/json
 		"steps": 4065,
 		"heartRate": 0,
 		"weight": 0,
-		"workDay": 0,
 		"sleepData": {
-			"length": 4,
+			"length": 400,
 			"deepSleep": 250,
-			"lightSleep": 0
+			"lightSleep": 150
 			},
 		"activityPlaces": [
 				{
