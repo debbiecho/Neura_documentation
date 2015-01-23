@@ -106,36 +106,36 @@ Content-Type: application/json
 		"weight": 0,
 		"workDay": 0,
 		"sleepData": {
-		"length": 4,
-		"deepSleep": 250,
-		"lightSleep": 0
-		},
-	"activityPlaces": [
-			{
-				"name": "Home",
-				"steps": 1628,
-				"calories": 87.21400034428402,
-				"heartRate": 0
+			"length": 4,
+			"deepSleep": 250,
+			"lightSleep": 0
 			},
-			{
-				"name": "Neura HQ",
-				"steps": 214,
-				"calories": 10.759000122551,
-				"heartRate": 0
-			},
-			{
-				"name": "Sand Hill Road. Menlo Park",
-				"steps": 66,
-				"calories": 2.89899992943,
-				"heartRate": 0
-			},
-			{
-				"name": "Whole Foods Market",
-				"steps": 225,
-				"calories": 9.8490001335833,
-				"heartRate": 0
-			}
-		]
+		"activityPlaces": [
+				{
+					"name": "Home",
+					"steps": 1628,
+					"calories": 87.21400034428402,
+					"heartRate": 0
+				},
+				{
+					"name": "Neura HQ",
+					"steps": 214,
+					"calories": 10.759000122551,
+					"heartRate": 0
+				},
+				{
+					"name": "Sand Hill Road. Menlo Park",
+					"steps": 66,
+					"calories": 2.89899992943,
+					"heartRate": 0
+				},
+				{
+					"name": "Whole Foods Market",
+					"steps": 225,
+					"calories": 9.8490001335833,
+					"heartRate": 0
+				}
+			]
 	}
 }
 ```
