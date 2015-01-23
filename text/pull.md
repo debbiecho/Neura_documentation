@@ -67,12 +67,12 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
   - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `data`:  The complex object of wellness data. If data is not available for any of the sub-objects then Neura returns 0.
-  - `data` > `date`: Neura echoes the `date` in your Request parameter in the format YYYY-MM-DD.   
-  - `data` > `minutesWalk`: The number of minutes that the user was continuously active either running or walking while outside their home. 
-  - `data` > `steps`: The number of steps the user walked on `date`.  If the user has multiple step-counting devices, then Neura the merges datasets to best reflect total steps walked without double-counting.
-  - `data` > `calories`: The amount of calories the user burned on `date` in kilocalories (kcal).
-   - `data` > `heartRate`: The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with NeuroSky. 
-  - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). (If the user weighed himself once, it will return this value, if twice, it will return the average of the two values, and if he didn't weigh himself, no data will be returned.)
+	  - `date`: Neura echoes the `date` in your Request parameter in the format YYYY-MM-DD.   
+	  - `minutesWalk`: The number of minutes that the user was continuously active either running or walking while outside their home. 
+	  - `steps`: The number of steps the user walked on `date`.  If the user has multiple step-counting devices, then Neura the merges datasets to best reflect total steps walked without double-counting.
+	  - `data` > `calories`: The amount of calories the user burned on `date` in kilocalories (kcal).
+	   - `data` > `heartRate`: The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with NeuroSky. 
+	  - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). (If the user weighed himself once, it will return this value, if twice, it will return the average of the two values, and if he didn't weigh himself, no data will be returned.)
 
 
 ### Example `daily_summary` request
