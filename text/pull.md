@@ -68,11 +68,21 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `data`:  The complex object of wellness data. If data is not available for any of the sub-objects then Neura returns 0.
 	  - `date`: Neura echoes the `date` in your Request parameter in the format YYYY-MM-DD.   
+	  - `createdAt`: The most recent time and day when Neura calculated `daily_summary`. Neura calculates `daily_summary` multiple times because Neura receives data from integrated devices asynchronously, so `daily_summary` always reflects the most current information Neura has. 
 	  - `minutesWalk`: The number of minutes that the user was continuously active either running or walking while outside their home. 
 	  - `steps`: The number of steps the user walked on `date`.  If the user has multiple step-counting devices, then Neura the merges datasets to best reflect total steps walked without double-counting.
-	  - `data` > `calories`: The amount of calories the user burned on `date` in kilocalories (kcal).
-	   - `data` > `heartRate`: The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with NeuroSky. 
-	  - `data` > `weight`: The user's average body weight on `date` in kilograms (kg). (If the user weighed himself once, it will return this value, if twice, it will return the average of the two values, and if he didn't weigh himself, no data will be returned.)
+	  - `calories`: The amount of calories the user burned on `date` in kilocalories (kcal).
+	  - `heartRate`: The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with NeuroSky. 
+	  - `weight`: The user's average body weight on `date` in kilograms (kg). (If the user weighed himself once, it will return this value, if twice, it will return the average of the two values, and if he didn't weigh himself, no data will be returned.)
+	  - `sleepData`: The complex object of wellness data.
+		  - `length`: The number of minutes the user slept that night, according to the definition of [a Neura day](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#days-time-and-time-zones).
+		  - `deepSleep`: The average duration of deep sleep in minutes during the period.  
+		  - `lightSleep`: The average duration of light sleep in minutes during the period.  
+	  - `activityPlaces`: The user was in these locations at least twice and spent more than 3 minutes each time.
+		  - `name`: A contextual label for the location, such as "Home".
+		  - `steps`: The total count of steps the user took in the location during the day.
+		  - `calories`: The total count of calories burned in the location during the day in kilocalories.
+		  - `heartRate`: The user's average heart rate in the location. 
 
 
 ### Example `daily_summary` request
