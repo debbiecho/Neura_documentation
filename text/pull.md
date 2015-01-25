@@ -38,7 +38,7 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 
 ## GET /users/profile/daily_summary
 
-`daily_summary` is an insight containing a user’s wellness information for a single day. `daily_summary` is calculated based on [a Neura day](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#days-time-and-time-zones), from the time when the user awoke on `date` until the time the user awoke on the following calendar day (`date` + 1 day).  If Neura is unable to identfy when the user awoke, then `daily_summary` is unavailable for that day.
+`daily_summary` is an insight containing a user’s wellness information for a single day. `daily_summary` is calculated based on [a Neura day](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#days-time-and-time-zones), from the time when the user woke on `date` until the time the user woke on the following calendar day (`date` + 1 day).  If Neura is unable to identfy when the user woke, then `daily_summary` is unavailable for that day.
 
 ### Resource URI
 
@@ -66,11 +66,11 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 
   - `status`: The status is `success`.
   - `timestamp`: The time when Neura sent the response in epoch time. 
-  - `data`:  The complex object of wellness data. If data is not available for any of the sub-objects then Neura returns 0.
+  - `data`:  The complex object of wellness data. If data are not available for any of the sub-objects then Neura returns 0.
 	  - `date`: Neura echoes the `date` in your Request parameter in the format YYYY-MM-DD.   
 	  - `createdAt`: The most recent time and day when Neura calculated `daily_summary`. Neura calculates `daily_summary` multiple times because Neura receives data from integrated devices asynchronously, so `daily_summary` always reflects the most current information Neura has. 
 	  - `minutesWalk`: The number of minutes that the user was continuously active either running or walking while outside their home. 
-	  - `steps`: The number of steps the user walked on `date`.  If the user has multiple step-counting devices, then Neura the merges datasets to best reflect total steps walked without double-counting.
+	  - `steps`: The number of steps the user walked on `date`.  If the user has multiple step-counting devices, then Neura merges the datasets to best reflect total steps walked without double-counting.
 	  - `calories`: The amount of calories the user burned on `date` in kilocalories (kcal).
 	  - `heartRate`: The user's average heartRate on `date`.  As of October 2014, `heartRate` is only available for users with NeuroSky. 
 	  - `weight`: The user's average body weight on `date` in kilograms (kg). (If the user weighed himself once, it will return this value, if twice, it will return the average of the two values, and if he didn't weigh himself, no data will be returned.)
@@ -81,8 +81,8 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 	  - `activityPlaces`: The user was in these locations at least twice and spent more than 3 minutes each time.
 		  - `name`: A contextual label for the location, such as "Home".
 		  - `steps`: The total count of steps the user took in the location during the day.
-		  - `calories`: The total count of calories burned in the location during the day in kilocalories.
-		  - `heartRate`: The user's average heart rate in the location. 
+		  - `calories`: The total count of calories burned in the location during the day (in kilocalories).
+		  - `heartRate`: The user's average heart rate at the location. 
 
 
 ### Example `daily_summary` request
@@ -161,7 +161,7 @@ Content-Type: application/json
 ### Request query parameters
 
 #### Required request parameters
-Use the single `date` for a data on a single day or the `start_date` and `end_date` parameters for a period.  If you include all 3 parameters Neura will return an `error`.  
+Use the single `date` for data on a single day or the `start_date` and `end_date` parameters for a period.  If you include all 3 parameters Neura will return an `error`.  
 - `date`: The day for which you want information in YYYY-MM-DD format.  
 OR
 - `start_date`: The first day for which you want information in YYYY-MM-DD format.
