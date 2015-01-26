@@ -76,8 +76,8 @@ Neura returns a `status` indicating whether your GET request was a `success` or 
 	  - `weight`: The user's average body weight on `date` in kilograms (kg). (If the user weighed himself once, it will return this value, if twice, it will return the average of the two values, and if he didn't weigh himself, no data will be returned.)
 	  - `sleepData`: The complex object of wellness data.
 		  - `length`: The number of minutes the user slept that night, according to the definition of [a Neura day](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#days-time-and-time-zones).
-		  - `deepSleep`: The average duration of deep sleep in minutes during the period.  
-		  - `lightSleep`: The average duration of light sleep in minutes during the period.  
+		  - `deepSleep`: The average duration of deep sleep, as defined by the user's activity tracker, in minutes during the period.  
+		  - `lightSleep`: The average duration of light sleep, as defined by the user's activity tracker, in minutes during the period.  
 	  - `activityPlaces`: The user was in these locations at least twice and spent more than 3 minutes each time.
 		  - `name`: A contextual label for the location, such as "Home".
 		  - `steps`: The total count of steps the user took in the location during the day.
@@ -186,9 +186,9 @@ None.
   - `timestamp`: The time when Neura sent the response in epoch time. 
   - `data`:  The complex object of sleep data. If data are not available for any of the sub-objects then Neura returns 0.
   - `data` > `length`: The average duration of time sleeping in minutes during the period. 
-  - `data` > `deepSleep`:  The average duration of deep sleep in minutes during the period. 
-  - `data` > `lightSleep`: The average duration of light sleep in minutes during the period. 
-  - `data` > `efficiency`: The percentage of `deepSleep` out of the `length` of sleep.
+  - `data` > `deepSleep`:  The average duration of deep sleep, as defined by the user's activity tracker, in minutes during the period. 
+  - `data` > `lightSleep`: The average duration of light sleep, as defined by the user's activity tracker, in minutes during the period. 
+  - `data` > `efficiency`: The percentage of `deepSleep` out of the `length` of sleep, as defined by the user's activity tracker.
 
 
 ### Example `sleep` request
