@@ -1,7 +1,7 @@
 # Requesting insights
 Insights contain [distilled user information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature), such as wellness, activity, or sleep information, during a period of time, in JSON format that you access asynchronously.  
 
-In this document we detail Neura's API endpoints for requesting insights. (If you want to obtain instantaneous data, go to Neura [event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)). The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated,](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md) provide a **Bearer** access token, and have user permission to receive a response. 
+In this document we detail Neura's API endpoints for requesting insights. (If you want to obtain instantaneous data, go to Neura [event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)). The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must provide a **Bearer** access token and have user permission to receive a response. 
 
 ##Neura insights detailed below
   - [`daily_summary`](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#get-usersprofiledaily_summary) is a summary of the user's activity for a day
