@@ -272,142 +272,11 @@ Authorization: Bearer asdf1234**************************
 Cache-Control: no-cache
 ```
 
-## GET /users/profile/activity
-The profile enables personalizing and customizing adaptive insights and correlations to users’ day-to-day patterns and wellness status.
-End and start time of the period must be different. If only 1 data entry exists per time period then data is not provided since profile does not have enough data.
-
-
-### Resource URI
-
-**`https://wapi.theneura.com/v1/users/places/trends`**
-
-### Request query parameters
-
-You may request either:
-
-```params
-start_date: The first day for which you want information in YYYY-MM-DD format.
-
-end_date: The last day for which you want information in YYYY-MM-DD format.
-
-```
-OR
-
-```params
-date: The day for which you want information in YYYY-MM-DD format.
-```
-
-
-### Request headers
-
-#### Required request headers
-
-- `authorization`: `Bearer <access_token>`
-
-#### Optional request headers
-
-- `Cache-Control`: Specifies if the server should circumvent the server cache
-
-## Response for `daily_summary` 
-
- {
-"status": "success",
-"timestamp": 1422272412,
-"data": {
-"calories": 1920.6701922594,
-"steps": 11098.08962623951,
-"activityPlaces": [
-{
-"label": "workout",
-"steps": 2216.2600026130676,
-"calories": 148.26000261306763
-},
-{
-"label": "home",
-"steps": 589.3478274034417,
-"calories": 452.78261001213735
-},
-{
-"steps": 1881.3065800164875,
-"calories": 273.8855273849086
-}
-]
-}
-}
-
-
-### Example `daily_summary` request
-
-```http
-GET https://wapi.theneura.com/v1/users/profile/daily_summary?date=2014-09-30
-Authorization: Bearer asdf1234**************************
-Cache-Control: no-cache
-```
-
-### Example `daily_summary` response
-
-#### Headers
-```http
-status: 200 OK
-version: HTTP/1.1
-Content-Type: application/json
-```
-#### Body
-```json
-{
-	"status": "success",
-	"timestamp": 1422053086,
-	"data": {
-		"date": 20141103,
-		"createdAt": "2014-11-05T13:56:22Z",
-		"minutesWalk": 27,
-		"calories": 196.13300064956726,
-		"steps": 4065,
-		"heartRate": 0,
-		"weight": 0,
-		"sleepData": {
-			"length": 400,
-			"deepSleep": 250,
-			"lightSleep": 150
-			},
-		"activityPlaces": [
-				{
-					"name": "Home",
-					"steps": 1628,
-					"calories": 87.21400034428402,
-					"heartRate": 0
-				},
-				{
-					"name": "Neura HQ",
-					"steps": 214,
-					"calories": 10.759000122551,
-					"heartRate": 0
-				},
-				{
-					"name": "Sand Hill Road. Menlo Park",
-					"steps": 66,
-					"calories": 2.89899992943,
-					"heartRate": 0
-				},
-				{
-					"name": "Whole Foods Market",
-					"steps": 225,
-					"calories": 9.8490001335833,
-					"heartRate": 0
-				}
-			]
-	}
-}
-```
-
-______________
-
 ## GET /users/places/trends
 Trends specifies the user's current place and its difference from the user's average activity level at that place. The customer requests the activity level per current specific timestamp. Neura checks what is user location timeline event per this current moment and gives the activity level profile data per specific location.
  
 If user is driving in the current moment then the service gives the response message that “user is not at place”. 
 The data request must specify per which type of data is requested. For example, customer can ask the overview per steps. 
-
 
 ### Resource URI
 
@@ -418,10 +287,10 @@ The data request must specify per which type of data is requested. For example, 
 #### Required query parameters
 
 - `resources`:  (Array)
+- 			ADD LIST OF POSSIBLE RESOURCES
 - `timestamp`:  (Integer) Time to check the place
 - `request_id`: (String) Identifies the request will return as 
 - `webhook_id`: (String) Id of webook to which the response will be sent.
-
 
 ####Optional request parameters
 - `source`: (String): By specifying Neurosky (source = Neurosky), the output will be based on Neurosky's activity tracking data.  Otherwise the request will generate data based on Neura’s existing logic.  
@@ -438,18 +307,18 @@ The data request must specify per which type of data is requested. For example, 
 
 ## Response for `trends` 
 
- ASK GIL (EVERYTHING BELOW)
+ ASK GIL 
 
-
-### Example `daily_summary` request
-
-```http
-GET https://wapi.theneura.com/v1/users/profile/daily_summary?date=2014-09-30
+### Example `trends` request
+```
+GET https://pulsa.theneura.com/v1/users/places/trends?resources[]=steps&timestamp=1414595865&request_id=123&webhook_id=1
 Authorization: Bearer asdf1234**************************
 Cache-Control: no-cache
 ```
 
-### Example `daily_summary` response
+### Example `trends` response
+this service is a sync and will make a call to the provided webhook once the response is ready. imidatly after the request you will receive a response telling you all is good 
+### immediate sync response
 
 #### Headers
 ```http
@@ -457,53 +326,18 @@ status: 200 OK
 version: HTTP/1.1
 Content-Type: application/json
 ```
+
 #### Body
-```json
+```
 {
-	"status": "success",
-	"timestamp": 1422053086,
-	"data": {
-		"date": 20141103,
-		"createdAt": "2014-11-05T13:56:22Z",
-		"minutesWalk": 27,
-		"calories": 196.13300064956726,
-		"steps": 4065,
-		"heartRate": 0,
-		"weight": 0,
-		"sleepData": {
-			"length": 400,
-			"deepSleep": 250,
-			"lightSleep": 150
-			},
-		"activityPlaces": [
-				{
-					"name": "Home",
-					"steps": 1628,
-					"calories": 87.21400034428402,
-					"heartRate": 0
-				},
-				{
-					"name": "Neura HQ",
-					"steps": 214,
-					"calories": 10.759000122551,
-					"heartRate": 0
-				},
-				{
-					"name": "Sand Hill Road. Menlo Park",
-					"steps": 66,
-					"calories": 2.89899992943,
-					"heartRate": 0
-				},
-				{
-					"name": "Whole Foods Market",
-					"steps": 225,
-					"calories": 9.8490001335833,
-					"heartRate": 0
-				}
-			]
-	}
+"status": "success",
+"timestamp": 1422280694
 }
+```
 
-## [Return to the main page](https://github.com/NeuraLabs/Neura_documentation#build-with-neura)
-
+###  async callback 
+#### Body
+```
+TO BE ADDED
+```
 
