@@ -341,3 +341,57 @@ Content-Type: application/json
 TO BE ADDED
 ```
 
+## GET /users/profile/activity
+The profile enables personalizing and customizing adaptive insights and correlations to users’ day-to-day patterns and wellness status.  End and start time of the period must be different. If only 1 data entry exists per time period then data is not provided since profile does not have enough data.
+
+### Resource URI
+
+**`https://wapi.theneura.com/v1/users/places/trends`**
+
+### Request query parameters
+
+You may request either:
+
+```params
+start_date: The first day for which you want information in YYYY-MM-DD format.
+
+end_date: The last day for which you want information in YYYY-MM-DD format.
+
+```
+OR
+
+```params
+date: The day for which you want information in YYYY-MM-DD format.
+```
+
+### Request headers
+
+#### Required request headers
+
+- `authorization`: `Bearer <access_token>`
+
+#### Optional request headers
+
+- `Cache-Control`: Specifies if the server should circumvent the server cache
+
+## Response for `activity` 
+
+ ```{ FILL THIS IN
+
+}
+```
+
+### Example `activity` request
+
+```FILL THIS IN
+```
+
+### Example `activity` response
+
+#### Headers
+```FILL THIS IN
+```
+#### Body
+```{FILL THIS IN}
+```
+
