@@ -76,4 +76,268 @@ We hope it gives you a small taste of the power of Neura and motivates you to in
       }
       
         Cache-Control: no-cache
+        
+##The response you'll get in JSON:
+
+     {
+  "status": "success",
+  "timestamp": 1423056121,
+  "data": {
+    "token": "0dd36f9dc44071217f18125d38cea9fce2549a803af734be3e433191df69ca74",
+    "permissions": [
+      {
+        "name": "userArrivedToWork",
+        "displayName": "User arrived to work",
+        "neuraId": "pq6ody6iw"
+      },
+      {
+        "name": "userIsAtWork",
+        "displayName": "User is at work",
+        "neuraId": "pxzx064c1"
+      },
+      {
+        "name": "userIsRunning",
+        "displayName": "User is running",
+        "neuraId": "p5im398j8"
+      },
+      {
+        "name": "userArrivedToSignificantLocationFromActiveZone",
+        "displayName": "User arrived to significant location from active zone",
+        "neuraId": "paye7va2c"
+      },
+      {
+        "name": "userIsDriving",
+        "displayName": "User is driving",
+        "neuraId": "pkxmsmw8x"
+      },
+      {
+        "name": "userArrivedToGym",
+        "displayName": "User arrived to gym",
+        "neuraId": "pqol9hhmm"
+      },
+      {
+        "name": "userFinishedCycling",
+        "displayName": "User finished cycling",
+        "neuraId": "p745n0jjc"
+      },
+      {
+        "name": "userArrivedToSignificantLocationByCommute",
+        "displayName": "User arrived to significant location by commute",
+        "neuraId": "prjvnae2u"
+      },
+      {
+        "name": "userIsCycling",
+        "displayName": "User is cycling",
+        "neuraId": "pkgcn73aq"
+      },
+      {
+        "name": "userStartedCycling",
+        "displayName": "User started cycling",
+        "neuraId": "pci0vbfov"
+      },
+      {
+        "name": "userIsAtGym",
+        "displayName": "User is at gym",
+        "neuraId": "pd2i72qd"
+      },
+      {
+        "name": "userFinishedRunning",
+        "displayName": "User finished running",
+        "neuraId": "pkjfacf9r"
+      },
+      {
+        "name": "userArrivedToSignificantLocationAfterWorkout/Running",
+        "displayName": "User arrived to significant location after workout/running",
+        "neuraId": "pul8nrqgh"
+      },
+      {
+        "name": "userStartedRunning",
+        "displayName": "User started running",
+        "neuraId": "pylix0rx4"
+      },
+      {
+        "name": "userFinishedWalking",
+        "displayName": "User finished walking",
+        "neuraId": "psxpf4fe4"
+      },
+      {
+        "name": "userIsWalking",
+        "displayName": "User is walking",
+        "neuraId": "pqt7f4g0d"
+      },
+      {
+        "name": "userIsIdle",
+        "displayName": "User is idle",
+        "neuraId": "praxizz37"
+      },
+      {
+        "name": "userIsNoLongerIdle",
+        "displayName": "User is no longer idle",
+        "neuraId": "pcs8pb5r6"
+      },
+      {
+        "name": "userWokeUp",
+        "displayName": "User woke up",
+        "neuraId": "pflbulvdw"
+      },
+      {
+        "name": "userStartedSleeping",
+        "displayName": "User started sleeping",
+        "neuraId": "p6425ktr"
+      },
+      {
+        "name": "userFinishedWorkOut",
+        "displayName": "User finished work out",
+        "neuraId": "ps70x1aze"
+      },
+      {
+        "name": "userIsWorkingOut",
+        "displayName": "User is working out",
+        "neuraId": "pj2xcqwfp"
+      },
+      {
+        "name": "userStartedWorkOut",
+        "displayName": "User started work out",
+        "neuraId": "pw2rtuuox"
+      },
+      {
+        "name": "userArrivedAtActiveZone",
+        "displayName": "User arrived at active zone",
+        "neuraId": "ptk35d1n5"
+      },
+      {
+        "name": "userFinishedDriving",
+        "displayName": "User finished driving",
+        "neuraId": "pdxo3q15x"
+      },
+      {
+        "name": "userFinishedWorkOutInSignificantPlace",
+        "displayName": "User finished work out in significant place",
+        "neuraId": "pzgeclkwo"
+      },
+      {
+        "name": "userIsWorkingOutInSignificantPlace",
+        "displayName": "User is working out in significant place",
+        "neuraId": "p23rwuxen"
+      },
+      {
+        "name": "userIsAtActiveZone",
+        "displayName": "User is at active zone",
+        "neuraId": "p2epubdsh"
+      },
+      {
+        "name": "userStartedWorkOutInSignificantPlace",
+        "displayName": "User started work out in significant place",
+        "neuraId": "pf5t9sw6o"
+      },
+      {
+        "name": "userStartedDriving",
+        "displayName": "User started driving",
+        "neuraId": "pmxmrt9s8"
+      },
+      {
+        "name": "userStartedWalking",
+        "displayName": "User started walking",
+        "neuraId": "p8u1k1zfb"
+      },
+      {
+        "name": "userArrivedHome",
+        "displayName": "User arrived home",
+        "neuraId": "pa2png0au"
+      },
+      {
+        "name": "userIsAtHome",
+        "displayName": "User is at home",
+        "neuraId": "p3kev1ojz"
+      },
+      {
+        "name": "userIsOnTheWayToActiveZone",
+        "displayName": "User is on the way to active zone",
+        "neuraId": "pj8ks7amc"
+      },
+      {
+        "name": "userLeftWork",
+        "displayName": "User left work",
+        "neuraId": "p94slwjji"
+      },
+      {
+        "name": "userLeftGym",
+        "displayName": "User left gym",
+        "neuraId": "pmrgg9wbn"
+      },
+      {
+        "name": "userLeftHome",
+        "displayName": "User left home",
+        "neuraId": "pg4itlqms"
+      },
+      {
+        "name": "userLeftActiveZone",
+        "displayName": "User left active zone",
+        "neuraId": "pjg4i9vnk"
+      },
+      {
+        "name": "userHasBeenIdleMoreThan60Minutes",
+        "displayName": "User has been idle more than 60 minutes",
+        "neuraId": "ppr22l3s6"
+      },
+      {
+        "name": "userHasBeenSleepingMoreThan30Minutes",
+        "displayName": "User has been sleeping more than 30 minutes",
+        "neuraId": "p4c17y93p"
+      },
+      {
+        "name": "userArrivedToSignificantLocationFromSignificantLocation",
+        "description": "",
+        "displayName": "User arrived to significant location from significant location",
+        "neuraId": "pwnudrjpn"
+      },
+      {
+        "name": "userHasBeenRunningMoreThan10Minutes",
+        "displayName": "User has been running more than 10 minutes",
+        "neuraId": "p23sa4tmi"
+      },
+      {
+        "name": "userHasBeenWalkingMoreThan10Minutes",
+        "displayName": "User has been walking more than 10 minutes",
+        "neuraId": "pmc2xsw2i"
+      },
+      {
+        "name": "userHasBeenActiveMoreThan30Minutes",
+        "displayName": "User has been active more than 30 minutes",
+        "neuraId": "po43xj8db"
+      },
+      {
+        "name": "dailyActivitySummary",
+        "description": "gives the user’s number of steps, calories, weight, heart rate variability etc per day",
+        "displayName": "Daily activity summary",
+        "neuraId": "pklnx21g9"
+      },
+      {
+        "name": "activitySummaryPerPlace",
+        "description": "Overview of users activity behaviors at the current place",
+        "displayName": "Activity summary per place",
+        "neuraId": "p39lf8xvf"
+      },
+      {
+        "name": "wellnessProfile",
+        "description": "Enables to receive average number of steps/calories per day and per time at work and at workout",
+        "displayName": "Wellness profile",
+        "neuraId": "pbpzhu02u"
+      },
+      {
+        "name": "neuroskyHeartRateVariable",
+        "description": "The service gives all the heart rate data measure collections per requested time period",
+        "displayName": "Neurosky heart rate variable",
+        "neuraId": "pjl0ncfil"
+      },
+      {
+        "name": "sleepData",
+        "description": "Gives the overview of user’s sleep data per requested period of time",
+        "displayName": "Sleep data",
+        "neuraId": "pukvfpsum"
+      }
+    ]
+  }
+}
+        
 ##[Return to the Main Page](https://github.com/NeuraLabs/Neura_documentation#build-with-neura)
