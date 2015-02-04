@@ -70,8 +70,8 @@ We hope it gives you a small taste of the power of Neura and motivates you to in
        Body:
 
       {
-        "client_id":"7ec55c01f2dc1af5bd0f9c0edf9736f8913e26978269be5807f803c69eb182cf",
-        "client_secret":"d75bb20df54573901d4234e6e38b4c026882b22725b087b85e6e81b45d73109f",
+        "client_id":"7ec55c01f**********************************************************",
+        "client_secret":"d75bb20********************************************************",
         "permissions": "userHasBeenIdleMoreThan60Minutes,userArrivedToSignificantLocationFromActiveZone,userArrivedToGym,user         IsAtGym,userWokeUp,userArrivedAtActiveZone,userFinishedWorkOutInSignificantPlace,userIsOnTheWayToActiveZone,userLeftA         ctiveZone,dailyActivitySummary,neuroskyHeartRateVariable,wellnessProfile,activitySummaryPerPlace,sleepData"
       }
       
