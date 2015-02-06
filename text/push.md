@@ -270,7 +270,7 @@ version: HTTP/1.1
 Content-Type: application/json
 ```
 
-##6. List of Events available for subscription
+##6. List of events available for subscription
 The events are detailed below, organized into events by location and events by activity.
 
 ###Events by location
