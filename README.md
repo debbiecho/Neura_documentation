@@ -8,7 +8,7 @@ You can use the Neura API and SDKs to securely access user data by subscribing t
 Here are quickstart projects to test drive Neura in minutes. 
  - [Quickstart for **the web**: request health and wellness information](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPull.md#quickstart-request-wellness-information) (3 minutes)  
  - [Quickstart for **Android**: subscribe to a push notification](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstartPush.md#quickstart-subscribe-to-events-on-android) (5 minutes)  
- - [Quickstart for **iOS**: authenticate a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md) (5 minutes)  
+ - [Quickstart for **iOS**: authenticate a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md#quickstart-authenticate-with-neuras-demo-3rd-party-app-on-ios) (5 minutes)  
 
 ### Learn more
  - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md)   
