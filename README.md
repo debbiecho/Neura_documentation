@@ -15,7 +15,7 @@ Here are quickstart projects to test drive Neura in minutes.
  - [API insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md#requesting-insights)   
  - [API event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#subscribing-to-events)   
  - [Neura for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#neura-for-android)  
- - [Neura on iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md)  
+ - [Neura for iOS](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_iOS.md#neura-for-ios)  
  - [Integrated devices that can send data to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/integrations.md) 
  - [Current status of the Neura API](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/status.md) 
 
