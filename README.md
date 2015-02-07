@@ -11,7 +11,7 @@ Here are quickstart projects to test drive Neura in minutes.
  - [Quickstart for **iOS**: authenticate a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/quickstart_iOS.md#quickstart-authenticate-with-neuras-demo-3rd-party-app-on-ios) (5 minutes)  
 
 ### Learn more
- - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md)   
+ - [An introduction to Neura](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#an-introduction-to-neura-for-developers)   
  - [API insights](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/pull.md)   
  - [API event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md)   
  - [Neura on Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md)  
