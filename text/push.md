@@ -90,7 +90,7 @@ None
 `items`: The complex object representing the subscription list.   
 `items`>`created_at`: The timestamp when you created the subscription.  
 `items`>`identifier`: The identifier of the subscription that you created.   
-`items`>`event`: The event name from the [list below](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions).   
+`items`>`event`: The event name from the [list below](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#6-list-of-events-available-for-subscription).   
 `items`>`state`: Neura echos back the state you defined for the subscription.  
 
 ### Example of a subscription list request
