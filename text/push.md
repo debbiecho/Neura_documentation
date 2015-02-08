@@ -150,7 +150,7 @@ None
 `data`: The complex object representing the subscription info.   
 `data`>`created_at`: The timestamp when you created the subscription.  
 `data`>`identifier`: The identifier of the subscription that you created.   
-`data`>`event`: The event name from the [list below](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#events-available-for-push-notification-subscriptions).   
+`data`>`event`: The event name from the [list below](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#6-list-of-events-available-for-subscription).   
 `data`>`state`: Neura echos back the state you defined for the subscription.  
 
 
