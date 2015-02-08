@@ -50,7 +50,7 @@ Authorization: Bearer asdf1234**************************
 
 #### Headers
 ```http
-status: 200 OK
+status: 201 OK
 version: HTTP/1.1
 Content-Type: application/json
 ```
