@@ -22,7 +22,7 @@ This document consists of the following sections:
 
 #### Required request parameters
 - `event_name`: (string) This is the name of the event to which you are subscribing. We provide a full [list of event names](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#6-list-of-events-available-for-subscription) below.
-- `method`: (string) How Neura will notify you about the event, either `all`, `push`, or `webhook`. Neura defaults to `method=all`.  If you specify `method=webhook` then Neura will [POST to your webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-posts-an-event-to-your-webhook) every time the event occurs.  If you specify `method=push` then Neura will PUSH to your mobile app (only available [for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md)).  If you specify `method=all` then Neura will do both.
+- `method`: (string) How Neura will notify you about the event, either `all`, `push`, or `webhook`. Neura defaults to `method=all`.  If you specify `method=webhook` then Neura will [POST to your webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-posts-an-event-to-your-webhook) every time the event occurs.  If you specify `method=push` then Neura will PUSH to your mobile app (only available [for Android](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#neura-for-android)).  If you specify `method=all` then Neura will do both.
 - `identifier`: (string) The name you give to identify your subscription.  
 
 #### Optional request parameters
