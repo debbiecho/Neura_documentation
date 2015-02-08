@@ -7,7 +7,7 @@ In this document Neura details API endpoints that you can use to subscribe to ev
 This document consists of the following sections:  
   1. [Subscribe to an event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#1-subscribe-to-an-event)  
   2. [Get a list of your event subscriptions](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#2-get-a-list-of-your-event-subscriptions)  
-  3. [Get information for an existing subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-a-specific-subscription)  
+  3. [Get information for an existing subscription](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#3-get-information-for-an-existing-subscription)  
   4. [Unsubscribe](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#4-unsubscribe)  
   5. [Neura POSTs an event to your webhook](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#5-neura-posts-an-event-to-your-webhook)  
   6. [Event list](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#6-list-of-events-available-for-subscription)  
