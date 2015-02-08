@@ -2,7 +2,7 @@
 
 Events are changes in [the state of a user](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/basics.md#neuras-nomenclature).  After you subscribe to an event, Neura sends that event to you, either to your server using webhook or to your mobile app through Neura's [Android app](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/SDK_Android.md#neura-for-android). 
 
-In this document Neura details API endpoints that you can use to subscribe to events for a single user.  **You can only subscribe to events for one user at a time.**   The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md), provide an access token and have user permission to receive PUSH notifications.
+In this document Neura details API endpoints that you can use to subscribe to events for a single user.  **You can only subscribe to events for one user at a time.**   The Neura API is read-only, requires HTTPS, and returns responses in JSON.  You must [be authenticated](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/authentication.md#authentication), provide an access token and have user permission to receive PUSH notifications.
 
 This document consists of the following sections:  
   1. [Subscribe to an event](https://github.com/NeuraLabs/Neura_documentation/blob/master/text/push.md#1-subscribe-to-an-event)  
